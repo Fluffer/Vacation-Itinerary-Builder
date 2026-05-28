@@ -101,12 +101,13 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["category", "low_local", "high_local"],
+            "required": ["category"],
             "properties": {
               "category": {"type": "string"},
               "low_local": {"type": "integer"},
               "high_local": {"type": "integer"}
-            }
+            },
+            "additionalProperties": true
           }
         },
         "flight_sgd_low": {"type": "integer"},
@@ -127,13 +128,14 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["name", "channel", "local_per_pax", "includes"],
+              "required": ["name", "channel", "includes"],
               "properties": {
                 "name": {"type": "string"},
                 "channel": {"type": "string"},
                 "local_per_pax": {"type": "integer"},
                 "includes": {"type": "string"}
-              }
+              },
+              "additionalProperties": true
             }
           },
           "extras": {"type": "array", "items": {"type": "object"}}
