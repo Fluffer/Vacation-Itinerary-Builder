@@ -11,7 +11,7 @@ def test_partial_accepts_minimal(minimal_data):
     assert errors == []
 
 
-def test_strict_rejects_missing_required(minimal_data):
+def test_strict_passes_for_complete_minimal_shape(minimal_data):
     errors = validate(minimal_data, partial=False)
     # Strict mode passes for the minimal shape (only top-level required is slug/metadata/itinerary/places).
     assert errors == []

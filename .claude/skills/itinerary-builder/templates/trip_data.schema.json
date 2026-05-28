@@ -101,6 +101,7 @@
           "type": "array",
           "items": {
             "type": "object",
+            "$comment": "Renderer (build_workbook.py) reads low_local/high_local; fields are schema-optional only to support legacy *_vnd fixtures via the _pick() shim.",
             "required": ["category"],
             "properties": {
               "category": {"type": "string"},
@@ -128,6 +129,7 @@
             "type": "array",
             "items": {
               "type": "object",
+              "$comment": "Renderer (build_workbook.py) reads local_per_pax; field is schema-optional only to support legacy vnd_per_pax fixtures via the _pick() shim.",
               "required": ["name", "channel", "includes"],
               "properties": {
                 "name": {"type": "string"},
