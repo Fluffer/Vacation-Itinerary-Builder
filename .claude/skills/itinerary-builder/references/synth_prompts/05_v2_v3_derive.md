@@ -34,6 +34,7 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
 - v3 `day_label` strings are the v1 label with `" (rain plan)"` appended (e.g. `"Day 1 — Arrival (rain plan)"`).
 - Both v2 and v3 use the identical row schema as v1: `time`, `activity`, `route`, `km`, `min`, `cost_local`, `sgd`, `notes`, `place_key`. No extra fields; no missing required fields.
 - All `cost_local` amounts use the currency declared in `metadata.currency_code`.
+- `route` and `notes` are strings — use `""` for empty, never `null`. (Schema enforces.)
 
 ## Reference snippets
 
@@ -44,13 +45,13 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
       {
         "day_label": "Day 1 — Arrival + Beach Sunset",
         "rows": [
-          {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": null, "place_key": null},
-          {"time": "12:00", "activity": "Land DAD; SIM + cash + Grab to hotel (no rush)", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": null, "place_key": null},
-          {"time": "13:30", "activity": "Hotel check-in, slow lunch at hotel", "route": null, "km": null, "min": null, "cost_local": 280000, "sgd": null, "notes": null, "place_key": null},
-          {"time": "15:30", "activity": "Rest block — pool or nap", "route": null, "km": null, "min": null, "cost_local": 0, "sgd": null, "notes": "Recovery from early flight", "place_key": null},
-          {"time": "17:30", "activity": "Sunset at quieter Lang Co Beach (skip touristy Linh Ung crowds)", "route": "My Khe → Lang Co", "km": 32, "min": 45, "cost_local": 250000, "sgd": null, "notes": null, "place_key": "lang_co_beach"},
-          {"time": "19:30", "activity": "Dinner — Bún Chả Cá Bà Phiến (still open late)", "route": "Lang Co → Hai Chau", "km": 28, "min": 38, "cost_local": 80000, "sgd": null, "notes": null, "place_key": "bun_cha_ca"},
-          {"time": "21:30", "activity": "Return + early bed", "route": "Hai Chau → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": null, "place_key": null}
+          {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": "", "place_key": null},
+          {"time": "12:00", "activity": "Land DAD; SIM + cash + Grab to hotel (no rush)", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": "", "place_key": null},
+          {"time": "13:30", "activity": "Hotel check-in, slow lunch at hotel", "route": "", "km": null, "min": null, "cost_local": 280000, "sgd": null, "notes": "", "place_key": null},
+          {"time": "15:30", "activity": "Rest block — pool or nap", "route": "", "km": null, "min": null, "cost_local": 0, "sgd": null, "notes": "Recovery from early flight", "place_key": null},
+          {"time": "17:30", "activity": "Sunset at quieter Lang Co Beach (skip touristy Linh Ung crowds)", "route": "My Khe → Lang Co", "km": 32, "min": 45, "cost_local": 250000, "sgd": null, "notes": "", "place_key": "lang_co_beach"},
+          {"time": "19:30", "activity": "Dinner — Bún Chả Cá Bà Phiến (still open late)", "route": "Lang Co → Hai Chau", "km": 28, "min": 38, "cost_local": 80000, "sgd": null, "notes": "", "place_key": "bun_cha_ca"},
+          {"time": "21:30", "activity": "Return + early bed", "route": "Hai Chau → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": "", "place_key": null}
         ]
       }
     ],
@@ -58,13 +59,13 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
       {
         "day_label": "Day 1 — Arrival (rain plan)",
         "rows": [
-          {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": null, "place_key": null},
-          {"time": "11:45", "activity": "Land DAD; SIM + cash + Grab to hotel", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": null, "place_key": null},
-          {"time": "13:00", "activity": "Hotel check-in + lunch", "route": null, "km": null, "min": null, "cost_local": 250000, "sgd": null, "notes": null, "place_key": null},
-          {"time": "15:00", "activity": "Da Nang Museum of Cham Sculpture (indoor refuge)", "route": "My Khe → Hai Chau", "km": 4.5, "min": 14, "cost_local": 60000, "sgd": null, "notes": null, "place_key": "cham_museum"},
-          {"time": "17:00", "activity": "Indochina Riverside Mall (browse, coffee)", "route": "Cham → Han River", "km": 0.8, "min": 4, "cost_local": 100000, "sgd": null, "notes": null, "place_key": "indochina_mall"},
-          {"time": "19:00", "activity": "Dinner — Bún Chả Cá Bà Phiến (covered courtyard)", "route": "Han River → Hai Chau", "km": 1.0, "min": 4, "cost_local": 80000, "sgd": null, "notes": null, "place_key": "bun_cha_ca"},
-          {"time": "20:30", "activity": "Return to hotel — rest", "route": "Hai Chau → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": null, "place_key": null}
+          {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": "", "place_key": null},
+          {"time": "11:45", "activity": "Land DAD; SIM + cash + Grab to hotel", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": "", "place_key": null},
+          {"time": "13:00", "activity": "Hotel check-in + lunch", "route": "", "km": null, "min": null, "cost_local": 250000, "sgd": null, "notes": "", "place_key": null},
+          {"time": "15:00", "activity": "Da Nang Museum of Cham Sculpture (indoor refuge)", "route": "My Khe → Hai Chau", "km": 4.5, "min": 14, "cost_local": 60000, "sgd": null, "notes": "", "place_key": "cham_museum"},
+          {"time": "17:00", "activity": "Indochina Riverside Mall (browse, coffee)", "route": "Cham → Han River", "km": 0.8, "min": 4, "cost_local": 100000, "sgd": null, "notes": "", "place_key": "indochina_mall"},
+          {"time": "19:00", "activity": "Dinner — Bún Chả Cá Bà Phiến (covered courtyard)", "route": "Han River → Hai Chau", "km": 1.0, "min": 4, "cost_local": 80000, "sgd": null, "notes": "", "place_key": "bun_cha_ca"},
+          {"time": "20:30", "activity": "Return to hotel — rest", "route": "Hai Chau → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": "", "place_key": null}
         ]
       }
     ]

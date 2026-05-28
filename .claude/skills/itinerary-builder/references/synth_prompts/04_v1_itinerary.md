@@ -28,6 +28,7 @@ Populate `itinerary.v1_standard` — one array entry per day, each containing a 
 - `cost_local` populated where there is a real cost; `0` for free entries; `null` for placeholder rows.
 - Day 1 (arrival) and last day (departure) include airport buffer rows matching airline recommendation — typically 2hr domestic, 3hr international.
 - Active-hour budget: total per day from first activity start to last activity end is 14 hours maximum.
+- `route` and `notes` are strings — use `""` for empty, never `null`. (Schema enforces.)
 - See [`references/variant_transforms.md`](../variant_transforms.md) for v1 rules (this is the headline-packed track).
 
 ## Reference snippet
@@ -41,12 +42,12 @@ Populate `itinerary.v1_standard` — one array entry per day, each containing a 
         "rows": [
           {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": "Check-in closes 60min before", "place_key": null},
           {"time": "11:45", "activity": "Land DAD; SIM + cash + Grab to hotel", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": "Grab pool ~₫110k; SIM at airport 7-Eleven", "place_key": null},
-          {"time": "13:00", "activity": "Hotel check-in + light lunch", "route": null, "km": null, "min": null, "cost_local": 200000, "sgd": null, "notes": null, "place_key": null},
+          {"time": "13:00", "activity": "Hotel check-in + light lunch", "route": "", "km": null, "min": null, "cost_local": 200000, "sgd": null, "notes": "", "place_key": null},
           {"time": "15:00", "activity": "My Khe Beach swim + rest", "route": null, "km": 0.2, "min": 3, "cost_local": 0, "sgd": null, "notes": "Flag system: green = safe, yellow = caution", "place_key": "my_khe_beach"},
           {"time": "17:30", "activity": "Sunset at Linh Ung Pagoda (Son Tra)", "route": "My Khe → Son Tra", "km": 8.0, "min": 22, "cost_local": 200000, "sgd": null, "notes": "Grab ~₫200k return; dress code — shoulders + knees covered", "place_key": "linh_ung_pagoda"},
           {"time": "19:30", "activity": "Dinner — Bún Chả Cá Bà Phiến", "route": "Son Tra → Hai Chau", "km": 7.5, "min": 20, "cost_local": 80000, "sgd": null, "notes": "Lunch-only; order arrives fast — 10min queue max", "place_key": "bun_cha_ca"},
           {"time": "21:00", "activity": "Dragon Bridge fire/water show (Fri/Sat/Sun only)", "route": "Hai Chau → Han River", "km": 1.5, "min": 6, "cost_local": 0, "sgd": null, "notes": "Show runs 21:00 sharp; skip if mid-week", "place_key": "dragon_bridge"},
-          {"time": "22:30", "activity": "Return to hotel + buffer", "route": "Han River → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": null, "place_key": null}
+          {"time": "22:30", "activity": "Return to hotel + buffer", "route": "Han River → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": "", "place_key": null}
         ]
       }
     ]

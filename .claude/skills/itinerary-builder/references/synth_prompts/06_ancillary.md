@@ -43,6 +43,7 @@ Populate all remaining `data.json` blocks so the file passes strict schema valid
 - Both maps must have at least 6 labelled places each. Use coordinates already present in `places[]` (set in stage 2).
 - `risk_flags` calls out 2-5 trip-specific risks — e.g. `["Typhoon season early", "Watch landslip alerts for Hai Van Pass"]`.
 - `v1_v2_compare[]` has one entry per substituted item; `item`, `v1`, and `v2` values align with the same rows in the v1 and v2 itineraries from stages 4-5.
+- `booking_flex_tips` items are `{label, text}` objects (renderer requirement; schema is permissive but `build_workbook` expects dict items).
 
 ## Reference snippets
 
@@ -78,9 +79,9 @@ Embed these blocks verbatim (adapt values to the destination):
       }
     ],
     "booking_flex_tips": [
-      "Choose hotel with free-cancel window of 24h",
-      "Cebu Pacific Lite fares non-changeable — buy Plus if typhoon risk high",
-      "Klook tours typically refundable up to 48h before"
+      {"label": "Hotel cancellation", "text": "Choose hotel with free-cancel window of 24h"},
+      {"label": "Flight fare class", "text": "Cebu Pacific Lite fares non-changeable — buy Plus if typhoon risk high"},
+      {"label": "Tour refund window", "text": "Klook tours typically refundable up to 48h before"}
     ]
   }
 }
