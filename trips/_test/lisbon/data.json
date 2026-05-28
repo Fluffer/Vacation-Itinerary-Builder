@@ -1,0 +1,2955 @@
+{
+  "slug": "lisbon",
+  "metadata": {
+    "dates_start": "2026-08-14",
+    "dates_end": "2026-08-18",
+    "origin": "Manila",
+    "destination": "Lisbon",
+    "passport": "PH",
+    "pax": 2,
+    "base_hotel_area": "Bairro Alto",
+    "currency_code": "EUR",
+    "fx_rate_to_sgd": 0.68,
+    "fx_rate_anchor_date": "2026-05-29",
+    "climate_summary": "Lisbon mid-August: hot dry 30-35C, virtually no rain, strong Atlantic sea breeze PM, heat-wave risk 14:00-17:00 block",
+    "power_plug": "Type F (Schuko)",
+    "weather_risk": "low",
+    "tap_water": "Potable — safe to drink from tap",
+    "tipping": "Round up or 5-10% in restaurants; not mandatory",
+    "emergency": "112 universal (police + ambulance + fire)"
+  },
+  "visa": {
+    "rule": "Schengen short-stay visa required for PH passport holders; apply at Portuguese consulate (Manila). 90-day maximum in any 180-day window.",
+    "days_allowed": 90,
+    "e_visa_required": false,
+    "passport_validity_required_until": "2027-02-14",
+    "onward_ticket_required": true,
+    "source": "https://www.vfsglobal.com/portugal/philippines/"
+  },
+  "places": [
+    {
+      "key": "belem_tower",
+      "name": "Torre de Belém",
+      "category": "iconic",
+      "area": "Belém",
+      "wiki_title": "Belem_Tower",
+      "description": "UNESCO-listed Manueline limestone tower built 1516-1519 on the Tagus riverbank. Entry €6; advance tickets recommended. Climb is narrow — not suitable for claustrophobics.",
+      "distance_km_from_base": 6.5,
+      "travel_min_from_base": 25,
+      "price_local": 6,
+      "price_label": "€6",
+      "when": "Day 2 morning",
+      "indoor": false,
+      "duration": "1hr",
+      "opening_hours": "Tue-Sun 10:00-17:30 (last entry 17:00)",
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://www.torrebelem.gov.pt/"
+        }
+      ],
+      "lat": 38.691586,
+      "lon": -9.2159288
+    },
+    {
+      "key": "jeronimos_monastery",
+      "name": "Mosteiro dos Jerónimos",
+      "category": "iconic",
+      "area": "Belém",
+      "wiki_title": "Jerónimos_Monastery",
+      "description": "Masterpiece of Manueline Gothic architecture, completed 1601. Houses tombs of Vasco da Gama and poet Luís de Camões. €12 entry; arrive before 10:00 to beat tour groups.",
+      "distance_km_from_base": 6.2,
+      "travel_min_from_base": 24,
+      "price_local": 12,
+      "price_label": "€12",
+      "when": "Day 2 morning",
+      "indoor": true,
+      "duration": "1.5hr",
+      "opening_hours": "Tue-Sun 09:30-18:00 (Oct-Apr 17:00)",
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://www.mosteirojeronimos.gov.pt/"
+        }
+      ],
+      "lat": 38.6977577,
+      "lon": -9.2066239
+    },
+    {
+      "key": "praca_comercio",
+      "name": "Praça do Comércio",
+      "category": "iconic",
+      "area": "Baixa",
+      "wiki_title": "Praça_do_Comércio",
+      "description": "Massive riverfront square framed by arcaded yellow buildings, opened post-1755 earthquake. Bronze equestrian statue of King José I at centre. Rua Augusta triumphal arch leads north. Free.",
+      "distance_km_from_base": 1.4,
+      "travel_min_from_base": 8,
+      "price_local": 0,
+      "price_label": "Free",
+      "when": "Day 1 afternoon",
+      "indoor": false,
+      "duration": "45min",
+      "opening_hours": "24h",
+      "links": [],
+      "lat": 38.7088579,
+      "lon": -9.1360541
+    },
+    {
+      "key": "tram_28",
+      "name": "Tram 28 (Eléctrico 28)",
+      "category": "iconic",
+      "area": "Graça–Alfama",
+      "wiki_title": "Lisbon_tram_28",
+      "description": "Historic yellow wooden tram running through Alfama's steep alleys from Martim Moniz to Campo Ourique. Ride full route for €3.10 with Lisboa Viva card. Crowded midday — board at Graça terminus for a seat.",
+      "distance_km_from_base": 1.8,
+      "travel_min_from_base": 10,
+      "price_local": 3,
+      "price_label": "€3",
+      "when": "Day 3 morning",
+      "indoor": false,
+      "duration": "40min",
+      "opening_hours": "06:00-23:00 daily",
+      "links": [],
+      "alt_search_query": "Lisbon tram 28 historic yellow tram Alfama"
+    },
+    {
+      "key": "miradouro_senhora_monte",
+      "name": "Miradouro da Senhora do Monte",
+      "category": "hidden_gem",
+      "area": "Graça",
+      "description": "Highest viewpoint in central Lisbon, overlooking São Jorge Castle, the Tagus, and Alfama rooftops. Less visited than Portas do Sol. Small chapel beside the terrace. Free, no facilities.",
+      "distance_km_from_base": 2.2,
+      "travel_min_from_base": 12,
+      "price_local": 0,
+      "price_label": "Free",
+      "when": "Day 3 sunset",
+      "indoor": false,
+      "duration": "45min",
+      "opening_hours": "24h",
+      "links": [],
+      "alt_search_query": "Miradouro da Senhora do Monte Lisbon viewpoint Graça"
+    },
+    {
+      "key": "lx_factory",
+      "name": "LX Factory",
+      "category": "hidden_gem",
+      "area": "Alcântara",
+      "description": "Repurposed 19th-century textile factory turned creative hub: independent shops, bookstore Ler Devagar (with a swing), restaurants, weekend market Sunday 10:00-18:00. Free to enter; individual shops vary.",
+      "distance_km_from_base": 2.8,
+      "travel_min_from_base": 14,
+      "price_local": 0,
+      "price_label": "Free entry",
+      "when": "Day 4 morning",
+      "indoor": true,
+      "duration": "2hr",
+      "opening_hours": "Daily 10:00-23:00 (market Sun 10:00-18:00)",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.lxfactory.com/"
+        }
+      ],
+      "lat": 38.7026001,
+      "lon": -9.1786619,
+      "alt_search_query": "LX Factory Alcântara Lisbon creative hub"
+    },
+    {
+      "key": "manteigaria",
+      "name": "Manteigaria – Fábrica de Pastéis de Nata",
+      "category": "food",
+      "area": "Chiado",
+      "wiki_title": "Pastel_de_nata",
+      "alt_search_query": "Manteigaria pasteis de nata Chiado Lisbon",
+      "description": "Standing-room pastry counter in Chiado producing fresh pastéis de nata every 15 minutes. €1.40 per tart, best eaten warm with cinnamon and icing sugar. Queue moves fast.",
+      "distance_km_from_base": 0.4,
+      "travel_min_from_base": 5,
+      "price_local": 2,
+      "price_label": "€1.40-2/tart",
+      "when": "Day 1 afternoon",
+      "indoor": true,
+      "duration": "20min",
+      "opening_hours": "Daily 08:00-00:00",
+      "links": []
+    },
+    {
+      "key": "pasteis_belem",
+      "name": "Pastéis de Belém",
+      "category": "food",
+      "area": "Belém",
+      "wiki_title": "Pastéis_de_Belém",
+      "description": "Original 1837 source of the custard tart recipe; the filling formula is a closely guarded secret. Takes on Blue Willow-pattern tiles. Price €1.40/tart. Queue can be 30min but moves quickly.",
+      "distance_km_from_base": 6.4,
+      "travel_min_from_base": 25,
+      "price_local": 2,
+      "price_label": "€1.40/tart",
+      "when": "Day 2 morning",
+      "indoor": true,
+      "duration": "30min",
+      "opening_hours": "Daily 08:00-23:00",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.pasteisdebelem.pt/"
+        }
+      ],
+      "lat": 38.6974795,
+      "lon": -9.2033202
+    },
+    {
+      "key": "tasca_do_chico",
+      "name": "Tasca do Chico",
+      "category": "food",
+      "area": "Bairro Alto",
+      "alt_search_query": "Tasca do Chico fado restaurant Bairro Alto Lisbon",
+      "description": "Small wood-panelled tasca in Bairro Alto offering live fado music nightly at 20:00, free with your meal. Menu of petiscos (sharing plates): chouriço flambé, octopus salad, bacalhau. Reservation essential.",
+      "distance_km_from_base": 0.3,
+      "travel_min_from_base": 3,
+      "price_local": 35,
+      "price_label": "€30-45pp",
+      "when": "Day 1 evening",
+      "indoor": true,
+      "duration": "2hr",
+      "opening_hours": "Mon-Sat 19:30-24:00",
+      "links": [],
+      "lat": 38.7116311,
+      "lon": -9.144132
+    },
+    {
+      "key": "time_out_market",
+      "name": "Time Out Market Lisboa",
+      "category": "food",
+      "area": "Cais do Sodré",
+      "wiki_title": "Time_Out_Market_Lisboa",
+      "description": "Curated food hall in the 1882 Mercado da Ribeira: 35+ stalls including starred-chef counters (Henrique Sá Pessoa), ginjinha bar, fresh seafood. Covered, air-conditioned. Open daily.",
+      "distance_km_from_base": 1.1,
+      "travel_min_from_base": 6,
+      "price_local": 15,
+      "price_label": "€12-20pp",
+      "when": "Day 4 lunch",
+      "indoor": true,
+      "duration": "1.5hr",
+      "opening_hours": "Sun-Wed 10:00-00:00, Thu-Sat 10:00-02:00",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.timeoutmarket.com/lisboa/"
+        }
+      ]
+    },
+    {
+      "key": "bairro_alto_bars",
+      "name": "Bairro Alto Bar Crawl",
+      "category": "nightlife",
+      "area": "Bairro Alto",
+      "wiki_title": "Bairro_Alto",
+      "description": "Dense grid of narrow streets (Rua da Atalaia, Rua do Norte, Rua Diário de Notícias) packed with independent bars. Bars open doors from 22:00; street drinking with plastic cups is tolerated. Budget €3-5 per beer.",
+      "distance_km_from_base": 0.2,
+      "travel_min_from_base": 2,
+      "price_local": 5,
+      "price_label": "€3-5/drink",
+      "when": "Day 1 night",
+      "indoor": false,
+      "duration": "2hr",
+      "opening_hours": "22:00-03:00 (peak nights Thu-Sat)",
+      "links": []
+    },
+    {
+      "key": "pink_street",
+      "name": "Pink Street (Rua Nova do Carvalho)",
+      "category": "nightlife",
+      "area": "Cais do Sodré",
+      "description": "700m street painted bright pink, formerly a red-light district, now a lineup of late-night bars and clubs. Bicaense, Pensão Amor, and Sol e Pesca are anchors. Heats up after midnight.",
+      "distance_km_from_base": 1.2,
+      "travel_min_from_base": 7,
+      "price_local": 10,
+      "price_label": "€5-15/entry",
+      "when": "Day 3 night",
+      "indoor": false,
+      "duration": "2hr",
+      "opening_hours": "22:00-04:00 daily",
+      "links": [],
+      "lat": 38.7072497,
+      "lon": -9.143845,
+      "alt_search_query": "Pink Street Rua Nova do Carvalho Lisbon nightlife"
+    },
+    {
+      "key": "maat",
+      "name": "MAAT – Museum of Art, Architecture and Technology",
+      "category": "indoor_backup",
+      "area": "Belém",
+      "description": "Contemporary art and architecture museum by Amanda Levete; wave-shaped white tiles on riverside. Collection covers media art and digital installations. Entry €11, riverside terrace free. Air-conditioned.",
+      "distance_km_from_base": 5.8,
+      "travel_min_from_base": 22,
+      "price_local": 11,
+      "price_label": "€11",
+      "when": "Day 2 afternoon (hot block)",
+      "indoor": true,
+      "duration": "1.5hr",
+      "opening_hours": "Mon, Wed-Sun 11:00-19:00 (closed Tue)",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.maat.pt/"
+        }
+      ],
+      "alt_search_query": "MAAT Museum Art Architecture Technology Lisbon Belem"
+    },
+    {
+      "key": "gulbenkian_museum",
+      "name": "Calouste Gulbenkian Museum",
+      "category": "indoor_backup",
+      "area": "São Sebastião",
+      "wiki_title": "Gulbenkian_Museum",
+      "description": "Encyclopedic collection from Egyptian antiquities to Renoir, Rembrandt, and Lalique glass, assembled by oil magnate Calouste Gulbenkian. Entry €10; gardens included. One of Europe's best-kept museum secrets.",
+      "distance_km_from_base": 4.1,
+      "travel_min_from_base": 18,
+      "price_local": 10,
+      "price_label": "€10",
+      "when": "Day 5 morning",
+      "indoor": true,
+      "duration": "2hr",
+      "opening_hours": "Wed-Mon 10:00-18:00 (closed Tue)",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://gulbenkian.pt/museu/"
+        }
+      ],
+      "lat": 38.7359613,
+      "lon": -9.1533321,
+      "alt_search_query": "Calouste Gulbenkian Museum Lisbon art collection"
+    },
+    {
+      "key": "cervejaria_ramiro",
+      "name": "Cervejaria Ramiro",
+      "category": "food",
+      "area": "Intendente",
+      "alt_search_query": "Cervejaria Ramiro seafood restaurant Lisbon Intendente",
+      "description": "Lisbon's most famous beerhouse serving piri-piri prawns, clams in garlic-wine, and grilled lobster since 1956. Queue outside or book. Finish with a prego sandwich. Budget €40-60pp with drinks.",
+      "distance_km_from_base": 2.4,
+      "travel_min_from_base": 12,
+      "price_local": 50,
+      "price_label": "€40-60pp",
+      "when": "Day 3 dinner",
+      "indoor": true,
+      "duration": "1.5hr",
+      "opening_hours": "Tue-Sun 12:00-00:30",
+      "links": []
+    },
+    {
+      "key": "sao_jorge_castle",
+      "name": "Castelo de São Jorge",
+      "category": "iconic",
+      "area": "Alfama",
+      "wiki_title": "Castle_of_São_Jorge",
+      "description": "Moorish hilltop castle dominating Lisbon's skyline; panoramic views over the city and Tagus estuary. Entry €15; includes archaeological site and peacocks in the grounds. Go early to avoid heat and crowds.",
+      "distance_km_from_base": 1.9,
+      "travel_min_from_base": 11,
+      "price_local": 15,
+      "price_label": "€15",
+      "when": "Day 3 morning",
+      "indoor": false,
+      "duration": "1.5hr",
+      "opening_hours": "Daily 09:00-21:00 (Nov-Feb 18:00)",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://castelodesaojorge.pt/"
+        }
+      ],
+      "lat": 38.7139258,
+      "lon": -9.133483,
+      "alt_search_query": "Castelo de São Jorge Lisbon Alfama castle"
+    },
+    {
+      "key": "sintra_day_trip",
+      "name": "Sintra Day Trip (Pena Palace)",
+      "category": "iconic",
+      "area": "Sintra",
+      "wiki_title": "Palace_of_Pena",
+      "description": "Romantic 19th-century hilltop palace in vivid yellow-and-red Romanticist style, 40min by train from Rossio. UNESCO World Heritage site. Entry €14; combined ticket with park €17. Go early — crowds surge by 11:00.",
+      "distance_km_from_base": 28.0,
+      "travel_min_from_base": 50,
+      "price_local": 17,
+      "price_label": "€14-17",
+      "when": "Day 4 all day",
+      "indoor": false,
+      "duration": "5hr",
+      "opening_hours": "Palace daily 09:30-18:30 (park 09:00-20:00)",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.parquesdesintra.pt/"
+        }
+      ],
+      "alt_search_query": "Pena Palace Sintra Portugal Romanticist palace"
+    },
+    {
+      "key": "spa_chiado",
+      "name": "Bairro Alto Hotel Spa",
+      "category": "spa",
+      "area": "Chiado",
+      "alt_search_query": "Bairro Alto Hotel spa Chiado Lisbon wellness",
+      "description": "Boutique spa at Bairro Alto Hotel with mosaic tile pool, steam room, and Portuguese cork-oil treatments. Massages from €90 for 50min. Advance booking required.",
+      "distance_km_from_base": 0.5,
+      "travel_min_from_base": 4,
+      "price_local": 90,
+      "price_label": "€90+",
+      "when": "Day 2 afternoon",
+      "indoor": true,
+      "duration": "2hr",
+      "opening_hours": "Daily 07:00-21:00",
+      "links": []
+    },
+    {
+      "key": "alfama_fado_museum",
+      "name": "Museu do Fado",
+      "category": "indoor_backup",
+      "area": "Alfama",
+      "wiki_title": "Fado_Museum",
+      "description": "Two-floor museum tracing fado's evolution from 19th-century Alfama taverns to UNESCO heritage status. Listening booths with headphones, vintage instruments, photographs. Entry €5.",
+      "distance_km_from_base": 2.0,
+      "travel_min_from_base": 11,
+      "price_local": 5,
+      "price_label": "€5",
+      "when": "Day 3 afternoon",
+      "indoor": true,
+      "duration": "1hr",
+      "opening_hours": "Tue-Sun 10:00-18:00",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.museudofado.pt/"
+        }
+      ],
+      "lat": 38.7110254,
+      "lon": -9.1276597,
+      "alt_search_query": "Museu do Fado Lisbon Alfama fado museum"
+    },
+    {
+      "key": "elevador_santa_justa",
+      "name": "Elevador de Santa Justa",
+      "category": "iconic",
+      "area": "Baixa",
+      "wiki_title": "Santa_Justa_Elevator",
+      "description": "Wrought-iron neo-Gothic elevator designed by Raoul Mesnier du Ponsard (1902), connecting Baixa to Carmo. €5.30 single. Upper terrace offers rooftop view of Rossio. Worth it for the architecture alone.",
+      "distance_km_from_base": 1.0,
+      "travel_min_from_base": 6,
+      "price_local": 5,
+      "price_label": "€5.30",
+      "when": "Day 1 afternoon",
+      "indoor": false,
+      "duration": "30min",
+      "opening_hours": "Daily 07:30-23:00",
+      "links": [],
+      "lat": 38.7121169,
+      "lon": -9.1393753,
+      "alt_search_query": "Santa Justa Lift Elevador Lisbon Baixa"
+    },
+    {
+      "key": "national_tile_museum",
+      "name": "Museu Nacional do Azulejo",
+      "category": "indoor_backup",
+      "area": "Beato",
+      "wiki_title": "National_Azulejo_Museum",
+      "description": "Housed in a 16th-century Manueline convent, the world's only museum dedicated to azulejo (blue-and-white tile). 20,000-piece panorama of Lisbon pre-1755 earthquake. Entry €5. A/C.",
+      "distance_km_from_base": 3.5,
+      "travel_min_from_base": 16,
+      "price_local": 5,
+      "price_label": "€5",
+      "when": "Day 5 afternoon",
+      "indoor": true,
+      "duration": "1.5hr",
+      "opening_hours": "Tue-Sun 10:00-18:00",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.museudoazulejo.gov.pt/"
+        }
+      ],
+      "alt_search_query": "Museu Nacional do Azulejo Lisbon tile museum Beato"
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Casa de São Mamede",
+      "tier": "Budget",
+      "rating": "3.5★",
+      "sgd_low": 65,
+      "sgd_high": 95,
+      "notes": "19th-century townhouse pension in Rato; 10min walk to Bairro Alto.",
+      "links": [
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/hotel/pt/casa-de-sao-mamede.html"
+        }
+      ]
+    },
+    {
+      "name": "Hotel do Chiado",
+      "tier": "Mid",
+      "rating": "4.0★",
+      "sgd_low": 140,
+      "sgd_high": 200,
+      "notes": "Rooftop terrace with castle views; 5min walk to Bairro Alto.",
+      "links": [
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/hotel/pt/chiado.html"
+        }
+      ]
+    },
+    {
+      "name": "Inspira Santa Marta Hotel",
+      "tier": "Mid",
+      "rating": "4.0★",
+      "sgd_low": 120,
+      "sgd_high": 175,
+      "notes": "Eco-certified boutique near Avenida da Liberdade; feng shui rooms.",
+      "links": []
+    },
+    {
+      "name": "Bairro Alto Hotel",
+      "tier": "Luxury",
+      "rating": "5.0★",
+      "sgd_low": 380,
+      "sgd_high": 600,
+      "notes": "Converted 18th-century palace in heart of Bairro Alto; rooftop bar.",
+      "links": [
+        {
+          "label": "Official",
+          "url": "https://www.bairroaltohotel.com/"
+        }
+      ]
+    },
+    {
+      "name": "Four Seasons Hotel Ritz Lisbon",
+      "tier": "Luxury",
+      "rating": "5.0★",
+      "sgd_low": 700,
+      "sgd_high": 1200,
+      "notes": "1959 grand hotel on Parque Eduardo VII with art collection and pool.",
+      "links": []
+    },
+    {
+      "name": "Generator Lisbon",
+      "tier": "Budget",
+      "rating": "3.0★",
+      "sgd_low": 30,
+      "sgd_high": 60,
+      "notes": "Design hostel in Graça with rooftop bar and private rooms from €55.",
+      "links": []
+    }
+  ],
+  "activity_pricing": [
+    {
+      "category": "airport_transfer",
+      "paths": [
+        {
+          "name": "Aerobus Line 1 to Marquês/Chiado",
+          "channel": "DIY (onboard)",
+          "local_per_pax": 4,
+          "includes": "40min ride, every 20min"
+        },
+        {
+          "name": "Metro Yellow Line to Rato + walk",
+          "channel": "DIY (Lisboa Viva card)",
+          "local_per_pax": 2,
+          "includes": "25min metro + 10min walk"
+        },
+        {
+          "name": "Licensed taxi / Bolt/Uber",
+          "channel": "Bolt app or taxi rank",
+          "local_per_pax": 18,
+          "includes": "20-35min depending on traffic; luggage included"
+        }
+      ]
+    },
+    {
+      "category": "sintra_day_trip",
+      "paths": [
+        {
+          "name": "CP train Rossio–Sintra + Scotturb bus 434 circuit",
+          "channel": "DIY (Zapping card)",
+          "local_per_pax": 8,
+          "includes": "Train return + hop-on bus; buy card at Rossio"
+        },
+        {
+          "name": "Sintra guided day tour",
+          "channel": "GetYourGuide",
+          "local_per_pax": 55,
+          "includes": "Pena + Moorish Castle + Regaleira; lunch not included"
+        }
+      ]
+    },
+    {
+      "category": "belem_monuments",
+      "paths": [
+        {
+          "name": "Tram 15E or Bus 727 + DIY walk",
+          "channel": "DIY (Lisboa Viva)",
+          "local_per_pax": 2,
+          "includes": "Tower + Jerónimos; pay entries separately"
+        },
+        {
+          "name": "Belém tour with Tuk Tuk",
+          "channel": "GetYourGuide",
+          "local_per_pax": 35,
+          "includes": "1.5hr tuk-tuk narrated route; entry fees extra"
+        }
+      ]
+    },
+    {
+      "category": "fado_dinner",
+      "paths": [
+        {
+          "name": "Tasca do Chico (fado + petiscos)",
+          "channel": "Direct reservation",
+          "local_per_pax": 40,
+          "includes": "Free fado show with dinner order"
+        },
+        {
+          "name": "Casa de Fado & Guitar show (Alfama)",
+          "channel": "GetYourGuide",
+          "local_per_pax": 65,
+          "includes": "2hr show + welcome drink + cheese board"
+        }
+      ]
+    },
+    {
+      "category": "tagus_river_cruise",
+      "paths": [
+        {
+          "name": "Transtejo ferry Cais do Sodré–Cacilhas",
+          "channel": "DIY (Navegante card)",
+          "local_per_pax": 1,
+          "includes": "10min river crossing + Cacilhas waterfront"
+        },
+        {
+          "name": "Sunset catamaran cruise",
+          "channel": "Klook",
+          "local_per_pax": 45,
+          "includes": "2hr Tagus cruise, welcome drink included"
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "rate_local_per_sgd": 0.68,
+    "categories": [
+      {
+        "category": "Food (per pax/day)",
+        "low_local": 25,
+        "high_local": 60
+      },
+      {
+        "category": "Local transport (per pax/day)",
+        "low_local": 5,
+        "high_local": 15
+      },
+      {
+        "category": "Attractions (per pax total)",
+        "low_local": 60,
+        "high_local": 130
+      },
+      {
+        "category": "SIM/eSIM (one-time)",
+        "low_local": 10,
+        "high_local": 25
+      },
+      {
+        "category": "Tips + misc (per pax total)",
+        "low_local": 20,
+        "high_local": 50
+      }
+    ],
+    "flight_sgd_low": 680,
+    "flight_sgd_high": 1100,
+    "hotel_sgd_low": 30,
+    "hotel_sgd_high": 700
+  },
+  "itinerary": {
+    "v1_standard": [
+      {
+        "day_label": "Day 1 — Arrival + Chiado & Bairro Alto",
+        "rows": [
+          {
+            "time": "06:00",
+            "activity": "Turkish Airlines TK 564 IST→LIS (overnight connection from MNL)",
+            "route": "Istanbul → Lisbon",
+            "km": 3350,
+            "min": 280,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "Land LIS approx 09:50; TK departs IST 06:00",
+            "place_key": null
+          },
+          {
+            "time": "10:30",
+            "activity": "Clear immigration + collect bags + metro Yellow Line to Rato",
+            "route": "LIS → Bairro Alto",
+            "km": 8.5,
+            "min": 35,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Buy Lisboa Viva card at airport vending machine; add €10 Zapping credit",
+            "place_key": null
+          },
+          {
+            "time": "11:30",
+            "activity": "Hotel check-in or drop bags (early check-in varies)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Most hotels offer 14:00 check-in; ask for early room or use luggage storage",
+            "place_key": null
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch at local tasca — caldo verde soup + sardines",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 20,
+            "sgd": null,
+            "notes": "Restaurants close 15:00-19:30 for siesta; eat now",
+            "place_key": null
+          },
+          {
+            "time": "13:30",
+            "activity": "Walk Praça do Comércio + Rua Augusta arch",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": "praca_comercio"
+          },
+          {
+            "time": "14:30",
+            "activity": "Santa Justa Lift + Carmo terrace view",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "",
+            "place_key": "elevador_santa_justa"
+          },
+          {
+            "time": "15:15",
+            "activity": "Manteigaria — fresh pastel de nata",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 3,
+            "sgd": null,
+            "notes": "Queue 5-10min; eat standing outside",
+            "place_key": "manteigaria"
+          },
+          {
+            "time": "15:45",
+            "activity": "Rest block — hotel pool/room during peak heat (35C)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "14:00-17:00 is hottest block in Lisbon August; rest or indoor options",
+            "place_key": null
+          },
+          {
+            "time": "18:00",
+            "activity": "Explore Bairro Alto streets + sunset aperitivo",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 8,
+            "sgd": null,
+            "notes": "Bars open from 18:00; ginjinha cherry liqueur at A Ginjinha (Rossio) for €1.50",
+            "place_key": "bairro_alto_bars"
+          },
+          {
+            "time": "20:00",
+            "activity": "Dinner + live fado at Tasca do Chico",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 40,
+            "sgd": null,
+            "notes": "Reservation mandatory; fado starts 20:00 sharp",
+            "place_key": "tasca_do_chico"
+          },
+          {
+            "time": "22:30",
+            "activity": "Bairro Alto late-night bar crawl",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Rua da Atalaia + Rua do Norte — street bars peak 22:00-01:00",
+            "place_key": "bairro_alto_bars"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Belém UNESCO Circuit",
+        "rows": [
+          {
+            "time": "08:30",
+            "activity": "Breakfast + tram 15E to Belém (30min)",
+            "route": "Bairro Alto → Belém",
+            "km": 6.5,
+            "min": 30,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Depart early to beat crowds and heat; tram 15E from Praça Figueira",
+            "place_key": null
+          },
+          {
+            "time": "09:15",
+            "activity": "Pastéis de Belém — tart + galão coffee",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 6,
+            "sgd": null,
+            "notes": "Arrive before 09:30 for short queue; sit in tiled dining room",
+            "place_key": "pasteis_belem"
+          },
+          {
+            "time": "09:45",
+            "activity": "Mosteiro dos Jerónimos — cloisters + tombs",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 12,
+            "sgd": null,
+            "notes": "Book online; Vasco da Gama tomb in church (free access)",
+            "place_key": "jeronimos_monastery"
+          },
+          {
+            "time": "11:30",
+            "activity": "Torre de Belém riverfront walk + interior",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 6,
+            "sgd": null,
+            "notes": "Narrow spiral stairs; 4-floor climb; views of Tagus and 25 de Abril Bridge",
+            "place_key": "belem_tower"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch at Belém riverside café (prego sandwich + imperial beer)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 18,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:30",
+            "activity": "MAAT Museum — contemporary art + A/C refuge",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 11,
+            "sgd": null,
+            "notes": "Peak heat block; riverside terrace free even without ticket",
+            "place_key": "maat"
+          },
+          {
+            "time": "16:30",
+            "activity": "Return tram 15E to Cais do Sodré",
+            "route": "Belém → Cais do Sodré",
+            "km": 6.5,
+            "min": 30,
+            "cost_local": 2,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "17:30",
+            "activity": "Pink Street (Rua Nova do Carvalho) — early evening drinks",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "Sol e Pesca sardine bar or Bicaense for cocktails",
+            "place_key": "pink_street"
+          },
+          {
+            "time": "19:30",
+            "activity": "Dinner at Time Out Market — graze multiple stalls",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 25,
+            "sgd": null,
+            "notes": "Arrive early to beat dinner rush; get ginjinha at the bar",
+            "place_key": "time_out_market"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Alfama, Tram 28 + Castle",
+        "rows": [
+          {
+            "time": "08:00",
+            "activity": "Tram 28 from Graça terminus — full route ride",
+            "route": "Graça → Campo Ourique",
+            "km": 4.5,
+            "min": 40,
+            "cost_local": 3,
+            "sgd": null,
+            "notes": "Board at Largo da Graça terminus (fewer crowds) with Lisboa Viva card",
+            "place_key": "tram_28"
+          },
+          {
+            "time": "09:00",
+            "activity": "Castelo de São Jorge — battlements + views",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Go early before heat; entry includes archaeological site and peacocks",
+            "place_key": "sao_jorge_castle"
+          },
+          {
+            "time": "10:30",
+            "activity": "Wander Alfama streets down to Museu do Fado",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Rua de São João da Praça + Rua dos Remedios — quieter backstreets",
+            "place_key": "alfama_fado_museum"
+          },
+          {
+            "time": "12:30",
+            "activity": "Lunch — petiscos at local Mouraria tasca",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 20,
+            "sgd": null,
+            "notes": "Mouraria neighbourhood; amêijoas (clams) + bifanas (pork sandwich)",
+            "place_key": null
+          },
+          {
+            "time": "14:00",
+            "activity": "Rest/siesta block — afternoon heat peak",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Lisbon is a late city — this is normal local rhythm; cafes open",
+            "place_key": null
+          },
+          {
+            "time": "16:30",
+            "activity": "Miradouro da Senhora do Monte — highest viewpoint, quietest",
+            "route": "Mouraria → Graça",
+            "km": 1.0,
+            "min": 10,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Free; bring water; small kiosk nearby",
+            "place_key": "miradouro_senhora_monte"
+          },
+          {
+            "time": "18:00",
+            "activity": "Tagus ferry crossing Cais do Sodré to Cacilhas (return)",
+            "route": "Cais do Sodré → Cacilhas",
+            "km": 1.5,
+            "min": 10,
+            "cost_local": 2,
+            "sgd": null,
+            "notes": "€1.25 each way; Cacilhas has fresh seafood restaurants + Cristo Rei view",
+            "place_key": null
+          },
+          {
+            "time": "20:30",
+            "activity": "Dinner — Cervejaria Ramiro (seafood beerhouse)",
+            "route": "Cais do Sodré → Intendente",
+            "km": 2.0,
+            "min": 12,
+            "cost_local": 55,
+            "sgd": null,
+            "notes": "Queue outside from 20:00 or book ahead; finish with prego sandwich",
+            "place_key": "cervejaria_ramiro"
+          },
+          {
+            "time": "23:00",
+            "activity": "Pink Street night crawl",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Heats up after 23:00; Pensão Amor for cocktails",
+            "place_key": "pink_street"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sintra Day Trip",
+        "rows": [
+          {
+            "time": "08:00",
+            "activity": "CP train Rossio → Sintra (40min)",
+            "route": "Lisbon Rossio → Sintra",
+            "km": 28,
+            "min": 40,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Trains every 20min; Zapping card valid; buy return at Rossio",
+            "place_key": null
+          },
+          {
+            "time": "08:45",
+            "activity": "Scotturb bus 434 up to Pena Palace (circuit route)",
+            "route": "Sintra → Pena Palace",
+            "km": 4,
+            "min": 15,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Bus also stops at Moorish Castle and National Palace",
+            "place_key": "sintra_day_trip"
+          },
+          {
+            "time": "09:10",
+            "activity": "Pena Palace interior + terrace walkways",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 17,
+            "sgd": null,
+            "notes": "Combined palace+park ticket; colourful Romantic-era architecture",
+            "place_key": "sintra_day_trip"
+          },
+          {
+            "time": "11:00",
+            "activity": "Walk Pena Park forest trails to Moorish Castle",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "Shaded trail; ~25min walk down through woodland",
+            "place_key": null
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch at Sintra town — Travesseiro pastry at Piriquita",
+            "route": "Moorish Castle → Sintra town",
+            "km": 2,
+            "min": 15,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Piriquita famous for almond/egg-cream Travesseiro pastry since 1862",
+            "place_key": null
+          },
+          {
+            "time": "14:00",
+            "activity": "Quinta da Regaleira — initiation wells + grottos",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Entry €10; initiatic wells are famous; buy ticket at gate",
+            "place_key": null
+          },
+          {
+            "time": "16:00",
+            "activity": "Train back to Lisbon Rossio",
+            "route": "Sintra → Lisbon Rossio",
+            "km": 28,
+            "min": 40,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "LX Factory browse — bookshop + coffee",
+            "route": "Rossio → Alcântara",
+            "km": 3.5,
+            "min": 18,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Ler Devagar bookshop + coffee; cool interior",
+            "place_key": "lx_factory"
+          },
+          {
+            "time": "19:30",
+            "activity": "Dinner at LX Factory restaurant",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 30,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Museums + Departure",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Calouste Gulbenkian Museum — morning before crowds",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "Encyclopedic collection; Egyptian to Impressionist; allow 2hr",
+            "place_key": "gulbenkian_museum"
+          },
+          {
+            "time": "11:30",
+            "activity": "Museu Nacional do Azulejo (Tile Museum)",
+            "route": "São Sebastião → Beato",
+            "km": 3.0,
+            "min": 15,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Uber/Bolt recommended; 1755 panorama panel unmissable",
+            "place_key": "national_tile_museum"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch — bacalhau à brás (shredded cod) at neighbourhood café",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 18,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:00",
+            "activity": "Hotel checkout + luggage storage",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Most hotels hold bags free until departure",
+            "place_key": null
+          },
+          {
+            "time": "15:00",
+            "activity": "Final Chiado stroll — cork goods + ceramics shopping",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 30,
+            "sgd": null,
+            "notes": "Cork everything (hats, bags, wallets) — uniquely Portuguese souvenir",
+            "place_key": null
+          },
+          {
+            "time": "16:30",
+            "activity": "Metro to Aeroporto Humberto Delgado (LIS)",
+            "route": "Bairro Alto → LIS Airport",
+            "km": 8.5,
+            "min": 30,
+            "cost_local": 2,
+            "sgd": null,
+            "notes": "Red Line direct from Alameda to Aeroporto; 3hr pre-departure recommended for TK",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "Airport — check in, security, departure lounge",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Turkish Airlines check-in desk opens 3hr before; security can be 30min in August",
+            "place_key": null
+          },
+          {
+            "time": "20:00",
+            "activity": "Turkish Airlines TK 1744 LIS→IST (connection to MNL)",
+            "route": "Lisbon → Istanbul",
+            "km": 3350,
+            "min": 275,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "Arrive IST +1 day; onward TK connection to MNL",
+            "place_key": null
+          }
+        ]
+      }
+    ],
+    "v2_relaxed": [
+      {
+        "day_label": "Day 1 — Arrival + Chiado & Bairro Alto",
+        "rows": [
+          {
+            "time": "06:00",
+            "activity": "Turkish Airlines TK 564 IST→LIS (overnight connection from MNL)",
+            "route": "Istanbul → Lisbon",
+            "km": 3350,
+            "min": 280,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "Land LIS approx 09:50",
+            "place_key": null
+          },
+          {
+            "time": "10:30",
+            "activity": "Airport to hotel by metro — no rush, stop for coffee at Rossio",
+            "route": "LIS → Bairro Alto",
+            "km": 8.5,
+            "min": 40,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Buy Lisboa Viva card; add Zapping credit",
+            "place_key": null
+          },
+          {
+            "time": "12:00",
+            "activity": "Hotel check-in + drop bags; slow lunch",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 22,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:00",
+            "activity": "Rest block — pool or room during peak heat",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Recovery from long-haul; heat advisory 35C",
+            "place_key": null
+          },
+          {
+            "time": "16:30",
+            "activity": "Manteigaria pastel de nata + stroll Chiado",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Go after 16:00 for shorter queues",
+            "place_key": "manteigaria"
+          },
+          {
+            "time": "17:30",
+            "activity": "Miradouro da Senhora do Monte — sunset over the city",
+            "route": "Chiado → Graça",
+            "km": 2.0,
+            "min": 14,
+            "cost_local": 3,
+            "sgd": null,
+            "notes": "Go early to avoid crowds; higher than Portas do Sol",
+            "place_key": "miradouro_senhora_monte"
+          },
+          {
+            "time": "19:30",
+            "activity": "Early dinner + fado at Tasca do Chico",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 40,
+            "sgd": null,
+            "notes": "Book in advance; relaxed pace tonight",
+            "place_key": "tasca_do_chico"
+          },
+          {
+            "time": "22:00",
+            "activity": "One bar on Bairro Alto — early bed (jet lag recovery)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 8,
+            "sgd": null,
+            "notes": "",
+            "place_key": "bairro_alto_bars"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Belém UNESCO Circuit",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Slow breakfast at hotel, then tram 15E to Belém",
+            "route": "Bairro Alto → Belém",
+            "km": 6.5,
+            "min": 30,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "No rush; Pastéis de Belém manageable at 09:30",
+            "place_key": null
+          },
+          {
+            "time": "09:45",
+            "activity": "Pastéis de Belém — coffee + two tarts each",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 6,
+            "sgd": null,
+            "notes": "",
+            "place_key": "pasteis_belem"
+          },
+          {
+            "time": "10:15",
+            "activity": "Jerónimos Monastery interior at a leisurely pace",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 12,
+            "sgd": null,
+            "notes": "Go at your own pace; church is free access",
+            "place_key": "jeronimos_monastery"
+          },
+          {
+            "time": "12:00",
+            "activity": "Torre de Belém + riverside stroll",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 6,
+            "sgd": null,
+            "notes": "",
+            "place_key": "belem_tower"
+          },
+          {
+            "time": "13:30",
+            "activity": "Lunch at Belém — shared cataplana seafood stew",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 28,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "15:00",
+            "activity": "MAAT Museum — contemporary art + A/C recovery block",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 11,
+            "sgd": null,
+            "notes": "Siesta-appropriate; cool indoors",
+            "place_key": "maat"
+          },
+          {
+            "time": "17:30",
+            "activity": "Return tram 15E; aperitivo at Time Out Market bar",
+            "route": "Belém → Cais do Sodré",
+            "km": 6.5,
+            "min": 30,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "time_out_market"
+          },
+          {
+            "time": "20:30",
+            "activity": "Dinner at Time Out Market — graze stalls at own pace",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 25,
+            "sgd": null,
+            "notes": "",
+            "place_key": "time_out_market"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Alfama, Tram 28 + Castle",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Tram 28 leisurely ride from Graça terminus",
+            "route": "Graça → Alfama",
+            "km": 2.5,
+            "min": 25,
+            "cost_local": 3,
+            "sgd": null,
+            "notes": "No tight schedule; ride and hop off when you see something interesting",
+            "place_key": "tram_28"
+          },
+          {
+            "time": "09:30",
+            "activity": "Castelo de São Jorge (go early to avoid heat)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "",
+            "place_key": "sao_jorge_castle"
+          },
+          {
+            "time": "11:00",
+            "activity": "Museu do Fado — listening booths (air-conditioned)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Good heat refuge; take time with headphone stations",
+            "place_key": "alfama_fado_museum"
+          },
+          {
+            "time": "12:30",
+            "activity": "Lunch near Alfama — grilled sardines + bifanas",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 20,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:30",
+            "activity": "Rest block — cafe with air conditioning",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Avoid 14:00 heat outdoors",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "Miradouro da Senhora do Monte for golden hour",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": "miradouro_senhora_monte"
+          },
+          {
+            "time": "19:30",
+            "activity": "Dinner — Cervejaria Ramiro (early arrival beats queue)",
+            "route": "Graça → Intendente",
+            "km": 2.0,
+            "min": 12,
+            "cost_local": 55,
+            "sgd": null,
+            "notes": "Arrive by 19:30 to skip the queue",
+            "place_key": "cervejaria_ramiro"
+          },
+          {
+            "time": "22:00",
+            "activity": "Pink Street one or two bars — relaxed night cap",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "pink_street"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sintra Day Trip",
+        "rows": [
+          {
+            "time": "08:30",
+            "activity": "CP train Rossio → Sintra",
+            "route": "Lisbon Rossio → Sintra",
+            "km": 28,
+            "min": 40,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "Slightly later than v1 for a rest-in morning",
+            "place_key": null
+          },
+          {
+            "time": "09:30",
+            "activity": "Pena Palace — interior at relaxed pace",
+            "route": "Sintra → Pena Palace",
+            "km": 4,
+            "min": 15,
+            "cost_local": 17,
+            "sgd": null,
+            "notes": "Combined palace+park ticket; terrace views over Atlantic",
+            "place_key": "sintra_day_trip"
+          },
+          {
+            "time": "11:30",
+            "activity": "Lunch at Piriquita — Travesseiro pastry + coffee",
+            "route": "Pena → Sintra town",
+            "km": 2,
+            "min": 15,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "13:30",
+            "activity": "Quinta da Regaleira — initiation wells (self-paced)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Skip Moorish Castle to reduce steps",
+            "place_key": null
+          },
+          {
+            "time": "15:30",
+            "activity": "Train back to Lisbon",
+            "route": "Sintra → Lisbon Rossio",
+            "km": 28,
+            "min": 40,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "LX Factory browse — coffee at Ler Devagar bookshop",
+            "route": "Rossio → Alcântara",
+            "km": 3.5,
+            "min": 18,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Cooler after 17:00; browse cork and design shops",
+            "place_key": "lx_factory"
+          },
+          {
+            "time": "19:30",
+            "activity": "Dinner at LX Factory — relaxed pace",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 28,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Museums + Departure",
+        "rows": [
+          {
+            "time": "09:30",
+            "activity": "Calouste Gulbenkian Museum — unhurried morning",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "gulbenkian_museum"
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch near museum — bacalhau or grilled veal",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 20,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "13:30",
+            "activity": "Hotel checkout + luggage storage + final Chiado stroll",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "15:00",
+            "activity": "Souvenir shopping — cork goods, LCM sardine tins",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 30,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "16:30",
+            "activity": "Metro Red Line to Aeroporto LIS",
+            "route": "Bairro Alto → LIS Airport",
+            "km": 8.5,
+            "min": 30,
+            "cost_local": 2,
+            "sgd": null,
+            "notes": "3hr check-in buffer for Turkish Airlines",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "Airport — check in + security + lounge",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "20:00",
+            "activity": "Turkish Airlines TK 1744 LIS→IST (connection to MNL)",
+            "route": "Lisbon → Istanbul",
+            "km": 3350,
+            "min": 275,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          }
+        ]
+      }
+    ],
+    "v3_weather": [
+      {
+        "day_label": "Day 1 — Arrival + Chiado & Bairro Alto (rain plan)",
+        "rows": [
+          {
+            "time": "06:00",
+            "activity": "Turkish Airlines TK 564 IST→LIS",
+            "route": "Istanbul → Lisbon",
+            "km": 3350,
+            "min": 280,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "August rain is rare in Lisbon (avg 4mm); heat-wave protocol more likely than rain",
+            "place_key": null
+          },
+          {
+            "time": "10:30",
+            "activity": "Airport to hotel by metro",
+            "route": "LIS → Bairro Alto",
+            "km": 8.5,
+            "min": 35,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "11:30",
+            "activity": "Hotel check-in + bags",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch indoors — tasca with covered courtyard",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 22,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "13:30",
+            "activity": "Manteigaria (indoor counter) + Chiado café hopping",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 8,
+            "sgd": null,
+            "notes": "Skip outdoor Praça do Comércio walk",
+            "place_key": "manteigaria"
+          },
+          {
+            "time": "15:00",
+            "activity": "Calouste Gulbenkian Museum (air-conditioned; encyclopedic collection)",
+            "route": "Chiado → São Sebastião",
+            "km": 3.5,
+            "min": 16,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "Excellent heat/rain refuge; 2hr minimum",
+            "place_key": "gulbenkian_museum"
+          },
+          {
+            "time": "17:30",
+            "activity": "Return to Bairro Alto; aperitivo at indoor wine bar",
+            "route": "São Sebastião → Bairro Alto",
+            "km": 3.5,
+            "min": 16,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "20:00",
+            "activity": "Fado dinner at Tasca do Chico (indoor, covered)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 40,
+            "sgd": null,
+            "notes": "",
+            "place_key": "tasca_do_chico"
+          },
+          {
+            "time": "22:00",
+            "activity": "Bairro Alto indoor bars (most have interiors even if doors open)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "bairro_alto_bars"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Belém UNESCO Circuit (rain plan)",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Tram 15E to Belém — rain check before departing",
+            "route": "Bairro Alto → Belém",
+            "km": 6.5,
+            "min": 30,
+            "cost_local": 4,
+            "sgd": null,
+            "notes": "If heavy rain, skip Belém Tower exterior; do Jerónimos interior only",
+            "place_key": null
+          },
+          {
+            "time": "09:45",
+            "activity": "Pastéis de Belém — indoor tiled rooms (always open)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 6,
+            "sgd": null,
+            "notes": "",
+            "place_key": "pasteis_belem"
+          },
+          {
+            "time": "10:15",
+            "activity": "Jerónimos Monastery interior (covered cloisters — rain-proof)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 12,
+            "sgd": null,
+            "notes": "Gothic cloisters have covered walkways; good in light rain",
+            "place_key": "jeronimos_monastery"
+          },
+          {
+            "time": "12:00",
+            "activity": "MAAT Museum — contemporary art, fully indoor",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 11,
+            "sgd": null,
+            "notes": "Skip Tower exterior if still raining; MAAT is excellent substitute",
+            "place_key": "maat"
+          },
+          {
+            "time": "13:30",
+            "activity": "Lunch at Belém indoor restaurant",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 22,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "15:00",
+            "activity": "National Tile Museum (Azulejo) — full afternoon",
+            "route": "Belém → Beato",
+            "km": 5.0,
+            "min": 20,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Uber to Azulejo museum; 1755 earthquake panorama tile panel",
+            "place_key": "national_tile_museum"
+          },
+          {
+            "time": "17:30",
+            "activity": "Time Out Market food hall — indoor dinner and drinks",
+            "route": "Beato → Cais do Sodré",
+            "km": 3.0,
+            "min": 14,
+            "cost_local": 30,
+            "sgd": null,
+            "notes": "Market is fully covered; great for a rainy evening graze",
+            "place_key": "time_out_market"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Alfama, Tram 28 + Castle (rain plan)",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Museu do Fado — indoor audio tour (skip Tram 28 in heavy rain)",
+            "route": "Bairro Alto → Alfama",
+            "km": 2.0,
+            "min": 12,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Tram 28 in rain = cobblestones slippery; take Uber if raining",
+            "place_key": "alfama_fado_museum"
+          },
+          {
+            "time": "10:30",
+            "activity": "Castelo de São Jorge — battlements (covered ramparts offer shelter)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 15,
+            "sgd": null,
+            "notes": "Still worthwhile in light rain; skip if thunderstorm warning",
+            "place_key": "sao_jorge_castle"
+          },
+          {
+            "time": "12:30",
+            "activity": "Lunch — covered tasca in Alfama",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 20,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:00",
+            "activity": "LX Factory indoor shops + café (rain refuge)",
+            "route": "Alfama → Alcântara",
+            "km": 4.5,
+            "min": 20,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Covered factory buildings; bookshop + restaurants",
+            "place_key": "lx_factory"
+          },
+          {
+            "time": "16:30",
+            "activity": "Bairro Alto Hotel Spa — steam room + massage (heat or rain recovery)",
+            "route": "Alcântara → Bairro Alto",
+            "km": 2.8,
+            "min": 14,
+            "cost_local": 90,
+            "sgd": null,
+            "notes": "Book same day if possible; advance recommended",
+            "place_key": "spa_chiado"
+          },
+          {
+            "time": "20:00",
+            "activity": "Dinner — Cervejaria Ramiro indoors",
+            "route": "Bairro Alto → Intendente",
+            "km": 2.5,
+            "min": 13,
+            "cost_local": 55,
+            "sgd": null,
+            "notes": "",
+            "place_key": "cervejaria_ramiro"
+          },
+          {
+            "time": "22:30",
+            "activity": "Pink Street indoor bars (covered venues available)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "pink_street"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sintra Day Trip (rain plan)",
+        "rows": [
+          {
+            "time": "08:30",
+            "activity": "Weather check: if Sintra cloudy/cool go as planned — mist is a feature",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "Sintra is cooler + foggy in morning; the romantic mist is a feature, not a bug",
+            "place_key": null
+          },
+          {
+            "time": "09:00",
+            "activity": "If Lisbon rain — pivot to Gulbenkian Museum full morning",
+            "route": "Bairro Alto → São Sebastião",
+            "km": 4.0,
+            "min": 18,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "Full day in Gulbenkian complex if Sintra scrubbed",
+            "place_key": "gulbenkian_museum"
+          },
+          {
+            "time": "11:00",
+            "activity": "National Tile Museum (Azulejo) — full 2hr visit",
+            "route": "São Sebastião → Beato",
+            "km": 3.0,
+            "min": 14,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "Indoor all day; covers unique Portuguese art form",
+            "place_key": "national_tile_museum"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch at Intendente neighbourhood café",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 18,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "15:00",
+            "activity": "LX Factory + Ler Devagar bookshop afternoon",
+            "route": "Beato → Alcântara",
+            "km": 3.5,
+            "min": 16,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "",
+            "place_key": "lx_factory"
+          },
+          {
+            "time": "18:00",
+            "activity": "Time Out Market early dinner",
+            "route": "Alcântara → Cais do Sodré",
+            "km": 2.5,
+            "min": 12,
+            "cost_local": 25,
+            "sgd": null,
+            "notes": "",
+            "place_key": "time_out_market"
+          },
+          {
+            "time": "20:30",
+            "activity": "Hotel rest — recover from full indoor day",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Museums + Departure (rain plan)",
+        "rows": [
+          {
+            "time": "09:30",
+            "activity": "Calouste Gulbenkian Museum — if not done earlier",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 10,
+            "sgd": null,
+            "notes": "",
+            "place_key": "gulbenkian_museum"
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch indoors — bacalhau à brás",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 18,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "13:30",
+            "activity": "Hotel checkout + luggage storage",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 5,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "14:30",
+            "activity": "Indoor shopping — Embaixada gallery mall (Moorish palace; covered)",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 30,
+            "sgd": null,
+            "notes": "Embaixada on Praça do Príncipe Real; Portuguese designer brands",
+            "place_key": null
+          },
+          {
+            "time": "16:30",
+            "activity": "Metro Red Line to Aeroporto LIS",
+            "route": "Bairro Alto → LIS Airport",
+            "km": 8.5,
+            "min": 30,
+            "cost_local": 2,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "17:00",
+            "activity": "Airport check-in + security + departure lounge",
+            "route": "",
+            "km": null,
+            "min": null,
+            "cost_local": 0,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          },
+          {
+            "time": "20:00",
+            "activity": "Turkish Airlines TK 1744 LIS→IST (connection to MNL)",
+            "route": "Lisbon → Istanbul",
+            "km": 3350,
+            "min": 275,
+            "cost_local": null,
+            "sgd": null,
+            "notes": "",
+            "place_key": null
+          }
+        ]
+      }
+    ]
+  },
+  "risk_flags": [
+    [
+      "Schengen Visa Required",
+      "PH passport holders must obtain Schengen type-C visa via Portuguese consulate in Manila before travel — apply 6-8 weeks early."
+    ],
+    [
+      "Heat Wave Risk",
+      "Lisbon August averages 35C+ with occasional 40C+ heat waves; outdoor activities should avoid 13:00-17:00; stay hydrated with 2L/day minimum."
+    ],
+    [
+      "Pickpocket Hotspots",
+      "Tram 28 and Alfama tourist streets are active pickpocket zones; use inner pockets, no rear-pocket wallets, split cash."
+    ],
+    [
+      "Sintra Crowd Surge",
+      "Pena Palace reaches capacity by 11:00 in August; pre-book timed entry and arrive before 09:15 or accept 45min queue."
+    ],
+    [
+      "Long-Haul Transit via IST",
+      "Turkish Airlines connection at Istanbul; IST is a large airport — allow 2hr minimum transit buffer for MNL connection."
+    ]
+  ],
+  "booking_timeline": [
+    {
+      "window": "12+ weeks",
+      "lead_time": "Now",
+      "action": "Apply for Schengen Type-C visa at Portuguese consulate Manila",
+      "why": "Processing takes 4-8 weeks; peak summer demand — apply by June 1 for August travel"
+    },
+    {
+      "window": "10-12 weeks",
+      "lead_time": "Soon",
+      "action": "Lock Turkish Airlines MNL–LIS flights (via IST)",
+      "why": "Long-haul EU fares 12-16 weeks out; August peak prices surge from SGD 900+"
+    },
+    {
+      "window": "8-10 weeks",
+      "lead_time": "Soon",
+      "action": "Reserve hotel with free cancellation policy",
+      "why": "Bairro Alto and Chiado properties sell out by July for August dates"
+    },
+    {
+      "window": "6-8 weeks",
+      "lead_time": "Soon",
+      "action": "Buy Pena Palace + Sintra timed-entry tickets online",
+      "why": "Palace caps daily visitors; August sells out weeks ahead"
+    },
+    {
+      "window": "4-6 weeks",
+      "lead_time": "Soon",
+      "action": "Reserve Tasca do Chico fado dinner",
+      "why": "20-seat venue; books solid 3-4 weeks out for summer"
+    },
+    {
+      "window": "3-4 weeks",
+      "lead_time": "Soon",
+      "action": "Buy GetYourGuide Sintra tour or Tagus sunset cruise if desired",
+      "why": "Best availability 3-4 weeks out; tours often fill Fri-Sun"
+    },
+    {
+      "window": "2-3 weeks",
+      "lead_time": "Soon",
+      "action": "Purchase Airalo EU eSIM (Orange Portugal)",
+      "why": "EU roaming eSIM activatable on arrival; 15-day data from €12"
+    },
+    {
+      "window": "1 week",
+      "lead_time": "Now",
+      "action": "Download offline Lisbon map + print visa copy",
+      "why": "Cobblestone Alfama alleys poor data signal; border agents may ask for visa docs"
+    },
+    {
+      "window": "Day before",
+      "lead_time": "Now",
+      "action": "Check Lisbon heat forecast; pre-book spa if heat wave flagged",
+      "why": "If 40C+ forecast, adjust Day 2-3 outdoor morning to 08:00-10:00 only"
+    },
+    {
+      "window": "Day-of",
+      "lead_time": "Now",
+      "action": "Confirm flight status + download Turkish Airlines app for gate info",
+      "why": "Istanbul transit — real-time gate updates critical"
+    }
+  ],
+  "practical_info": [
+    [
+      "Currency",
+      "Euro (EUR). ATMs widely available — use Multibanco network. Avoid airport ATMs (high fees); use city Multibanco for better rates."
+    ],
+    [
+      "Cash vs Card",
+      "Cards accepted almost everywhere in Lisbon proper; carry €30-50 cash for taxis, markets, small tascas. Some Alfama tascas cash-only."
+    ],
+    [
+      "SIM / eSIM",
+      "EU eSIM from Airalo (Orange Portugal or NOS) from €12 for 15 days, 10GB. Activate on arrival. Alternatively buy NOS or MEO prepaid at airport."
+    ],
+    [
+      "Metro + Tram",
+      "Lisbon Viva card (€0.50) + Zapping credit works on Metro, trams, buses. Single fare ~€1.40. 24hr unlimited pass €6.60."
+    ],
+    [
+      "Taxis + Rideshare",
+      "Uber, Bolt, and Freenow all operate. Bolt typically cheapest. Avoid unmarked taxis in Alfama tourist areas — ask for metered fare."
+    ],
+    [
+      "Siesta Culture",
+      "Most sit-down restaurants close 15:00-19:30. Eating window: lunch 12:00-14:30, dinner 19:30-23:30. Lisbon eats late."
+    ],
+    [
+      "Heat Advisory",
+      "August heat waves 35-42C are common. Carry minimum 1.5L water. Avoid sun exposure 13:00-17:00. Wear light linen or breathable synthetics."
+    ],
+    [
+      "Language",
+      "Portuguese. English widely spoken in tourist areas; less so in outer neighbourhoods. Learn obrigado (thank you) and por favor."
+    ],
+    [
+      "Safety",
+      "Lisbon is generally safe. Main risks: pickpockets on Tram 28 and Alfama; occasional bag-snatching near Praça do Comércio. Keep bags front-facing."
+    ],
+    [
+      "Tap Water",
+      "Potable — safe to drink. Lisbon tap water has slight chlorine taste; many locals buy mineral water anyway. Bring refillable bottle."
+    ],
+    [
+      "Power Plug",
+      "Type F (Schuko) — PH plugs (Type A) will not fit directly. Buy a Type A to F adaptor in Manila or at LIS airport (€5-8). Voltage 230V/50Hz."
+    ],
+    [
+      "Tipping",
+      "10% appreciated in restaurants (not mandatory); round up for coffee. Tipping culture is lighter than USA or UK."
+    ],
+    [
+      "Public Toilets",
+      "Scarce outside major monuments. Use café toilets — buy an espresso (€0.80) to justify use. Jerónimos and MAAT have clean facilities."
+    ],
+    [
+      "Pharmacies",
+      "Farmácia widespread; marked with green cross. Will dispense paracetamol, ibuprofen, sunscreen without prescription."
+    ],
+    [
+      "Emergency",
+      "112 universal (police, ambulance, fire). Hospital São José is the main central hospital; private CUF Descobertas has English-speaking staff."
+    ]
+  ],
+  "checklist": [
+    {
+      "category": "Documents",
+      "item": "Passport (valid to Feb 2027 minimum)"
+    },
+    {
+      "category": "Documents",
+      "item": "Portugal / Schengen visa (Type C, printed + digital copy)"
+    },
+    {
+      "category": "Documents",
+      "item": "Travel insurance with medical + trip cancellation"
+    },
+    {
+      "category": "Documents",
+      "item": "Turkish Airlines booking reference (both segments)"
+    },
+    {
+      "category": "Documents",
+      "item": "Hotel confirmation printout"
+    },
+    {
+      "category": "Documents",
+      "item": "Pena Palace timed-entry ticket (print or app)"
+    },
+    {
+      "category": "Money",
+      "item": "Euro cash €100-200 for arrival buffer (Multibanco later)"
+    },
+    {
+      "category": "Money",
+      "item": "Visa/Mastercard credit card (Amex less accepted in Lisbon)"
+    },
+    {
+      "category": "Money",
+      "item": "Notify bank of travel dates to avoid card blocks"
+    },
+    {
+      "category": "Health",
+      "item": "Sunscreen SPF 50+ — re-apply every 2hr outdoors in August heat"
+    },
+    {
+      "category": "Health",
+      "item": "Electrolyte sachets — heat wave prevention"
+    },
+    {
+      "category": "Health",
+      "item": "Lip balm with SPF (Atlantic sea breeze + sun = dry lips)"
+    },
+    {
+      "category": "Health",
+      "item": "Personal medications + prescription copies"
+    },
+    {
+      "category": "Health",
+      "item": "Travel-size ibuprofen + antihistamine"
+    },
+    {
+      "category": "Devices",
+      "item": "Type A to Type F power adaptor (European Schuko)"
+    },
+    {
+      "category": "Devices",
+      "item": "Universal power bank 10000mAh+ (GPS navigation drains battery)"
+    },
+    {
+      "category": "Devices",
+      "item": "EU eSIM activated (Airalo or local prepaid)"
+    },
+    {
+      "category": "Devices",
+      "item": "Offline Lisbon map downloaded (Maps.me or Google)"
+    },
+    {
+      "category": "Clothing",
+      "item": "Light linen or breathable shirts (35C+ temps)"
+    },
+    {
+      "category": "Clothing",
+      "item": "Comfortable walking shoes — Alfama has steep cobblestone hills"
+    },
+    {
+      "category": "Clothing",
+      "item": "Light cardigan or layer for cool evenings and A/C interiors"
+    },
+    {
+      "category": "Clothing",
+      "item": "Sun hat or cap — mandatory for Sintra + Belém outdoor exposure"
+    },
+    {
+      "category": "Clothing",
+      "item": "Modest cover for monastery visits (shoulders + knees at Jerónimos)"
+    },
+    {
+      "category": "Day-Pack",
+      "item": "Refillable water bottle 750ml+ (public fountains available)"
+    },
+    {
+      "category": "Day-Pack",
+      "item": "Lisboa Viva transit card (pick up at airport on arrival)"
+    },
+    {
+      "category": "Day-Pack",
+      "item": "Small day-pack (NOT backpack — pickpocket deterrence in Alfama)"
+    }
+  ],
+  "hidden_gems_categorized": {
+    "viewpoints": [
+      {
+        "name": "Miradouro da Senhora do Monte",
+        "distance": "2.2km from Bairro Alto",
+        "travel_time": "12min by Uber or 20min on foot uphill",
+        "why_quiet": "Fewer tour buses than Portas do Sol; no food vendors; primarily local artists and photographers",
+        "notes": "Highest vantage in central Lisbon; best at golden hour 18:00-19:30"
+      },
+      {
+        "name": "Miradouro do Monte Agudo",
+        "distance": "2.5km from base",
+        "travel_time": "15min walk from Alfama",
+        "why_quiet": "Barely on tourist maps; tiny terrace behind a residential building; no facilities",
+        "notes": "Faces northeast over railway lines and river; photographic novelty"
+      }
+    ],
+    "food": [
+      {
+        "name": "Zé da Mouraria",
+        "distance": "1.8km from Bairro Alto",
+        "travel_time": "10min Uber",
+        "why_quiet": "Mouraria neighbourhood is gentrifying but still off main Alfama tourist trail",
+        "notes": "Counter-top ameijoas (clams) and bifanas; lunch only; cash preferred"
+      },
+      {
+        "name": "A Cevicheria (Principe Real)",
+        "distance": "0.8km from base",
+        "travel_time": "8min walk",
+        "why_quiet": "Fusion ceviche is unusual in Lisbon; queue at door not on tourist app radar",
+        "notes": "Chef Kiko modern Portuguese ceviche; octopus tataki; no reservations — queue from 12:30"
+      }
+    ],
+    "culture": [
+      {
+        "name": "LX Factory Sunday Market",
+        "distance": "2.8km from base",
+        "travel_time": "14min Bolt",
+        "why_quiet": "Weekday LX Factory is quiet; Sunday market less saturated than Feira da Ladra flea market",
+        "notes": "Local designers, vinyl, furniture, street food; 10:00-18:00 Sundays"
+      },
+      {
+        "name": "Museu do Azulejo (Tile Museum)",
+        "distance": "3.5km from base",
+        "travel_time": "16min metro + walk",
+        "why_quiet": "Eastern Beato district; tourists rarely venture this far; weekday mornings near empty",
+        "notes": "The 1755 Lisbon panorama tile is alone worth the Uber; not on most group tour circuits"
+      }
+    ]
+  },
+  "v1_v2_compare": [
+    {
+      "item": "Day 1 arrival activity",
+      "v1": "Praça do Comércio + Santa Justa Lift (full afternoon)",
+      "v2": "Manteigaria only + long rest block (jet lag recovery)",
+      "why": "v2 cuts outdoor exposure and pacing on arrival day"
+    },
+    {
+      "item": "Day 1 evening viewpoint",
+      "v1": "Bairro Alto bar crawl from 18:00",
+      "v2": "Miradouro da Senhora do Monte golden hour (quieter hidden gem)",
+      "why": "v2 swaps crowd exposure for hidden-gem viewpoint"
+    },
+    {
+      "item": "Day 3 morning",
+      "v1": "Tram 28 full route at 08:00 packed",
+      "v2": "Tram 28 leisurely from 09:00 with no tight onward schedule",
+      "why": "v2 shifts start later; Lisbon is a late-rising city"
+    },
+    {
+      "item": "Day 3 afternoon",
+      "v1": "Cervejaria Ramiro + Pink Street night crawl",
+      "v2": "Miradouro da Senhora do Monte golden hour instead of early bar crawl",
+      "why": "v2 reduces evening intensity; same dinner at Ramiro"
+    },
+    {
+      "item": "Day 4 Sintra",
+      "v1": "Pena + Moorish Castle + Regaleira full circuit (full stamina required)",
+      "v2": "Pena + Regaleira only (skip Moorish Castle) — reduced steps",
+      "why": "v2 reduces walking by ~3km on a hot day"
+    },
+    {
+      "item": "Day 5 morning",
+      "v1": "Gulbenkian + Azulejo tile museum back-to-back",
+      "v2": "Gulbenkian only (skip Azulejo)",
+      "why": "v2 keeps departure day relaxed; one museum not two"
+    }
+  ],
+  "weather_plan_b": {
+    "emit": true,
+    "rationale": "Lisbon August: hot dry 30-35C, heat-wave risk not rain (avg 4mm Aug); outdoor activity restricted 13:00-17:00 on hot days; thunderstorms rare but possible from Atlantic",
+    "decision_tree": [
+      {
+        "level": "clear",
+        "action": "Proceed with v1; front-load outdoor before 12:00"
+      },
+      {
+        "level": "PM showers",
+        "action": "Move outdoor visits to morning; museums + Time Out Market in afternoon"
+      },
+      {
+        "level": "all-day rain",
+        "action": "Switch to v3 weather plan; Jerónimos cloisters + MAAT + Time Out Market loop"
+      },
+      {
+        "level": "tropical storm",
+        "action": "Indoor day: Gulbenkian + Tile Museum + LX Factory; no Sintra trip"
+      },
+      {
+        "level": "typhoon warning",
+        "action": "N/A for Lisbon; use extreme-heat-event protocol instead — hotel pool day, adjust departure logistics if 42C+ forecast"
+      }
+    ],
+    "per_day_swaps": [
+      {
+        "day_label": "Day 1 — Arrival + Chiado & Bairro Alto",
+        "swaps": [
+          {
+            "original": "Praça do Comércio afternoon walk",
+            "why_risk": "Exposed open plaza — extreme heat in afternoon",
+            "trigger": "Heat advisory >38C or rain",
+            "action": "Replace with Manteigaria + café hopping Chiado",
+            "alt_local": 8,
+            "channel": "DIY"
+          },
+          {
+            "original": "Santa Justa Lift climb",
+            "why_risk": "Outdoor exposed queue in heat",
+            "trigger": "Heat advisory >38C",
+            "action": "Skip lift; walk covered arcades of Baixa Pombalina instead",
+            "alt_local": 0,
+            "channel": "DIY"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Belém UNESCO Circuit",
+        "swaps": [
+          {
+            "original": "Torre de Belém exterior climb",
+            "why_risk": "Narrow tower exposed to direct sun at peak heat",
+            "trigger": "Heat >38C or rain",
+            "action": "Visit MAAT instead; skip tower interior; terrace viewing is free",
+            "alt_local": 11,
+            "channel": "DIY"
+          },
+          {
+            "original": "Belém riverside walk between sites",
+            "why_risk": "Exposed waterfront 1km walk in direct sun",
+            "trigger": "Heat >36C",
+            "action": "Take Bolt between Jerónimos and Tower instead of walking",
+            "alt_local": 5,
+            "channel": "Bolt app"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Alfama, Tram 28 + Castle",
+        "swaps": [
+          {
+            "original": "Tram 28 ride (crowded + hot tram)",
+            "why_risk": "Non-A/C wooden trams become ovens in 35C+ heat",
+            "trigger": "Heat >36C",
+            "action": "Take Bolt to Castelo instead; skip tram or ride early at 08:00",
+            "alt_local": 5,
+            "channel": "Bolt app"
+          },
+          {
+            "original": "Miradouro da Senhora do Monte at sunset",
+            "why_risk": "Exposed hilltop in rain",
+            "trigger": "PM showers",
+            "action": "Stay at Museu do Fado audio tour instead",
+            "alt_local": 5,
+            "channel": "DIY"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sintra Day Trip",
+        "swaps": [
+          {
+            "original": "Full Sintra day trip",
+            "why_risk": "Sintra outdoor palace trails exposed to heat or rain",
+            "trigger": "Heat >38C in Sintra OR sustained rain",
+            "action": "Pivot to full indoor day: Gulbenkian + Tile Museum + LX Factory",
+            "alt_local": 20,
+            "channel": "DIY"
+          },
+          {
+            "original": "Walk from Pena to Moorish Castle",
+            "why_risk": "Exposed forested trail in extreme heat",
+            "trigger": "Heat >36C",
+            "action": "Skip walk; take Scotturb bus 434 between stops",
+            "alt_local": 5,
+            "channel": "Scotturb bus 434"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Museums + Departure",
+        "swaps": [
+          {
+            "original": "Chiado outdoor stroll + shopping",
+            "why_risk": "Afternoon exposure before airport departure",
+            "trigger": "Heat >38C",
+            "action": "Shop at Embaixada gallery mall (covered Moorish palace interior)",
+            "alt_local": 0,
+            "channel": "DIY"
+          }
+        ]
+      }
+    ],
+    "booking_flex_tips": [
+      {
+        "label": "Book hotels with free-cancel policy up to 24hr before",
+        "text": "heat waves may change plans"
+      },
+      {
+        "label": "Pena Palace timed entry is non-refundable",
+        "text": "rebook at least 48hr out if forecast looks dangerous"
+      },
+      {
+        "label": "Turkish Airlines plus-fare allows date changes",
+        "text": "consider if extreme heat event hits during departure window"
+      },
+      {
+        "label": "GetYourGuide tours typically refundable 24-48hr before",
+        "text": "check individual listing policy"
+      },
+      {
+        "label": "Tasca do Chico: call to rebook if sick",
+        "text": "they will accommodate once with 24hr notice"
+      }
+    ],
+    "indoor_bank": [
+      {
+        "name": "Mosteiro dos Jerónimos",
+        "area": "Belém",
+        "local_cost": 12,
+        "duration": "1.5hr",
+        "notes": "Masterpiece of Manueline Gothic architecture, completed 1601. Houses tombs of Vasco da Gama and poet Luís de Camões. €12 entry; arrive before 10:00 to beat tour groups."
+      },
+      {
+        "name": "LX Factory",
+        "area": "Alcântara",
+        "local_cost": 0,
+        "duration": "2hr",
+        "notes": "Repurposed 19th-century textile factory turned creative hub: independent shops, bookstore Ler Devagar (with a swing), restaurants, weekend market Sunday 10:00-18:00. Free to enter; individual shops va"
+      },
+      {
+        "name": "Manteigaria – Fábrica de Pastéis de Nata",
+        "area": "Chiado",
+        "local_cost": 2,
+        "duration": "20min",
+        "notes": "Standing-room pastry counter in Chiado producing fresh pastéis de nata every 15 minutes. €1.40 per tart, best eaten warm with cinnamon and icing sugar. Queue moves fast."
+      },
+      {
+        "name": "Pastéis de Belém",
+        "area": "Belém",
+        "local_cost": 2,
+        "duration": "30min",
+        "notes": "Original 1837 source of the custard tart recipe; the filling formula is a closely guarded secret. Takes on Blue Willow-pattern tiles. Price €1.40/tart. Queue can be 30min but moves quickly."
+      },
+      {
+        "name": "Tasca do Chico",
+        "area": "Bairro Alto",
+        "local_cost": 35,
+        "duration": "2hr",
+        "notes": "Small wood-panelled tasca in Bairro Alto offering live fado music nightly at 20:00, free with your meal. Menu of petiscos (sharing plates): chouriço flambé, octopus salad, bacalhau. Reservation essent"
+      },
+      {
+        "name": "Time Out Market Lisboa",
+        "area": "Cais do Sodré",
+        "local_cost": 15,
+        "duration": "1.5hr",
+        "notes": "Curated food hall in the 1882 Mercado da Ribeira: 35+ stalls including starred-chef counters (Henrique Sá Pessoa), ginjinha bar, fresh seafood. Covered, air-conditioned. Open daily."
+      },
+      {
+        "name": "MAAT – Museum of Art, Architecture and Technology",
+        "area": "Belém",
+        "local_cost": 11,
+        "duration": "1.5hr",
+        "notes": "Contemporary art and architecture museum by Amanda Levete; wave-shaped white tiles on riverside. Collection covers media art and digital installations. Entry €11, riverside terrace free. Air-condition"
+      },
+      {
+        "name": "Calouste Gulbenkian Museum",
+        "area": "São Sebastião",
+        "local_cost": 10,
+        "duration": "2hr",
+        "notes": "Encyclopedic collection from Egyptian antiquities to Renoir, Rembrandt, and Lalique glass, assembled by oil magnate Calouste Gulbenkian. Entry €10; gardens included. One of Europe's best-kept museum s"
+      },
+      {
+        "name": "Cervejaria Ramiro",
+        "area": "Intendente",
+        "local_cost": 50,
+        "duration": "1.5hr",
+        "notes": "Lisbon's most famous beerhouse serving piri-piri prawns, clams in garlic-wine, and grilled lobster since 1956. Queue outside or book. Finish with a prego sandwich. Budget €40-60pp with drinks."
+      },
+      {
+        "name": "Bairro Alto Hotel Spa",
+        "area": "Chiado",
+        "local_cost": 90,
+        "duration": "2hr",
+        "notes": "Boutique spa at Bairro Alto Hotel with mosaic tile pool, steam room, and Portuguese cork-oil treatments. Massages from €90 for 50min. Advance booking required."
+      },
+      {
+        "name": "Museu do Fado",
+        "area": "Alfama",
+        "local_cost": 5,
+        "duration": "1hr",
+        "notes": "Two-floor museum tracing fado's evolution from 19th-century Alfama taverns to UNESCO heritage status. Listening booths with headphones, vintage instruments, photographs. Entry €5."
+      },
+      {
+        "name": "Museu Nacional do Azulejo",
+        "area": "Beato",
+        "local_cost": 5,
+        "duration": "1.5hr",
+        "notes": "Housed in a 16th-century Manueline convent, the world's only museum dedicated to azulejo (blue-and-white tile). 20,000-piece panorama of Lisbon pre-1755 earthquake. Entry €5. A/C."
+      }
+    ]
+  },
+  "transport_tips": [
+    "Lisboa Viva card (€0.50) + Zapping credit is the correct city transit setup — works on Metro, Tram, Bus, Elevadores.",
+    "Tram 15E is the fastest way to Belém; departs Praça da Figueira every 10-12min.",
+    "Metro has 4 lines (Yellow/Blue/Green/Red); Red Line connects airport to Alameda interchange.",
+    "Bolt and Uber are cheaper than taxis (€3-8 for most inner-city rides). Avoid TukTuks for transport — tourist pricing.",
+    "CP trains (Comboios de Portugal) serve Sintra (Rossio line) and Cascais (Cais do Sodré line). Zapping card valid.",
+    "Alfama and Bairro Alto are pedestrian-first; streets too narrow for rideshare drop-off in many spots — walk last 200m.",
+    "Night buses (Carris) operate after Metro closes (01:00). Night Bus 759 connects Baixa to Bairro Alto."
+  ],
+  "accommodation_recommendation": "Bairro Alto is the optimal base: walkable to Chiado, LX nightlife, Time Out Market, and Santa Justa. Mid-range recommendation: Hotel do Chiado (rooftop castle views, €140-200/night). Budget: Generator Lisbon Graça or Casa de São Mamede. For honeymoon/splurge: Bairro Alto Hotel (5 stars, €380+).",
+  "practical_links": {
+    "transport": [
+      {
+        "label": "CP Trains (Sintra line)",
+        "url": "https://www.cp.pt/passageiros/en"
+      },
+      {
+        "label": "Carris Metro Lisbon",
+        "url": "https://www.carris.pt/en/"
+      }
+    ],
+    "attractions": [
+      {
+        "label": "Pena Palace booking",
+        "url": "https://www.parquesdesintra.pt/"
+      },
+      {
+        "label": "Gulbenkian Museum",
+        "url": "https://gulbenkian.pt/museu/"
+      },
+      {
+        "label": "Time Out Market",
+        "url": "https://www.timeoutmarket.com/lisboa/"
+      }
+    ],
+    "visa": [
+      {
+        "label": "VFS Portugal Philippines",
+        "url": "https://www.vfsglobal.com/portugal/philippines/"
+      },
+      {
+        "label": "Embassy of Portugal Manila",
+        "url": "https://www.embaixada-portugal-manila.org/"
+      }
+    ],
+    "esim": [
+      {
+        "label": "Airalo EU eSIM",
+        "url": "https://www.airalo.com/europe-esim"
+      }
+    ]
+  },
+  "maps": {
+    "regional": {
+      "zoom": 10,
+      "places": [
+        {
+          "lat": 38.7223,
+          "lon": -9.1393,
+          "label": "Lisbon Centre",
+          "color": "red",
+          "pos": "NE"
+        },
+        {
+          "lat": 38.6979,
+          "lon": -9.2044,
+          "label": "Belém",
+          "color": "blue",
+          "pos": "SW"
+        },
+        {
+          "lat": 38.7922,
+          "lon": -9.39,
+          "label": "Sintra / Pena",
+          "color": "orange",
+          "pos": "NW"
+        },
+        {
+          "lat": 38.6939,
+          "lon": -9.422,
+          "label": "Cascais",
+          "color": "green",
+          "pos": "SW"
+        },
+        {
+          "lat": 38.6447,
+          "lon": -9.168,
+          "label": "Cristo Rei / Cacilhas",
+          "color": "purple",
+          "pos": "S"
+        },
+        {
+          "lat": 38.7557,
+          "lon": -9.1539,
+          "label": "Gulbenkian / São Sebastião",
+          "color": "darkblue",
+          "pos": "N"
+        }
+      ]
+    },
+    "city_closeup": {
+      "zoom": 12,
+      "places": [
+        {
+          "lat": 38.7139,
+          "lon": -9.14,
+          "label": "Bairro Alto (Base)",
+          "color": "red",
+          "pos": "W"
+        },
+        {
+          "lat": 38.7066,
+          "lon": -9.1359,
+          "label": "Praça do Comércio",
+          "color": "blue",
+          "pos": "SE"
+        },
+        {
+          "lat": 38.7117,
+          "lon": -9.1337,
+          "label": "Santa Justa Lift",
+          "color": "orange",
+          "pos": "E"
+        },
+        {
+          "lat": 38.7108,
+          "lon": -9.1365,
+          "label": "Manteigaria (Chiado)",
+          "color": "green",
+          "pos": "NE"
+        },
+        {
+          "lat": 38.7139,
+          "lon": -9.1226,
+          "label": "São Jorge Castle",
+          "color": "purple",
+          "pos": "NE"
+        },
+        {
+          "lat": 38.722,
+          "lon": -9.1321,
+          "label": "Miradouro Sra Monte",
+          "color": "darkblue",
+          "pos": "N"
+        },
+        {
+          "lat": 38.7205,
+          "lon": -9.1378,
+          "label": "Tram 28 Graça",
+          "color": "orange",
+          "pos": "NW"
+        },
+        {
+          "lat": 38.7033,
+          "lon": -9.1577,
+          "label": "Pink Street Cais do Sodré",
+          "color": "red",
+          "pos": "SW"
+        },
+        {
+          "lat": 38.7058,
+          "lon": -9.1609,
+          "label": "Time Out Market",
+          "color": "blue",
+          "pos": "W"
+        }
+      ]
+    }
+  },
+  "distance_matrix": [
+    {
+      "from": "Bairro Alto",
+      "to": "Torre de Belém",
+      "km": 6.5,
+      "min": 25
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Mosteiro dos Jerónimos",
+      "km": 6.2,
+      "min": 24
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Praça do Comércio",
+      "km": 1.4,
+      "min": 8
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Tram 28 (Eléctrico 28)",
+      "km": 1.8,
+      "min": 10
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Miradouro da Senhora do Monte",
+      "km": 2.2,
+      "min": 12
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "LX Factory",
+      "km": 2.8,
+      "min": 14
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Manteigaria – Fábrica de Pastéis de Nata",
+      "km": 0.4,
+      "min": 5
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Pastéis de Belém",
+      "km": 6.4,
+      "min": 25
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Tasca do Chico",
+      "km": 0.3,
+      "min": 3
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Time Out Market Lisboa",
+      "km": 1.1,
+      "min": 6
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Bairro Alto Bar Crawl",
+      "km": 0.2,
+      "min": 2
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Pink Street (Rua Nova do Carvalho)",
+      "km": 1.2,
+      "min": 7
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "MAAT – Museum of Art, Architecture and Technology",
+      "km": 5.8,
+      "min": 22
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Calouste Gulbenkian Museum",
+      "km": 4.1,
+      "min": 18
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Cervejaria Ramiro",
+      "km": 2.4,
+      "min": 12
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Castelo de São Jorge",
+      "km": 1.9,
+      "min": 11
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Sintra Day Trip (Pena Palace)",
+      "km": 28.0,
+      "min": 50
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Bairro Alto Hotel Spa",
+      "km": 0.5,
+      "min": 4
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Museu do Fado",
+      "km": 2.0,
+      "min": 11
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Elevador de Santa Justa",
+      "km": 1.0,
+      "min": 6
+    },
+    {
+      "from": "Bairro Alto",
+      "to": "Museu Nacional do Azulejo",
+      "km": 3.5,
+      "min": 16
+    }
+  ]
+}
