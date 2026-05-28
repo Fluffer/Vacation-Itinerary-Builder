@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -11,7 +12,7 @@ from lib.schema_check import validate
 from lib.geocode import Geocoder
 from lib.wiki_precheck import WikiPrechecker
 
-TIME_RE = re.compile(r"^([0-1]?\d|2[0-3]):[0-5]\d$|^[A-Za-z][A-Za-z0-9 \-/]{1,39}$")  # HH:MM or alpha-led label (e.g. "Sunrise", "All day", "Pre-dawn")
+TIME_RE = re.compile(r"^([0-1]?\d|2[0-3]):[0-5]\d$|^[A-Za-z][A-Za-z0-9 \-/]{0,39}$")  # HH:MM or alpha-led label (e.g. "Sunrise", "All day", "Pre-dawn")
 
 
 @dataclass
@@ -124,6 +125,7 @@ def _stage_6_ancillary_and_derive(data: dict) -> list[str]:
                 "from": base, "to": p["name"],
                 "km": p["distance_km_from_base"], "min": p["travel_min_from_base"],
             })
+            existing_pairs.add(pair)
 
     # Auto-derive indoor_bank
     wpb = data.setdefault("weather_plan_b", {})
@@ -137,6 +139,7 @@ def _stage_6_ancillary_and_derive(data: dict) -> list[str]:
                 "duration": p.get("duration", ""),
                 "notes": p.get("description", "")[:200],
             })
+            bank_names.add(p["name"])
 
     # Strict schema
     return validate(data, partial=False)
@@ -186,8 +189,8 @@ def final_validate(slug_dir: Path, skip_fact_validate: bool = False) -> StageRes
             vf = scripts_dir / "validate_facts.py"
             if vf.exists():
                 subprocess.run(
-                    ["python", str(vf), "--slug-dir", str(slug_dir)],
-                    timeout=120, check=False,
+                    [sys.executable, str(vf), "--slug-dir", str(slug_dir)],
+                    timeout=120, check=False, capture_output=True, text=True,
                 )
                 notes.append("fact-validate ran (see unvalidated.md)")
         except Exception as e:

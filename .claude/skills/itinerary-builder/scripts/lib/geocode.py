@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 from pathlib import Path
 from typing import Iterable
@@ -38,7 +39,9 @@ class Geocoder:
     def _save_cache(self) -> None:
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         serialisable = {k: (list(v) if v is not None else None) for k, v in self._cache.items()}
-        self.cache_path.write_text(json.dumps(serialisable, indent=2), encoding="utf-8")
+        tmp = self.cache_path.with_suffix(self.cache_path.suffix + ".tmp")
+        tmp.write_text(json.dumps(serialisable, indent=2), encoding="utf-8")
+        os.replace(tmp, self.cache_path)
 
     @staticmethod
     def _key(name: str, area: str, country: str) -> str:

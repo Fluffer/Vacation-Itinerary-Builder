@@ -73,3 +73,24 @@ def test_resume_existing_run(tmp_path):
         rl.log_event(stage=2, event="stage_start")
     lines = (runs_root / run_id).joinpath("stages.jsonl").read_text(encoding="utf-8").strip().splitlines()
     assert len(lines) == 2
+
+
+def test_exit_records_outcome_ok(tmp_path):
+    runs_root = tmp_path / "runs"
+    with RunLogger(slug="x", runs_root=runs_root, inputs={}) as rl:
+        pass
+    manifest = json.loads((rl.run_dir / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["outcome"] == "ok"
+
+
+def test_exit_records_outcome_exception(tmp_path):
+    runs_root = tmp_path / "runs"
+    try:
+        with RunLogger(slug="x", runs_root=runs_root, inputs={}) as rl:
+            run_dir = rl.run_dir
+            raise ValueError("test")
+    except ValueError:
+        pass
+    manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["outcome"] == "exception"
+    assert manifest["exception_type"] == "ValueError"

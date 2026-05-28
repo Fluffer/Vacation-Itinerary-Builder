@@ -146,6 +146,8 @@ def cmd_learn(args) -> int:
     cutoff = time.time() - cutoff_days * 86400
     feedback_files: list[Path] = []
     for run_dir in sorted(runs_root.iterdir()):
+        if not run_dir.is_dir():
+            continue
         fb = run_dir / "feedback.md"
         if fb.exists() and fb.stat().st_mtime >= cutoff:
             feedback_files.append(fb)

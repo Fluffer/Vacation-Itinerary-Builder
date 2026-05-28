@@ -62,9 +62,16 @@ class RunLogger:
 
     def __exit__(self, exc_type, exc, tb) -> None:
         manifest_path = self.run_dir / "manifest.json"
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            manifest = {}
         manifest["ended_at"] = _utc_now_iso()
+        manifest["outcome"] = "exception" if exc_type is not None else "ok"
+        if exc_type is not None:
+            manifest["exception_type"] = exc_type.__name__
         manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+        # Do not suppress the exception — return None implicitly.
 
     def log_event(self, stage: int | str, event: str, details: dict | None = None) -> None:
         line = {

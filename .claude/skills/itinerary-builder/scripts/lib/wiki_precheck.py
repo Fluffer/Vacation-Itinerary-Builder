@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 from pathlib import Path
 from typing import Iterable
@@ -34,7 +35,9 @@ class WikiPrechecker:
 
     def _save_cache(self) -> None:
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
-        self.cache_path.write_text(json.dumps(self._cache, indent=2), encoding="utf-8")
+        tmp = self.cache_path.with_suffix(self.cache_path.suffix + ".tmp")
+        tmp.write_text(json.dumps(self._cache, indent=2), encoding="utf-8")
+        os.replace(tmp, self.cache_path)
 
     def precheck(self, title: str) -> bool:
         if title in self._cache:
