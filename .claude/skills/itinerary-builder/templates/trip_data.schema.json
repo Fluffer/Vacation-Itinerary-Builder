@@ -258,7 +258,8 @@
                 "min": {"type": ["integer", "null"]},
                 "cost_local": {"type": ["integer", "null"]},
                 "sgd": {"type": ["number", "null"]},
-                "notes": {"type": "string"}
+                "notes": {"type": "string"},
+                "place_key": {"type": ["string", "null"], "description": "Must match a places[].key if set; null for transit/buffer rows"}
               }
             }
           }

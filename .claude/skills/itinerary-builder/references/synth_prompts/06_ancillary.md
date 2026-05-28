@@ -93,3 +93,5 @@ python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --st
 ```
 
 Stage 6 runs STRICT schema (`partial=False`) — all required top-level blocks must be present.
+
+If any errors: read them, patch `trips/<slug>/data.json`, re-run stage 6 until clean.

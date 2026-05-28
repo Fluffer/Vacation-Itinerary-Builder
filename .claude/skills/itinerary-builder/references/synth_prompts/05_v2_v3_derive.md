@@ -21,7 +21,7 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
   - `rows[].notes` — string or null
   - `rows[].place_key` — string or null (must match a key in `places[]`)
 - `itinerary.v3_weather[]` — same row shape as `v1_standard`
-  - `day_label` — string, v1 label with `" — Rain plan"` appended
+  - `day_label` — string, v1 label with `" (rain plan)"` appended
   - `rows[]` — same fields as v2 above
 
 ## Quality bar
@@ -31,7 +31,7 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
 - v2 keeps the SAME `day_label` strings as v1 — no suffix, no modification.
 - v3 has the SAME day count as v1.
 - v3 swaps every outdoor, weather-sensitive row for an indoor alternative from `places[]` (`indoor=true`). Eligible indoor categories: malls, museums, spas, cafes, indoor markets, food halls, covered temples. Transport-only rows (flights, airport transfers) are not swapped — they are reproduced as-is.
-- v3 `day_label` strings are the v1 label with `" — Rain plan"` appended (e.g. `"Day 1 — Arrival (rain plan)"`).
+- v3 `day_label` strings are the v1 label with `" (rain plan)"` appended (e.g. `"Day 1 — Arrival (rain plan)"`).
 - Both v2 and v3 use the identical row schema as v1: `time`, `activity`, `route`, `km`, `min`, `cost_local`, `sgd`, `notes`, `place_key`. No extra fields; no missing required fields.
 - All `cost_local` amounts use the currency declared in `metadata.currency_code`.
 
@@ -47,7 +47,7 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
           {"time": "08:30", "activity": "Cebu Pacific 5J 3010 MNL→DAD", "route": "Manila → Da Nang", "km": null, "min": 195, "cost_local": null, "sgd": null, "notes": null, "place_key": null},
           {"time": "12:00", "activity": "Land DAD; SIM + cash + Grab to hotel (no rush)", "route": "DAD → My Khe", "km": 4.5, "min": 18, "cost_local": 110000, "sgd": null, "notes": null, "place_key": null},
           {"time": "13:30", "activity": "Hotel check-in, slow lunch at hotel", "route": null, "km": null, "min": null, "cost_local": 280000, "sgd": null, "notes": null, "place_key": null},
-          {"time": "15:30", "activity": "Rest block — pool or nap", "route": null, "km": null, "min": null, "cost_local": 0, "sgd": 0, "notes": "Recovery from early flight", "place_key": null},
+          {"time": "15:30", "activity": "Rest block — pool or nap", "route": null, "km": null, "min": null, "cost_local": 0, "sgd": null, "notes": "Recovery from early flight", "place_key": null},
           {"time": "17:30", "activity": "Sunset at quieter Lang Co Beach (skip touristy Linh Ung crowds)", "route": "My Khe → Lang Co", "km": 32, "min": 45, "cost_local": 250000, "sgd": null, "notes": null, "place_key": "lang_co_beach"},
           {"time": "19:30", "activity": "Dinner — Bún Chả Cá Bà Phiến (still open late)", "route": "Lang Co → Hai Chau", "km": 28, "min": 38, "cost_local": 80000, "sgd": null, "notes": null, "place_key": "bun_cha_ca"},
           {"time": "21:30", "activity": "Return + early bed", "route": "Hai Chau → My Khe", "km": 4.0, "min": 12, "cost_local": 80000, "sgd": null, "notes": null, "place_key": null}
