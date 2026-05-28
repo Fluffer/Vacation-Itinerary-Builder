@@ -23,21 +23,36 @@ Two paths. Both end with a fully-populated `trips/<slug>/data.json` conforming t
 3. **Extract tables** if any (some sources embed prices/schedules in tables).
 4. **Map** extracted content into the JSON schema. Fill schema gaps from Claude knowledge + Web search.
 
-**Path B — No source doc (compose from knowledge):**
+**Path B — No source doc (staged synthesizer):**
 
-There is **no automated synthesizer**. Claude composes `data.json` by hand, drawing on:
-- Training knowledge for stable facts (geography, historical sites, classic restaurants)
-- `WebSearch` / `WebFetch` for time-sensitive facts (visa rules, current prices, weather, scheduled events)
-- The reference example `trips/da-nang/data.json` as a structural template
+Six sequential authoring stages. Each stage: read the corresponding `references/synth_prompts/0N_<name>.md` template + `references/learnings.md`, write the relevant blocks to `trips/<slug>/data.json`, then run:
 
-Target scope per destination (5-day trip):
-- 15–25 `places[]` entries (iconic + hidden_gem + food + spa + nightlife)
-- 4–7 `hotels[]`
-- 4–6 `activity_pricing[]` pick-one bundles
-- Full v1 + v2 + v3 itineraries with per-row time, route, km, min, cost_local, notes
-- `risk_flags`, `booking_timeline`, `practical_info`, `checklist`, `hidden_gems_categorized`, `v1_v2_compare`, `weather_plan_b` (incl per_day_swaps + indoor_bank + booking_flex_tips), `distance_matrix`
+```
+python scripts/synthesize.py --slug <slug> --stage <N>
+```
 
-Expect 800–1500 lines for a 5-day trip. Budget the time accordingly — Claude takes 5–15 minutes of focused authoring to compose a quality data.json. **Do not promise instant turn-around.**
+If the validator prints errors, patch `data.json` and re-run the same stage. Iterate until pass. Then move to stage N+1.
+
+Stages:
+
+1. **`01_metadata_visa.md`** — `metadata{}` + `visa{}` (passport-specific, sourced)
+2. **`02_places.md`** — `places[]` 15-25 entries; runner auto-geocodes (Nominatim, cached) + probes Wikipedia for each `wiki_title`
+3. **`03_hotels_pricing_budget.md`** — `hotels[]`, `activity_pricing[]`, `budget{}`
+4. **`04_v1_itinerary.md`** — `itinerary.v1_standard` with full per-row time/km/min/cost
+5. **`05_v2_v3_derive.md`** — `itinerary.v2_relaxed` + `itinerary.v3_weather` derived from v1
+6. **`06_ancillary.md`** — `risk_flags`, `booking_timeline`, `practical_info`, `checklist`, `hidden_gems_categorized`, `v1_v2_compare`, `weather_plan_b`, `maps`, etc. Stage runner auto-derives `distance_matrix` + `weather_plan_b.indoor_bank`. Full strict schema enforced.
+
+After stage 6:
+
+```
+python scripts/synthesize.py --slug <slug> --stage final
+```
+
+Runs strict schema check + invokes existing Ollama fact-validate (non-blocking; results in `trips/<slug>/unvalidated.md`). On pass, snapshots `data.json` to `runs/<run_id>/data.snapshot.json`.
+
+Then proceed to Phase 6 (images / maps / workbook / docx) via `run_all.py`.
+
+Expect 800-1500 lines for a 5-day trip across all stages combined. The staged structure prevents schema drift and keeps each phase resumable.
 
 **In both paths:**
 1. **Detect language** of place names (Vietnamese, Thai, Japanese diacritics common). Store both native + ASCII fallback for image search.
@@ -130,3 +145,18 @@ Output to:
 - Print clickable file:// links in response
 
 Report any `unvalidated.md` items at the end of the response so user knows what to verify manually.
+
+## Phase 10.5 — Feedback capture (NEW, optional)
+
+After workbook + Word doc are delivered, prompt the user:
+
+> "Trip rendered. Anything good/bad to capture for future runs?
+>   - What worked well?
+>   - What was thin or wrong?
+>   - Specific places or sections that needed manual fix?"
+
+Use `AskUserQuestion` with a single open-ended question. User may skip.
+
+If a reply is given, write it verbatim to `runs/<run_id>/feedback.md`. The RunLogger will mark `feedback_captured: true` in `manifest.json`. Periodically run `python scripts/synthesize.py --stage learn` to surface candidate `references/learnings.md` entries from recent feedback; review in chat with Claude before appending.
+
+The `learnings.md` file is read by every synth-prompt at every stage. That's the entire self-improvement loop.
