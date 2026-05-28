@@ -105,3 +105,29 @@ def test_final_validate_calls_strict_schema(tmp_trip, minimal_data):
     # final_validate should not fail on the minimal shape (it just calls strict + tries facts)
     result = final_validate(slug_dir=tmp_trip, skip_fact_validate=True)
     assert result.passed is True
+
+
+def test_stage_4_rejects_garbage_time(tmp_trip, minimal_data):
+    minimal_data["itinerary"] = {
+        "v1_standard": [{
+            "day_label": "Day 1",
+            "rows": [{"time": "12345", "activity": "garbage"}],
+        }],
+    }
+    _write_data(tmp_trip, minimal_data)
+    result = run_stage(slug_dir=tmp_trip, stage_num=4)
+    assert result.passed is False
+    assert any("bad time format" in e for e in result.errors)
+
+
+def test_stage_4_accepts_alpha_label(tmp_trip, minimal_data):
+    minimal_data["itinerary"] = {
+        "v1_standard": [{
+            "day_label": "Day 1",
+            "rows": [{"time": "Sunrise", "activity": "watch sunrise"}],
+        }],
+    }
+    _write_data(tmp_trip, minimal_data)
+    result = run_stage(slug_dir=tmp_trip, stage_num=4)
+    # No "bad time format" error for the row (other partial-schema errors are tolerable here)
+    assert not any("bad time format" in e for e in result.errors)

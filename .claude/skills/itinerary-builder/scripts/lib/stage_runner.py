@@ -11,7 +11,7 @@ from lib.schema_check import validate
 from lib.geocode import Geocoder
 from lib.wiki_precheck import WikiPrechecker
 
-TIME_RE = re.compile(r"^([0-1]?\d|2[0-3]):[0-5]\d$|^.{2,40}$")  # HH:MM or short label
+TIME_RE = re.compile(r"^([0-1]?\d|2[0-3]):[0-5]\d$|^[A-Za-z][A-Za-z0-9 \-/]{1,39}$")  # HH:MM or alpha-led label (e.g. "Sunrise", "All day", "Pre-dawn")
 
 
 @dataclass
