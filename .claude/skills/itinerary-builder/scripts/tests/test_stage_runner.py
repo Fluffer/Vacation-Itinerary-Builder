@@ -131,3 +131,20 @@ def test_stage_4_accepts_alpha_label(tmp_trip, minimal_data):
     result = run_stage(slug_dir=tmp_trip, stage_num=4)
     # No "bad time format" error for the row (other partial-schema errors are tolerable here)
     assert not any("bad time format" in e for e in result.errors)
+
+
+def test_stage_6_rejects_booking_flex_tips_strings(tmp_trip, minimal_data):
+    minimal_data["itinerary"] = {
+        "v1_standard": [{"day_label": "Day 1", "rows": []}],
+        "v2_relaxed": [{"day_label": "Day 1", "rows": []}],
+        "v3_weather": [{"day_label": "Day 1", "rows": []}],
+    }
+    minimal_data["weather_plan_b"] = {
+        "emit": True,
+        "indoor_bank": [],
+        "booking_flex_tips": ["plain string not allowed"],
+    }
+    _write_data(tmp_trip, minimal_data)
+    result = run_stage(slug_dir=tmp_trip, stage_num=6)
+    assert result.passed is False
+    assert any("booking_flex_tips" in e for e in result.errors)

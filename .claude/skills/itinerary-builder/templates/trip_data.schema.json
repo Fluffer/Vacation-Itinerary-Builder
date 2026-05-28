@@ -152,7 +152,18 @@
         "decision_tree": {"type": "array"},
         "per_day_swaps": {"type": "array", "description": "Each entry: {day_label, swaps: [{original, why_risk, trigger, action, alt_local, channel}]}"},
         "indoor_bank": {"type": "array", "description": "Each entry: {name, area, local_cost, duration, notes}. Auto-merged with places[] where indoor=true."},
-        "booking_flex_tips": {"type": "array"}
+        "booking_flex_tips": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "text"],
+            "properties": {
+              "label": {"type": "string"},
+              "text": {"type": "string"}
+            },
+            "additionalProperties": true
+          }
+        }
       }
     },
     "distance_matrix": {

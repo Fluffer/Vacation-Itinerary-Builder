@@ -33,6 +33,35 @@ def _slug_dir(slug: str) -> Path:
     return _trips_root() / slug
 
 
+def _pointer_path() -> Path:
+    return _runs_root() / ".current_run"
+
+
+def _read_pointer(slug: str) -> str | None:
+    p = _pointer_path()
+    if not p.exists():
+        return None
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    if data.get("slug") != slug:
+        return None
+    return data.get("run_id")
+
+
+def _write_pointer(slug: str, run_id: str) -> None:
+    p = _pointer_path()
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps({"slug": slug, "run_id": run_id}), encoding="utf-8")
+
+
+def _clear_pointer() -> None:
+    p = _pointer_path()
+    if p.exists():
+        p.unlink()
+
+
 def _print_result(stage_label: str, r: StageResult) -> None:
     status = "PASS" if r.passed else "FAIL"
     print(f"[{status}] stage {stage_label} ({r.duration_s:.2f}s)")
@@ -53,8 +82,15 @@ def cmd_stage(args) -> int:
         _print_result(str(args.stage), r)
         return 0 if r.passed else 1
 
+    existing_run_id = _read_pointer(args.slug)
     inputs = {"slug": args.slug, "stage_first_invoked": args.stage}
-    with RunLogger(slug=args.slug, runs_root=_runs_root(), inputs=inputs) as rl:
+    if existing_run_id:
+        rl_cm = RunLogger.resume(slug=args.slug, run_id=existing_run_id, runs_root=_runs_root())
+    else:
+        rl_cm = RunLogger(slug=args.slug, runs_root=_runs_root(), inputs=inputs)
+    with rl_cm as rl:
+        if not existing_run_id:
+            _write_pointer(args.slug, rl.run_id)
         rl.log_event(stage=args.stage, event="stage_start")
         r = run_stage(slug_dir, args.stage)
         rl.log_event(
@@ -77,8 +113,15 @@ def cmd_final(args) -> int:
         _print_result("final", r)
         return 0 if r.passed else 1
 
-    with RunLogger(slug=args.slug, runs_root=_runs_root(),
-                   inputs={"slug": args.slug, "stage_first_invoked": "final"}) as rl:
+    existing_run_id = _read_pointer(args.slug)
+    if existing_run_id:
+        rl_cm = RunLogger.resume(slug=args.slug, run_id=existing_run_id, runs_root=_runs_root())
+    else:
+        rl_cm = RunLogger(slug=args.slug, runs_root=_runs_root(),
+                          inputs={"slug": args.slug, "stage_first_invoked": "final"})
+    with rl_cm as rl:
+        if not existing_run_id:
+            _write_pointer(args.slug, rl.run_id)
         rl.log_event(stage="final", event="stage_start")
         r = final_validate(slug_dir, skip_fact_validate=args.skip_facts)
         rl.log_event(
@@ -88,6 +131,7 @@ def cmd_final(args) -> int:
         )
         if r.passed:
             rl.snapshot_data(slug_dir / "data.json")
+            _clear_pointer()
     _print_result("final", r)
     return 0 if r.passed else 1
 
@@ -95,8 +139,8 @@ def cmd_final(args) -> int:
 def cmd_learn(args) -> int:
     runs_root = _runs_root()
     if not runs_root.exists():
-        print("no runs/ directory yet", file=sys.stderr)
-        return 1
+        print("no runs/ directory yet")
+        return 0
     cutoff_days = args.days
     import time
     cutoff = time.time() - cutoff_days * 86400
