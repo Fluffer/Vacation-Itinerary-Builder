@@ -87,7 +87,7 @@ Detailed step-by-step in [`references/workflow.md`](references/workflow.md). Sum
 0. **INTAKE GATE** — verify destination + dates/duration + nationality. If ANY missing, call AskUserQuestion. Do not proceed until all three are captured. See [`references/intake.md`](references/intake.md).
 1. **Author data.json** at `trips/<slug>/data.json` conforming to [`templates/trip_data.schema.json`](templates/trip_data.schema.json). Two paths:
    - **Parse a source doc** (user-supplied .docx draft) — extract places, times, prices.
-   - **Compose from knowledge** — Claude writes the data.json by hand, drawing on training + WebSearch + WebFetch. Realistic scope per destination: ~15-25 places, 4-7 hotels, 4-6 pricing bundles, full v1/v2/v3 itineraries. Expect 800-1500 lines for a 5-day trip. **No automated synthesizer exists** — this is Claude doing the writing, one field at a time, against the schema.
+   - **Compose via staged synthesizer** — when no source doc, Claude uses the staged synth_prompts at `references/synth_prompts/0N_*.md`. Six stages: metadata+visa → places → hotels+pricing+budget → v1 itinerary → v2+v3 derive → ancillary. After each stage write data.json and run `python scripts/synthesize.py --slug <slug> --stage N` to validate. Validator output guides revisions. Final pass: `--stage final` runs strict schema + Ollama fact-validate (non-blocking). See [`references/workflow.md`](references/workflow.md) Phase 1 for the full flow and [`references/learnings.md`](references/learnings.md) for prior-run lessons that inform each stage.
 2. **Fact-validate** key claims (visa for the SPECIFIC nationality, weather for dates, pricing, schedules) via Ollama models with 60-second per-call timeout; on timeout flag entry as `unvalidated` and proceed (do NOT stall the pipeline)
 3. **Apply enhancement rules** (see [`references/enhancement_rules.md`](references/enhancement_rules.md)):
    - Single-hotel base unless trip ≥ 7 days
@@ -143,7 +143,7 @@ Python 3.10+ with:
 - `staticmap` (OSM tile-based map renderer)
 - `urllib` (Wikipedia REST + image download — stdlib)
 
-Install: `pip install python-docx openpyxl Pillow staticmap`
+Install: `pip install python-docx openpyxl Pillow staticmap jsonschema requests pytest`
 
 ## Running the skill
 
