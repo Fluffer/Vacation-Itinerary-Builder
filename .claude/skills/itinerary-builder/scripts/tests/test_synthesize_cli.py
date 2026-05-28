@@ -38,7 +38,7 @@ def test_cli_unknown_stage_errors(tmp_path, minimal_data):
     trips.mkdir(parents=True)
     (trips / "data.json").write_text(json.dumps(minimal_data), encoding="utf-8")
     res = _run_cli(["--slug", "test-slug", "--stage", "9", "--no-log"], cwd=tmp_path)
-    assert res.returncode != 0
+    assert res.returncode == 2
 
 
 def test_cli_missing_data_json_errors(tmp_path):
