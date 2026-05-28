@@ -1,0 +1,421 @@
+{
+  "slug": "da-nang",
+  "metadata": {
+    "dates_start": "2026-08-14",
+    "dates_end": "2026-08-18",
+    "nights": 4,
+    "origin": "Singapore (SIN)",
+    "destination": "Da Nang",
+    "destination_airport": "DAD",
+    "airline": "Scoot",
+    "outbound_arrive_local": "Fri 14 Aug — lands DAD ~09:55",
+    "return_depart_local": "Tue 18 Aug — departs DAD ~18:30",
+    "passport": "Philippines",
+    "pax": 2,
+    "base_hotel_area": "My Khe Beach (An Thuong / Ngu Hanh Son district)",
+    "currency_code": "VND",
+    "fx_rate_to_sgd": 18500,
+    "fx_rate_anchor_date": "2025-11-01",
+    "climate_summary": "Warm/mostly dry, 27-34C, 75-85% humidity; rising afternoon storm risk in Aug",
+    "power_plug": "Type A/C/F (220V/50Hz) — SG/UK Type G NOT compatible",
+    "weather_risk": "medium",
+    "origin_plug": "Type G (SG)"
+  },
+  "visa": {
+    "rule": "Visa-exempt 21 days (PH-VN bilateral)",
+    "days_allowed": 21,
+    "e_visa_required": false,
+    "passport_validity_required_until": "2027-02-18",
+    "onward_ticket_required": true
+  },
+  "places": [
+    {
+      "key": "dragon_bridge",
+      "name": "Dragon Bridge (Cầu Rồng)",
+      "category": "iconic",
+      "area": "Han River",
+      "wiki_title": "Dragon Bridge (Vietnam)",
+      "lat": 16.0721,
+      "lon": 108.2244,
+      "distance_km_from_base": 3.2,
+      "travel_min_from_base": 12,
+      "description": "A 666-metre, six-lane bridge across the Han River shaped as a dragon. Every Fri/Sat/Sun at 21:00 it breathes fire and water for ~15 min. Best from east-side deck.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Vietnam)"
+        },
+        {
+          "label": "Vietnam Tourism",
+          "url": "https://vietnam.travel/things-to-do/dragon-bridge"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\da-nang\\images\\dragon_bridge.jpg"
+    },
+    {
+      "key": "ba_na_hills",
+      "name": "Ba Na Hills & Golden Bridge",
+      "category": "iconic",
+      "area": "36 km W of Da Nang",
+      "wiki_title": "Bà Nà Hills",
+      "alt_search_query": "Golden Bridge Da Nang",
+      "lat": 15.997,
+      "lon": 107.9967,
+      "distance_km_from_base": 36,
+      "travel_min_from_base": 55,
+      "description": "Mountain resort accessed via 5,801m cable car (Guinness record). Golden Bridge held aloft by giant stone hands, French Village, Linh Ung Pagoda, Alpine Coaster. Klook group day tour bundles transport+cable car+lunch ~1.2M VND.",
+      "links": [
+        {
+          "label": "Sun World Ba Na Hills (official)",
+          "url": "https://banahills.sunworld.vn/en/"
+        },
+        {
+          "label": "Klook Ba Na Hills tours",
+          "url": "https://www.klook.com/en-SG/activity/4279-ba-na-hill-day-tour-da-nang/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\da-nang\\images\\ba_na_hills.jpg"
+    }
+  ],
+  "itinerary": {
+    "v1_standard": [
+      {
+        "day_label": "Day 1 — Fri 14 Aug: Arrival, Coast, Dragon Bridge",
+        "rows": [
+          {
+            "time": "09:55",
+            "activity": "Land DAD; immigration",
+            "route": "DAD arrival",
+            "vnd": 0,
+            "sgd": 0,
+            "notes": "PH passport 21-day exempt"
+          },
+          {
+            "time": "10:45",
+            "activity": "Grab to hotel",
+            "route": "DAD → My Khe",
+            "km": 6.0,
+            "min": 18,
+            "vnd": 150000,
+            "sgd": 9,
+            "notes": ""
+          },
+          {
+            "time": "12:30",
+            "activity": "Lunch: Bếp Cuốn",
+            "route": "Hotel → Bếp Cuốn (walk)",
+            "km": 0.5,
+            "min": 8,
+            "vnd": 200000,
+            "sgd": 11,
+            "notes": "Per pax"
+          }
+        ]
+      }
+    ],
+    "v2_relaxed": [
+      {
+        "day_label": "Day 1 — Fri 14 Aug: Soft Arrival",
+        "rows": [
+          {
+            "time": "09:55",
+            "activity": "Land DAD",
+            "route": "DAD arrival",
+            "notes": "Skip Day-1 spa, pool decompress instead"
+          }
+        ]
+      }
+    ]
+  },
+  "budget": {
+    "rate_vnd_per_sgd": 18500,
+    "categories": [
+      {
+        "category": "Food (5 days)",
+        "low_vnd": 2500000,
+        "high_vnd": 4000000
+      },
+      {
+        "category": "Transport — Grab + tours",
+        "low_vnd": 1500000,
+        "high_vnd": 2200000
+      },
+      {
+        "category": "Activities",
+        "low_vnd": 1100000,
+        "high_vnd": 1400000
+      },
+      {
+        "category": "Spas",
+        "low_vnd": 1300000,
+        "high_vnd": 2000000
+      },
+      {
+        "category": "Pub Crawl",
+        "low_vnd": 0,
+        "high_vnd": 300000
+      },
+      {
+        "category": "SIM/eSIM",
+        "low_vnd": 250000,
+        "high_vnd": 300000
+      },
+      {
+        "category": "Souvenirs/buffer",
+        "low_vnd": 800000,
+        "high_vnd": 1200000
+      }
+    ],
+    "flight_sgd_low": 220,
+    "flight_sgd_high": 380,
+    "hotel_sgd_low": 320,
+    "hotel_sgd_high": 480
+  },
+  "distance_matrix": [
+    {
+      "from": "DAD Airport",
+      "to": "My Khe Beach hotels",
+      "km": 6.0,
+      "min": 18,
+      "fare_vnd": 150000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Dragon Bridge / Han River",
+      "km": 3.2,
+      "min": 12,
+      "fare_vnd": 80000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Ba Na Hills cable car station",
+      "km": 36.0,
+      "min": 55,
+      "fare_vnd": 600000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Marble Mountains",
+      "km": 8.0,
+      "min": 17,
+      "fare_vnd": 100000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Lady Buddha (Son Tra)",
+      "km": 12.0,
+      "min": 22,
+      "fare_vnd": 120000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Hoi An Old Town",
+      "km": 30.0,
+      "min": 42,
+      "fare_vnd": 300000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Hai Van Pass (top)",
+      "km": 30.0,
+      "min": 60,
+      "fare_vnd": 450000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Lang Co Beach (via tunnel)",
+      "km": 35.0,
+      "min": 70,
+      "fare_vnd": 500000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "My Son Sanctuary",
+      "km": 50.0,
+      "min": 75,
+      "fare_vnd": 600000
+    },
+    {
+      "from": "My Khe Beach",
+      "to": "Cham Museum",
+      "km": 5.0,
+      "min": 14,
+      "fare_vnd": 90000
+    }
+  ],
+  "activity_pricing": [
+    {
+      "category": "🎡 BA NA HILLS — PICK ONE BUNDLE",
+      "paths": [
+        {
+          "name": "PATH 1 — Klook GROUP DAY TOUR",
+          "channel": "Klook shared bus pkg",
+          "vnd_per_pax": 1200000,
+          "includes": "ALL-IN PER PAX: RT shuttle + cable car + Golden Bridge + buffet + English guide. Cheapest path, group of 15–25."
+        },
+        {
+          "name": "PATH 2 — Klook VIP private car",
+          "channel": "Klook private bundle",
+          "vnd_per_pax": 1800000,
+          "includes": "Private car + driver + cable car ticket. Lunch usually NOT incl (+350k)."
+        },
+        {
+          "name": "PATH 3 — Cable car ticket only",
+          "channel": "Sun World gate",
+          "vnd_per_pax": 1050000,
+          "includes": "TICKET ONLY; add transport separately."
+        }
+      ],
+      "extras": [
+        {
+          "name": "Optional: Alpine Coaster",
+          "channel": "on-site",
+          "vnd_per_pax": 200000,
+          "includes": "Single ride"
+        },
+        {
+          "name": "Optional: Fantasy Park",
+          "channel": "on-site",
+          "vnd_per_pax": 350000,
+          "includes": "Indoor games; rain backup"
+        }
+      ]
+    }
+  ],
+  "maps": {
+    "regional": {
+      "zoom": 10,
+      "places": [
+        {
+          "lat": 16.0544,
+          "lon": 108.2425,
+          "label": "BASE HOTEL\n(Da Nang / My Khe)",
+          "color": "red",
+          "pos": "E"
+        },
+        {
+          "lat": 16.1004,
+          "lon": 108.3037,
+          "label": "Lady Buddha\n(Son Tra)",
+          "color": "green",
+          "pos": "NE"
+        },
+        {
+          "lat": 15.997,
+          "lon": 107.9967,
+          "label": "Ba Na Hills",
+          "color": "purple",
+          "pos": "W"
+        },
+        {
+          "lat": 16.2089,
+          "lon": 108.1306,
+          "label": "Hai Van Pass",
+          "color": "purple",
+          "pos": "W"
+        },
+        {
+          "lat": 16.2266,
+          "lon": 108.0792,
+          "label": "Lang Co\nBeach",
+          "color": "purple",
+          "pos": "NW"
+        },
+        {
+          "lat": 15.8801,
+          "lon": 108.338,
+          "label": "Hoi An\nOld Town",
+          "color": "orange",
+          "pos": "E"
+        },
+        {
+          "lat": 15.9214,
+          "lon": 108.3411,
+          "label": "An Bang Beach",
+          "color": "green",
+          "pos": "NE"
+        },
+        {
+          "lat": 15.7639,
+          "lon": 108.1244,
+          "label": "My Son\nSanctuary",
+          "color": "purple",
+          "pos": "SW"
+        },
+        {
+          "lat": 15.9508,
+          "lon": 108.4953,
+          "label": "Cu Lao Cham\nIslands",
+          "color": "darkblue",
+          "pos": "E"
+        }
+      ]
+    },
+    "city_closeup": {
+      "zoom": 12,
+      "places": [
+        {
+          "lat": 16.0544,
+          "lon": 108.2425,
+          "label": "BASE HOTEL\nMy Khe Beach +\n43 Factory + An Thuong",
+          "color": "red",
+          "pos": "SEE"
+        },
+        {
+          "lat": 16.0439,
+          "lon": 108.1994,
+          "label": "DAD Airport",
+          "color": "blue",
+          "pos": "SWW"
+        },
+        {
+          "lat": 16.0721,
+          "lon": 108.2244,
+          "label": "Dragon Bridge",
+          "color": "orange",
+          "pos": "NW"
+        },
+        {
+          "lat": 16.0632,
+          "lon": 108.2129,
+          "label": "Cham Museum\n+ Pink Cathedral",
+          "color": "orange",
+          "pos": "W"
+        },
+        {
+          "lat": 16.076,
+          "lon": 108.2278,
+          "label": "Han Market",
+          "color": "orange",
+          "pos": "N"
+        },
+        {
+          "lat": 16.0042,
+          "lon": 108.2647,
+          "label": "Marble Mountains",
+          "color": "green",
+          "pos": "SEE"
+        },
+        {
+          "lat": 16.1004,
+          "lon": 108.3037,
+          "label": "Lady Buddha\n(Son Tra)",
+          "color": "green",
+          "pos": "NEE"
+        }
+      ]
+    }
+  },
+  "changes_applied": [
+    "R1: single hotel base (≤7 days)",
+    "R2: distance + travel-time columns added",
+    "R3: airport buffer pushed 2.5hr → 3hr (Scoot recommendation)",
+    "R4: visa corrected 30 days → 21 days (PH passport)",
+    "R5: FX rate updated 17,000 → 18,500 VND/SGD",
+    "R6: power plug warning added (Type G NOT compatible)",
+    "R7: Ba Na bundle consolidation (pick-ONE-path)",
+    "R8: Day 2 fatigue flag (Ba Na + crawl)",
+    "R11: Bad weather Plan B emitted (Aug rising storm risk)",
+    "R13: v2 sunrise-shift Son Tra"
+  ]
+}

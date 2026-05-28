@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trip Data Schema",
+  "description": "Per-trip data contract consumed by build_workbook.py, build_docx.py, build_map.py. Currency-agnostic: monetary fields use *_local naming with metadata.currency_code declaring the currency.",
+  "type": "object",
+  "required": ["slug", "metadata", "itinerary", "places"],
+  "properties": {
+    "slug": {"type": "string", "description": "Short ID for output folder, e.g. 'da-nang'"},
+    "metadata": {
+      "type": "object",
+      "required": ["dates_start", "dates_end", "origin", "destination", "passport", "pax", "base_hotel_area"],
+      "properties": {
+        "dates_start": {"type": "string", "format": "date"},
+        "dates_end": {"type": "string", "format": "date"},
+        "nights": {"type": "integer"},
+        "origin": {"type": "string", "description": "Departure city / airport"},
+        "destination": {"type": "string"},
+        "airline": {"type": "string"},
+        "outbound_arrive_local": {"type": "string"},
+        "return_depart_local": {"type": "string"},
+        "passport": {"type": "string", "description": "Country issuing passport"},
+        "pax": {"type": "integer"},
+        "base_hotel_area": {"type": "string"},
+        "currency_code": {"type": "string", "description": "ISO 4217 e.g. VND, PHP, THB"},
+        "fx_rate_to_sgd": {"type": "number", "description": "Local currency units per 1 SGD"},
+        "fx_rate_anchor_date": {"type": "string", "format": "date"},
+        "climate_summary": {"type": "string"},
+        "power_plug": {"type": "string", "description": "e.g. Type A/C/F; SG/UK Type G NOT compatible"},
+        "weather_risk": {"type": "string", "enum": ["low", "medium", "high"]},
+        "tap_water": {"type": "string"},
+        "tipping": {"type": "string"},
+        "emergency": {"type": "string"}
+      }
+    },
+    "visa": {
+      "type": "object",
+      "properties": {
+        "rule": {"type": "string", "description": "e.g. 'Visa-exempt 21 days (PH-VN bilateral)'"},
+        "days_allowed": {"type": "integer"},
+        "e_visa_required": {"type": "boolean"},
+        "passport_validity_required_until": {"type": "string", "format": "date"},
+        "onward_ticket_required": {"type": "boolean"},
+        "validated_at": {"type": "string", "format": "date-time"},
+        "source": {"type": "string"}
+      }
+    },
+    "itinerary": {
+      "type": "object",
+      "properties": {
+        "v1_standard": {"$ref": "#/definitions/dayList"},
+        "v2_relaxed": {"$ref": "#/definitions/dayList"},
+        "v3_weather": {"$ref": "#/definitions/dayList"}
+      }
+    },
+    "places": {
+      "type": "array",
+      "description": "All POIs referenced — drives images, descriptions, hyperlinks. Canonical source for distance + indoor classification.",
+      "items": {
+        "type": "object",
+        "required": ["key", "name"],
+        "properties": {
+          "key": {"type": "string", "description": "Slug e.g. 'dragon_bridge'"},
+          "name": {"type": "string"},
+          "category": {"type": "string", "enum": ["iconic", "hidden_gem", "food", "spa", "nightlife", "hotel", "indoor_backup"]},
+          "area": {"type": "string"},
+          "wiki_title": {"type": "string"},
+          "alt_search_query": {"type": "string"},
+          "image_path": {"type": "string"},
+          "description": {"type": "string"},
+          "lat": {"type": "number"},
+          "lon": {"type": "number"},
+          "distance_km_from_base": {"type": "number"},
+          "travel_min_from_base": {"type": "integer"},
+          "price_local": {"type": ["integer", "null"], "description": "Single entry/typical price in metadata.currency_code"},
+          "price_range_local": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+          "price_label": {"type": "string", "description": "Human-friendly price tag e.g. '₱400-700' — used in tables"},
+          "when": {"type": "string", "description": "When in itinerary this place is hit (e.g. 'Day 2 lunch')"},
+          "indoor": {"type": "boolean", "description": "True if rain/heat refuge — auto-includes in weather_plan_b.indoor_bank if missing"},
+          "duration": {"type": "string", "description": "Typical visit duration e.g. '2hr'"},
+          "opening_hours": {"type": "string"},
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "url"],
+              "properties": {
+                "label": {"type": "string"},
+                "url": {"type": "string", "format": "uri"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "hotels": {"type": "array", "items": {"$ref": "#/definitions/hotel"}},
+    "budget": {
+      "type": "object",
+      "properties": {
+        "rate_local_per_sgd": {"type": "number", "description": "Display rate on Budget sheet B3. Falls back to metadata.fx_rate_to_sgd."},
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["category", "low_local", "high_local"],
+            "properties": {
+              "category": {"type": "string"},
+              "low_local": {"type": "integer"},
+              "high_local": {"type": "integer"}
+            }
+          }
+        },
+        "flight_sgd_low": {"type": "integer"},
+        "flight_sgd_high": {"type": "integer"},
+        "hotel_sgd_low": {"type": "integer"},
+        "hotel_sgd_high": {"type": "integer"}
+      }
+    },
+    "activity_pricing": {
+      "type": "array",
+      "description": "Pick-ONE-path bundles. See pricing_pattern.md",
+      "items": {
+        "type": "object",
+        "required": ["category", "paths"],
+        "properties": {
+          "category": {"type": "string"},
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "channel", "local_per_pax", "includes"],
+              "properties": {
+                "name": {"type": "string"},
+                "channel": {"type": "string"},
+                "local_per_pax": {"type": "integer"},
+                "includes": {"type": "string"}
+              }
+            }
+          },
+          "extras": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    },
+    "weather_plan_b": {
+      "type": "object",
+      "properties": {
+        "emit": {"type": "boolean"},
+        "rationale": {"type": "string"},
+        "decision_tree": {"type": "array"},
+        "per_day_swaps": {"type": "array", "description": "Each entry: {day_label, swaps: [{original, why_risk, trigger, action, alt_local, channel}]}"},
+        "indoor_bank": {"type": "array", "description": "Each entry: {name, area, local_cost, duration, notes}. Auto-merged with places[] where indoor=true."},
+        "booking_flex_tips": {"type": "array"}
+      }
+    },
+    "distance_matrix": {
+      "type": "array",
+      "description": "Pairwise base→POI travel facts. Auto-derived from places[].distance_km_from_base if not supplied.",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "km", "min"],
+        "properties": {
+          "from": {"type": "string"},
+          "to": {"type": "string"},
+          "km": {"type": "number"},
+          "min": {"type": "integer"},
+          "fare_local": {"type": "integer"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "risk_flags": {
+      "type": "array",
+      "description": "Pairs [label, note] surfaced in Overview sheet",
+      "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}
+    },
+    "booking_timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["window", "lead_time", "action", "why"],
+        "properties": {
+          "window": {"type": "string"},
+          "lead_time": {"type": "string"},
+          "action": {"type": "string"},
+          "why": {"type": "string"}
+        }
+      }
+    },
+    "practical_info": {
+      "type": "array",
+      "description": "Key-value pairs [label, text]",
+      "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}
+    },
+    "checklist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "item"],
+        "properties": {
+          "category": {"type": "string"},
+          "item": {"type": "string"}
+        }
+      }
+    },
+    "hidden_gems_categorized": {
+      "type": "object",
+      "description": "Category → list of {name, distance, travel_time, why_quiet, notes}"
+    },
+    "v1_v2_compare": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "v1", "v2", "why"]
+      }
+    },
+    "transport_tips": {"type": "array", "items": {"type": "string"}},
+    "accommodation_recommendation": {"type": "string"},
+    "practical_links": {"type": "object"},
+    "maps": {
+      "type": "object",
+      "properties": {
+        "regional": {"$ref": "#/definitions/mapConfig"},
+        "city_closeup": {"$ref": "#/definitions/mapConfig"}
+      }
+    },
+    "changes_applied": {
+      "type": "array",
+      "description": "Audit log of enhancement rules that fired",
+      "items": {"type": "string"}
+    },
+    "unvalidated": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Facts pipeline could not verify — listed for manual check"
+    }
+  },
+  "definitions": {
+    "dayList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["day_label", "rows"],
+        "properties": {
+          "day_label": {"type": "string"},
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["time", "activity"],
+              "properties": {
+                "time": {"type": "string"},
+                "activity": {"type": "string"},
+                "route": {"type": "string"},
+                "km": {"type": ["number", "null"]},
+                "min": {"type": ["integer", "null"]},
+                "cost_local": {"type": ["integer", "null"]},
+                "sgd": {"type": ["number", "null"]},
+                "notes": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "hotel": {
+      "type": "object",
+      "required": ["name", "tier"],
+      "properties": {
+        "name": {"type": "string"},
+        "tier": {"type": "string", "enum": ["Budget", "Mid", "Luxury", "Resort"]},
+        "rating": {"type": "string"},
+        "sgd_low": {"type": "integer"},
+        "sgd_high": {"type": "integer"},
+        "notes": {"type": "string"},
+        "links": {"type": "array"}
+      }
+    },
+    "mapConfig": {
+      "type": "object",
+      "required": ["zoom", "places"],
+      "properties": {
+        "zoom": {"type": "integer"},
+        "places": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["lat", "lon", "label", "color", "pos"],
+            "properties": {
+              "lat": {"type": "number"},
+              "lon": {"type": "number"},
+              "label": {"type": "string"},
+              "color": {"type": "string", "enum": ["red", "blue", "orange", "green", "purple", "darkblue"]},
+              "pos": {"type": "string", "enum": ["NE","NW","SE","SW","E","W","N","S","NEE","SEE","NWW","SWW"]}
+            }
+          }
+        }
+      }
+    }
+  }
+}

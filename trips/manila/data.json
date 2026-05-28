@@ -1,0 +1,2350 @@
+{
+  "slug": "manila",
+  "metadata": {
+    "dates_start": "2026-05-28",
+    "dates_end": "2026-06-01",
+    "nights": 4,
+    "origin": "Domestic / Provincial Philippines",
+    "destination": "Manila",
+    "destination_airport": "MNL (NAIA)",
+    "airline": "Philippine Airlines / Cebu Pacific (domestic)",
+    "outbound_arrive_local": "Thu 28 May — arrival NAIA (domestic terminal)",
+    "return_depart_local": "Mon 01 Jun — depart NAIA",
+    "passport": "Philippines",
+    "pax": 1,
+    "base_hotel_area": "Makati CBD (Ayala / Poblacion side)",
+    "currency_code": "PHP",
+    "fx_rate_to_sgd": 43,
+    "fx_rate_anchor_date": "2026-05-01",
+    "climate_summary": "Hot late dry → habagat onset, 28-34°C, humidity 75-90%, afternoon thunderstorms possible by end May/early Jun",
+    "power_plug": "Type A/B/C (220V/60Hz). US 2-pin (Type A) fits — SG/UK Type G plugs DO NOT fit (need adaptor).",
+    "weather_risk": "medium",
+    "origin_plug": "Type A/B/C (same)",
+    "tap_water": "NOT potable. Bottled only — even at most hotels. Boil if cooking.",
+    "tipping": "Service charge 10% often auto-added; if not, leave 5-10% for sit-down. Grab driver round up. Spa ₱50-100.",
+    "emergency": "Police/Fire/Ambulance 911 (national) · NAIA Tourist Police: +63 2 8551 9888"
+  },
+  "risk_flags": [
+    ["Habagat onset", "Late May / early Jun = start of SW monsoon. Afternoon thunderstorms 30-40% days. Pack rain shell + dry-bag for electronics."],
+    ["NAIA traffic", "EDSA + Skyway worst 16:30-20:00 Mon-Fri. Allow 60-75min Makati→NAIA Mon 01 Jun PM departure."],
+    ["Tagaytay traffic Sat", "Tagaytay weekend traffic adds 30-60min each way. Leave Makati by 07:00 OR delay to Mon (skip flight day)."],
+    ["Quiapo pickpockets", "Plaza Miranda crowded — wear money belt, no flashy phone, leave passport at hotel."],
+    ["Day 2 fatigue (v1)", "Binondo food crawl + Quiapo + Escolta + Poblacion crawl = high; v2 cuts Quiapo + crawl optional."],
+    ["Pinatubo flood risk", "Early-season tropical depressions possible; monitor PAGASA for LPA 1 week pre-trip."],
+    ["Taal volcano alert", "Day-trip to Tagaytay rim viewpoint OK at Alert Level 1-2; crater boat ride NOT allowed >Level 2. Check PHIVOLCS."],
+    ["NAIA terminal mix-up", "PH airlines split T2/T3/T4. PAL=T2, Cebu Pacific=T3 (intl/domestic mixed). Confirm terminal on booking — wrong terminal = miss flight."],
+    ["Currency cash", "Many small eateries + jeepneys cash-only. GCash accepted in Makati/BGC but spotty in Binondo/Quiapo. Carry ₱2-3k cash daily."],
+    ["Pollution/heat", "Heat index can hit 42°C midday late May. Indoor break 12:00-15:00; hydrate."]
+  ],
+  "booking_timeline": [
+    {"window": "Now → Feb 2026", "lead_time": "T-3 to T-5 mo", "action": "Track domestic fare via Cebu Pacific / PAL apps; set price alerts", "why": "Domestic fare swings ±50%; promos around payday Fridays"},
+    {"window": "Feb 2026", "lead_time": "T-3 mo", "action": "Book Cebu Pacific / PAL return; target Tue/Wed flights", "why": "Mid-week cheaper; avoid Friday return = NAIA chaos"},
+    {"window": "Mar 2026", "lead_time": "T-2 mo", "action": "Book hotel on Agoda/Booking with FREE CANCELLATION (Makati CBD)", "why": "Lock rate; pivot if flash sale or pivot to BGC"},
+    {"window": "Apr 2026", "lead_time": "T-1 mo", "action": "Pre-book Tagaytay private car / Klook tour; book Toyo Eatery 2 weeks ahead", "why": "Tagaytay weekend slots fill; Toyo books out"},
+    {"window": "Early May 2026", "lead_time": "T-3 wk", "action": "Book Corregidor (Sun Cruises) if pivoting from Tagaytay", "why": "Sun Cruises only ferry — limited Sat slots"},
+    {"window": "2 weeks before", "lead_time": "T-2 wk", "action": "Reconfirm Toyo Eatery + Old Manila Walks Binondo crawl", "why": "Both small operators with limited covers"},
+    {"window": "1 week before", "lead_time": "T-7 d", "action": "WhatsApp The Spa BGC / Nuat Thai for Sat/Sun reservation", "why": "Weekend spa slots fill"},
+    {"window": "3 days before", "lead_time": "T-3 d", "action": "Web check-in opens — confirm seats; verify terminal (T2/T3)", "why": "Avoid airport counter queue + terminal mix-up"},
+    {"window": "Day before", "lead_time": "T-1 d", "action": "Screenshot all vouchers offline; charge devices; download PAGASA app", "why": "Mobile data patchy at NAIA arrival"},
+    {"window": "Day of", "lead_time": "T-0", "action": "Domestic: arrive NAIA T-1.5hr; check terminal once more", "why": "Domestic shorter buffer but terminal errors common"}
+  ],
+  "practical_info": [
+    ["Visa (PH passport)", "Domestic travel — none. Show valid government ID (PH passport, UMID, driver's license, PRC) for check-in."],
+    ["Passport/ID", "PH passport or any valid government-issued photo ID. Passport not required for domestic."],
+    ["Hotel booking proof", "Have on phone — sometimes asked at hotel check-in for walk-ins."],
+    ["Currency", "PHP only. USD/SGD not accepted outside hotels/large malls."],
+    ["Exchange rate", "~43 PHP per 1 SGD (recheck XE.com; volatile 41-45)"],
+    ["Best ATMs", "BPI, BDO, Metrobank. Fee ₱200-250/withdrawal. AVOID generic Euronet ATMs."],
+    ["Cards", "Visa/MC at hotels, malls, mid+ restaurants. AmEx limited. Cash for jeepney, market, Binondo, Quiapo."],
+    ["Cash bring", "₱2-3k/day for street/market — Binondo/Quiapo cash-heavy."],
+    ["Tipping", "Service charge often auto-added 10%. If not, 5-10% sit-down. Spa ₱50-100. Grab — round up."],
+    ["SIM/eSIM", "Globe or Smart tourist SIM at NAIA arrival ₱500-1000 (5-10GB, 5-7 days). Or Klook/Airalo eSIM ~SGD 8-12."],
+    ["Power", "220V/60Hz. Type A/B/C plugs (US 2-pin fits). SG/UK Type G NOT compatible — bring adaptor."],
+    ["Tap water", "NOT potable. Bottled only. Hotels usually supply 2 bottles/day."],
+    ["Weather May-Jun", "28-34°C, humidity 75-90%. Heat index can exceed 42°C midday. Habagat onset = afternoon storms."],
+    ["Sun protection", "SPF 50+, sunglasses, hat. Manila sun is fierce 10:00-15:00."],
+    ["Dress code (churches)", "Quiapo / Manila Cathedral / San Agustin: covered shoulders + knees. Carry light shawl."],
+    ["Apps to install", "Grab, GCash, Foodpanda, Waze, Google Maps offline Manila, PAGASA, AccuWeather"],
+    ["Useful Tagalog", "Salamat (thanks), Magkano (how much), Mahal (expensive), Tara (let's go), Po/Opo (polite suffix)"],
+    ["Emergency", "Police/Fire/Ambulance 911 · Coast Guard 143 · NAIA Tourist Police +63 2 8551 9888"],
+    ["DOT Tourist Assistance", "+63 2 8459 5200 ext. 105 (Dept of Tourism hotline)"],
+    ["Travel insurance", "Optional for domestic but advisable for typhoon-season trip (Standard Insurance, Pioneer, Malayan)"]
+  ],
+  "checklist": [
+    {"category": "Documents", "item": "Valid PH passport or government-issued photo ID (UMID/driver's license/PRC)"},
+    {"category": "Documents", "item": "Return flight ticket printed + on phone"},
+    {"category": "Documents", "item": "Hotel booking confirmation printed + on phone"},
+    {"category": "Documents", "item": "Travel insurance policy + emergency hotline (if purchased)"},
+    {"category": "Documents", "item": "Photo of ID stored in cloud + phone"},
+    {"category": "Money", "item": "PHP cash ₱5,000-10,000 obtained from BPI/BDO ATM at origin"},
+    {"category": "Money", "item": "GCash topped up (₱2,000+) for Grab + Foodpanda + small retailers"},
+    {"category": "Money", "item": "Credit card limit increased for trip; notify bank if first-time Manila use"},
+    {"category": "Tech", "item": "Globe/Smart SIM or eSIM plan decided (buy at NAIA arrival counter)"},
+    {"category": "Tech", "item": "Universal travel adapter packed (if non-PH device with Type G plug)"},
+    {"category": "Tech", "item": "Power bank ≤100Wh (carry-on only on domestic flights)"},
+    {"category": "Tech", "item": "Apps installed: Grab, GCash, Foodpanda, Waze, Maps offline, PAGASA"},
+    {"category": "Tech", "item": "Mobile boarding pass downloaded T-72hr"},
+    {"category": "Bookings", "item": "Hotel — Free Cancellation rate locked"},
+    {"category": "Bookings", "item": "Tagaytay private car / Klook tour pre-booked (if doing)"},
+    {"category": "Bookings", "item": "Toyo Eatery reservation (2 weeks ahead)"},
+    {"category": "Bookings", "item": "Old Manila Walks Binondo crawl booked (1 week ahead)"},
+    {"category": "Bookings", "item": "The Spa BGC / Nuat Thai WhatsApp reserved (1 week ahead)"},
+    {"category": "Bookings", "item": "NAIA → hotel airport transfer planned (Grab or hotel shuttle)"},
+    {"category": "Pack", "item": "Light cotton clothes, breathable shoes, light shawl for churches"},
+    {"category": "Pack", "item": "Quick-dry sandals + closed walking shoes (Intramuros cobblestones)"},
+    {"category": "Pack", "item": "Packable rain shell + small umbrella (habagat onset)"},
+    {"category": "Pack", "item": "SPF 50+ sunscreen, sunglasses, hat"},
+    {"category": "Pack", "item": "Mosquito repellent DEET 25%+ (dengue zone)"},
+    {"category": "Pack", "item": "Personal meds + electrolyte sachets (Hydrite/ORS) for heat"},
+    {"category": "Pack", "item": "Reusable water bottle (refill at hotel — tap NOT potable)"},
+    {"category": "Pack", "item": "Money belt or anti-theft sling (Quiapo/Binondo crowds)"},
+    {"category": "Pre-flight", "item": "Web check-in T-72hr before each domestic flight"},
+    {"category": "Pre-flight", "item": "Confirm NAIA terminal (PAL=T2 · Cebu Pacific=T3 · AirAsia=T4) — wrong terminal = miss flight"},
+    {"category": "Pre-flight", "item": "Confirm baggage allowance (PAL incl 23kg; Cebu Pacific add-on)"},
+    {"category": "Pre-flight", "item": "PAGASA weather check 48hr (habagat / LPA / typhoon outlook)"},
+    {"category": "Pre-flight", "item": "Screenshot all vouchers + boarding passes offline"}
+  ],
+  "hidden_gems_categorized": {
+    "NATURE / SCENIC": [
+      {"name": "Pinto Art Museum (Antipolo)", "distance": "~28 km E", "travel_time": "~75 min", "why_quiet": "Whitewashed art compound on hillside; intentional curation vs tour-bus crowds", "notes": "₱250; pair with Antipolo Church + viewpoint"},
+      {"name": "La Mesa Eco Park (QC)", "distance": "~17 km NE", "travel_time": "~50 min", "why_quiet": "33-hectare watershed forest, walking trails, picnic. Most tourists never go.", "notes": "₱60; weekday best"},
+      {"name": "Las Piñas Bamboo Organ", "distance": "~20 km SW", "travel_time": "~50 min", "why_quiet": "1816 bamboo pipe organ in St Joseph Parish — Nat'l Cultural Treasure", "notes": "₱150; weekday morning"}
+    ],
+    "BEACHES / DAY TRIPS": [
+      {"name": "Anvaya Cove / Bataan", "distance": "~120 km NW", "travel_time": "~3 hr", "why_quiet": "Day-pass beach club on Subic Bay; far quieter than Boracay-adjacent stuff", "notes": "Overnight stay easier"},
+      {"name": "Caliraya Resort (Laguna)", "distance": "~110 km SE", "travel_time": "~2.5 hr", "why_quiet": "Pine-forest reservoir, kayaks; cooler than Tagaytay", "notes": "Day-trip possible but tight"},
+      {"name": "Corregidor (slow version)", "distance": "~45 km W (ferry)", "travel_time": "~90 min ferry", "why_quiet": "Overnight Corregidor Inn = empty island sunset", "notes": "₱6,500 overnight pkg via Sun Cruises"}
+    ],
+    "FOOD (local-only)": [
+      {"name": "Sincerity Restaurant", "distance": "Binondo ~8 km", "travel_time": "~28 min", "why_quiet": "Cantonese fried chicken + kiampong; locals' favorite, hidden alley", "notes": "Cash only; no English menu — point at neighbours"},
+      {"name": "Toho Antigua Panciteria", "distance": "Binondo ~8 km", "travel_time": "~28 min", "why_quiet": "Manila's OLDEST restaurant (1888); pancit + lumpia", "notes": "Heritage feel; ₱300-500"},
+      {"name": "Café Adriatico (Malate)", "distance": "~7 km W", "travel_time": "~25 min", "why_quiet": "1979 LJC institution; bibingka + paella; quiet weekday", "notes": "₱500-800"},
+      {"name": "Mañam Comfort Filipino", "distance": "Greenbelt 2 walk", "travel_time": "~10 min", "why_quiet": "Modern Filipino tapas; weekday lunch easy walk-in", "notes": "₱400-700; try sinigang sa watermelon"},
+      {"name": "Mercato Centrale (BGC weekend)", "distance": "BGC ~4 km", "travel_time": "~18 min", "why_quiet": "Fri-Sat 18:00-03:00 night food market; locals' weekly ritual", "notes": "₱100-400; cash heavy"}
+    ],
+    "COFFEE (specialty)": [
+      {"name": "Yardstick Coffee", "distance": "Legaspi Village ~0.5 km", "travel_time": "~5 min walk", "why_quiet": "Manila's specialty third-wave pioneer; locals work from here", "notes": "₱150-300"},
+      {"name": "EDSA Beverage Design Studio", "distance": "BGC ~4 km", "travel_time": "~18 min", "why_quiet": "Single-origin tasting flights; coffee + cocktails", "notes": "₱200-500"},
+      {"name": "Tilde Handcrafted Café", "distance": "Cubao ~12 km", "travel_time": "~35 min", "why_quiet": "Cubao Expo arts district; quiet vinyl + coffee", "notes": "Pair with Cubao Expo art browse"}
+    ],
+    "CULTURE (low-traffic)": [
+      {"name": "Escolta Street + HUB:Make Lab", "distance": "~8 km N", "travel_time": "~28 min", "why_quiet": "Heritage art district; First Saturday Block Party. Often missed.", "notes": "Free; Calvo Bldg, Regina Bldg"},
+      {"name": "Manila Chinese Cemetery", "distance": "~11 km N", "travel_time": "~35 min", "why_quiet": "Mausoleums w/ AC + mailboxes — surreal 'mini-city'", "notes": "Free; hire pedicab guide ₱500"},
+      {"name": "Bahay Tsinoy", "distance": "Intramuros ~8 km", "travel_time": "~28 min", "why_quiet": "Chinese-Filipino history museum; AC, rarely busy", "notes": "₱200; 1.5hr"},
+      {"name": "Cubao Expo", "distance": "~12 km NE", "travel_time": "~35 min", "why_quiet": "Indie design + vinyl + vintage compound; locals' creative scene", "notes": "Free entry; weekday quieter"},
+      {"name": "Marikina Shoe Museum", "distance": "~22 km E", "travel_time": "~55 min", "why_quiet": "Imelda Marcos's 800 shoes + shoemaking history", "notes": "₱100; eccentric niche"}
+    ],
+    "WELLNESS (off-radar)": [
+      {"name": "The Farm at San Benito (day-pass)", "distance": "~100 km S (Batangas)", "travel_time": "~2.5 hr", "why_quiet": "Award-winning wellness retreat day-pass; vegan lunch + pool", "notes": "Splurge ~₱8,500; book ahead"},
+      {"name": "Mandala Spa (Boracay quality, Antipolo)", "distance": "~28 km E", "travel_time": "~75 min", "why_quiet": "Hidden hillside spa retreat; pair w/ Pinto", "notes": "₱3,000-5,000"},
+      {"name": "Nuat Thai (Salcedo branch)", "distance": "walk", "travel_time": "5 min", "why_quiet": "Less busy than Greenbelt branch; weekday afternoon walk-in", "notes": "₱500-700"}
+    ]
+  },
+  "v1_v2_compare": [
+    {"item": "Day 1 PM", "v1": "Intramuros half-day + Manila Bay sunset (active)", "v2": "Hotel pool + Baywalk sunset only", "why": "Soft arrival; avoid heat exhaustion day 1"},
+    {"item": "Day 2", "v1": "Binondo crawl + Quiapo + Escolta + Poblacion nightlife", "v2": "Sunrise Intramuros + slow Binondo (skip Quiapo)", "why": "v1 too packed — 4 walking-heavy stops + late bars"},
+    {"item": "Day 3 anchor", "v1": "Tagaytay day trip (60km RT, peak weekend crowds)", "v2": "Pinto Art Museum Antipolo (28km, quiet curated art)", "why": "v2 cuts long drive + skips Tagaytay weekend traffic"},
+    {"item": "Day 4", "v1": "Ayala Museum + BGC + spa + Toyo Eatery dinner + nightcap", "v2": "Legaspi Market + Ayala Museum + long Toyo lunch + rest", "why": "v1 = 13hr active; v2 = 9hr + nap block"},
+    {"item": "Day 5 departure", "v1": "Pasalubong + lunch + Grab NAIA T-2hr", "v2": "Easy breakfast + light shopping + Grab NAIA T-3hr", "why": "Habagat = NAIA delays; extra buffer"},
+    {"item": "Total spa time", "v1": "60 + 90 = 150min two sessions", "v2": "150min single long ritual", "why": "Quality > quantity"},
+    {"item": "Avg daily transit km", "v1": "~28 km", "v2": "~22 km", "why": "v2 trades Tagaytay for shorter Antipolo + sunrise Intramuros (less traffic)"},
+    {"item": "Crowd exposure", "v1": "High (Binondo crawl + Quiapo + Tagaytay weekend)", "v2": "Low (sunrise Intramuros + Antipolo art + Legaspi local)", "why": "v2 avoids tour-bus + religious-crowd zones"},
+    {"item": "Heat exposure", "v1": "High (3 outdoor anchors)", "v2": "Medium (sunrise + indoor museum + spa)", "why": "v2 keeps 11-15:00 indoor"},
+    {"item": "Nightlife", "v1": "Mandatory Poblacion crawl + The Curator nightcap", "v2": "Optional — only if energy permits", "why": "Free weather/energy pivot"},
+    {"item": "Active hours/day", "v1": "13-14 hr", "v2": "10-12 hr with 2× rest blocks", "why": "Pace for couples/leisure/heat tolerance"}
+  ],
+  "transport_tips": [
+    "Grab >> regular taxi. Predictable fare, no haggling, GCash payment. Surge during rain — wait 5min.",
+    "EDSA traffic worst Mon-Fri 16:30-20:00 and Sun 19:00-22:00 (return-to-city). Plan around.",
+    "Jeepney for adventure only — minimal English, ₱13-20 fixed. Don't try with luggage.",
+    "Metro Manila Skyway costs ₱65-200 toll — Grab driver may ask cash for toll; OK to add to fare.",
+    "NAIA inter-terminal shuttle is FREE — pink bus loops T1↔T2↔T3↔T4 every 15 min.",
+    "Tagaytay private car ₱3,500-4,500 RT; avoid Sat morning outbound traffic by leaving by 07:00.",
+    "P2P bus to Tagaytay (DLTB/Genesis) ₱250 from Cubao or PITX — slow but cheap."
+  ],
+  "accommodation_recommendation": "RECOMMENDATION: Single hotel in Makati CBD (walking distance to Greenbelt + Poblacion + Salcedo). Citadines Salcedo = sweet spot mid-range. Book Free Cancellation rate to allow late pivot to BGC if needed. Avoid Manila/Ermita budget hotels (further from BGC, worse safety after dark).",
+  "visa": {
+    "rule": "Domestic travel — no visa. PH passport / any valid government-issued photo ID required for domestic flights.",
+    "days_allowed": 0,
+    "e_visa_required": false,
+    "passport_validity_required_until": "2026-06-01",
+    "onward_ticket_required": false,
+    "source": "Bureau of Immigration PH — domestic travel"
+  },
+  "places": [
+    {
+      "key": "intramuros",
+      "name": "Intramuros (Walled City)",
+      "category": "iconic",
+      "area": "Manila",
+      "wiki_title": "Intramuros",
+      "lat": 14.5906,
+      "lon": 120.9742,
+      "distance_km_from_base": 7.5,
+      "travel_min_from_base": 25,
+      "description": "16th-century Spanish walled city — the historic core of colonial Manila. Contains Fort Santiago (Rizal's last prison), San Agustin Church (1607, UNESCO, oldest stone church in PH), Manila Cathedral, Casa Manila, Bahay Tsinoy. Best explored on foot or by bamboo bike (Bambike eco-tours ₱1,200). Allocate half a day minimum.",
+      "price_vnd": 75,
+      "opening_hours": "Fort Santiago 08:00-18:00",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Intramuros"
+        },
+        {
+          "label": "Intramuros Administration (official)",
+          "url": "https://intramuros.gov.ph/"
+        },
+        {
+          "label": "Bambike Ecotours",
+          "url": "https://bambike.com/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\intramuros.jpg"
+    },
+    {
+      "key": "rizal_park",
+      "name": "Rizal Park (Luneta)",
+      "category": "iconic",
+      "area": "Ermita, Manila",
+      "wiki_title": "Rizal Park",
+      "lat": 14.5826,
+      "lon": 120.9787,
+      "distance_km_from_base": 6.0,
+      "travel_min_from_base": 22,
+      "description": "Largest urban park in PH and site of national hero José Rizal's execution (1896). Houses Rizal Monument (24/7 honor guard), Chinese & Japanese gardens, National Museum complex nearby. Free entry. Best at sunrise or late afternoon to avoid heat.",
+      "price_vnd": 0,
+      "opening_hours": "05:00-21:00",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rizal_Park"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\rizal_park.jpg"
+    },
+    {
+      "key": "national_museum",
+      "name": "National Museum Complex",
+      "category": "iconic",
+      "area": "Padre Burgos Ave, Ermita",
+      "wiki_title": "National Museum of the Philippines",
+      "lat": 14.587,
+      "lon": 120.981,
+      "distance_km_from_base": 6.2,
+      "travel_min_from_base": 22,
+      "description": "Three free museums — Fine Arts (Spoliarium by Luna), Anthropology, Natural History (Lolong the croc). FREE admission since 2016. AC, 3-4 hr comfortable visit. Closed Mondays.",
+      "price_vnd": 0,
+      "opening_hours": "Tue-Sun 09:00-18:00 (closed Mon)",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/National_Museum_of_the_Philippines"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.nationalmuseum.gov.ph/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\national_museum.jpg"
+    },
+    {
+      "key": "binondo",
+      "name": "Binondo (Chinatown)",
+      "category": "iconic",
+      "area": "Manila",
+      "wiki_title": "Binondo",
+      "lat": 14.601,
+      "lon": 120.975,
+      "distance_km_from_base": 8.2,
+      "travel_min_from_base": 28,
+      "description": "World's oldest Chinatown (established 1594). Food crawl heaven — Eng Bee Tin (hopia), Wai Ying (dimsum), Sincerity Cafe (kiampong + fried chicken), Lord Stow's (egg tart), Polland (pork siopao). Old Manila Walks 'Big Binondo Food Wok' tour ₱1,500.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Binondo"
+        },
+        {
+          "label": "Old Manila Walks",
+          "url": "https://www.oldmanilawalks.com/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\binondo.jpg"
+    },
+    {
+      "key": "quiapo_church",
+      "name": "Quiapo Church (Minor Basilica of the Black Nazarene)",
+      "category": "iconic",
+      "area": "Quiapo, Manila",
+      "wiki_title": "Quiapo Church",
+      "lat": 14.598,
+      "lon": 120.9836,
+      "distance_km_from_base": 8.0,
+      "travel_min_from_base": 28,
+      "description": "Home of the Black Nazarene — focal point of one of the largest Catholic devotions in Asia (Traslación every Jan 9). Surrounding Quiapo: Hidalgo St photography row, Raon St electronics, Villalobos herb stalls. Watch pickpockets in crowded plaza.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Quiapo_Church"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\quiapo_church.jpg"
+    },
+    {
+      "key": "manila_cathedral",
+      "name": "Manila Cathedral",
+      "category": "iconic",
+      "area": "Intramuros",
+      "wiki_title": "Manila Cathedral",
+      "lat": 14.5916,
+      "lon": 120.9731,
+      "distance_km_from_base": 7.5,
+      "travel_min_from_base": 25,
+      "description": "Minor Basilica and seat of the Archbishop of Manila. Current (8th) structure consecrated 1958 after WWII destruction. Free entry outside Mass times. Stained glass, papal organ. Pair with San Agustin walk.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Manila_Cathedral"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\manila_cathedral.jpg"
+    },
+    {
+      "key": "san_agustin_church",
+      "name": "San Agustin Church",
+      "category": "iconic",
+      "area": "Intramuros",
+      "wiki_title": "San Agustin Church (Manila)",
+      "lat": 14.5891,
+      "lon": 120.975,
+      "distance_km_from_base": 7.5,
+      "travel_min_from_base": 25,
+      "description": "Oldest stone church in the Philippines (1607). UNESCO World Heritage. Survived 7 earthquakes + WWII bombing of Intramuros. Adjacent museum has religious art and relics. Entry ₱200.",
+      "price_vnd": 200,
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/San_Agustin_Church_(Manila)"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\san_agustin_church.jpg"
+    },
+    {
+      "key": "ayala_museum",
+      "name": "Ayala Museum",
+      "category": "iconic",
+      "area": "Makati",
+      "wiki_title": "Ayala Museum",
+      "lat": 14.5547,
+      "lon": 121.0244,
+      "distance_km_from_base": 1.5,
+      "travel_min_from_base": 8,
+      "description": "Reopened 2022 with stunning Gold of Ancestors gallery (precolonial gold artifacts, world-class), Diorama Experience (60+ scenes of PH history), and rotating contemporary exhibits. Entry ₱650. Allocate 2-3 hours.",
+      "price_vnd": 650,
+      "opening_hours": "Tue-Sun 09:00-18:00",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ayala_Museum"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.ayalamuseum.org/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\ayala_museum.jpg"
+    },
+    {
+      "key": "bgc",
+      "name": "Bonifacio Global City (BGC)",
+      "category": "iconic",
+      "area": "Taguig",
+      "wiki_title": "Bonifacio Global City",
+      "lat": 14.5512,
+      "lon": 121.051,
+      "distance_km_from_base": 4.0,
+      "travel_min_from_base": 18,
+      "description": "Modern CBD with Bonifacio High Street (pedestrian zone), Mind Museum, The Alley at Karrivin Plaza (art galleries), and the BGC street-art trail. Best for upscale shopping + dining. Walkable.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bonifacio_Global_City"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\bgc.jpg"
+    },
+    {
+      "key": "manila_baywalk",
+      "name": "Manila Baywalk + Sunset",
+      "category": "iconic",
+      "area": "Roxas Blvd, Ermita",
+      "wiki_title": "Manila Bay",
+      "lat": 14.5712,
+      "lon": 120.975,
+      "distance_km_from_base": 6.5,
+      "travel_min_from_base": 22,
+      "description": "Famous Manila Bay sunset stretch along Roxas Blvd. Free. Best 17:30-18:30. Newly rehabilitated 'White Beach' near US Embassy. Skip if tide low (smell). Pair with dinner at CCP/Aristocrat.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Manila_Bay"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\manila_baywalk.jpg"
+    },
+    {
+      "key": "tagaytay",
+      "name": "Tagaytay (Taal Volcano view)",
+      "category": "iconic",
+      "area": "Cavite (60km S of Manila)",
+      "wiki_title": "Tagaytay",
+      "lat": 14.1059,
+      "lon": 120.9628,
+      "distance_km_from_base": 60,
+      "travel_min_from_base": 105,
+      "description": "Cool-climate ridge city overlooking Taal Volcano. 1.5-2hr drive from Makati. Bulalo (bone-marrow beef stew) at Leslie's or Diner's. Sky Ranch amusement park. People's Park in the Sky for volcano panorama. Sonya's Garden for organic lunch. Easy day trip.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tagaytay"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\tagaytay.jpg"
+    },
+    {
+      "key": "corregidor",
+      "name": "Corregidor Island",
+      "category": "iconic",
+      "area": "Manila Bay entrance",
+      "wiki_title": "Corregidor",
+      "lat": 14.3833,
+      "lon": 120.575,
+      "distance_km_from_base": 45,
+      "travel_min_from_base": 90,
+      "description": "WWII tadpole-shaped island fortress at Manila Bay entrance. Sun Cruises ferry from ESPLANADE Seaside Terminal (CCP). Malinta Tunnel, Pacific War Memorial, Mile-Long Barracks, Battery Way. Full-day tour 06:30-15:30. ~₱2,999/pax incl ferry+lunch+tram.",
+      "price_vnd": 2999,
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Corregidor"
+        },
+        {
+          "label": "Sun Cruises (official ferry)",
+          "url": "https://corregidorphilippines.com/"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\corregidor.jpg"
+    },
+    {
+      "key": "escolta",
+      "name": "Escolta Street",
+      "category": "hidden_gem",
+      "area": "Binondo / Sta Cruz",
+      "wiki_title": "Escolta",
+      "lat": 14.597,
+      "lon": 120.9785,
+      "distance_km_from_base": 8.0,
+      "travel_min_from_base": 28,
+      "description": "Once Manila's Wall Street — now a heritage art district. First Saturday Block Party (Saturdays of the month). Calvo Building, Regina Building, Capitol Theatre ruins. HUB:Make Lab for indie design. Often missed by tourists.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Escolta"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\escolta.jpg"
+    },
+    {
+      "key": "poblacion",
+      "name": "Poblacion (Makati nightlife district)",
+      "category": "hidden_gem",
+      "area": "Makati",
+      "wiki_title": "Poblacion, Makati",
+      "lat": 14.566,
+      "lon": 121.019,
+      "distance_km_from_base": 0.5,
+      "travel_min_from_base": 5,
+      "description": "Gritty-cool district reinvented as Manila's premier bar/food crawl zone. Rooftop bars (Z Hostel), speakeasies (Run Rabbit Run), Korean BBQ row, late-night taco stands. Walkable from Makati CBD hotels.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Poblacion,_Makati"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\poblacion.jpg"
+    },
+    {
+      "key": "pinto_art_museum",
+      "name": "Pinto Art Museum (Antipolo)",
+      "category": "hidden_gem",
+      "area": "Antipolo, Rizal (1hr E)",
+      "wiki_title": "Pinto Art Museum",
+      "lat": 14.5949,
+      "lon": 121.1842,
+      "distance_km_from_base": 28,
+      "travel_min_from_base": 75,
+      "description": "Whitewashed Mediterranean-style contemporary art compound on a hill in Antipolo. Multiple galleries + gardens + cafe. Phenomenal Instagram spot but actually substantive curation. ₱250. Worth the Grab ride.",
+      "price_vnd": 250,
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pinto_Art_Museum"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\pinto_art_museum.jpg"
+    },
+    {
+      "key": "manila_chinese_cemetery",
+      "name": "Manila Chinese Cemetery",
+      "category": "hidden_gem",
+      "area": "Sta Cruz",
+      "wiki_title": "Manila Chinese Cemetery",
+      "lat": 14.6262,
+      "lon": 120.987,
+      "distance_km_from_base": 11,
+      "travel_min_from_base": 35,
+      "description": "Surreal 'mini-city' cemetery where mausoleums have AC, mailboxes, two-storey houses. Built when Chinese were denied burial in Catholic cemeteries during Spanish era. Free, hire pedicab guide (~₱500) at gate.",
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Manila_Chinese_Cemetery"
+        }
+      ],
+      "image_path": "C:\\Dev\\Active\\itinerary-builder\\trips\\manila\\images\\manila_chinese_cemetery.jpg"
+    },
+    {
+      "key": "wai_ying",
+      "name": "Wai Ying Fastfood",
+      "category": "food",
+      "area": "Binondo",
+      "price_label": "₱200-350",
+      "when": "Day 2 Binondo crawl lunch",
+      "description": "Cheap, fast Cantonese dimsum + hakaw + soy chicken. Cult favorite. Two branches (Benavidez + Salazar). Cash only."
+    },
+    {
+      "key": "manam",
+      "name": "Manam Comfort Filipino",
+      "category": "food",
+      "area": "Greenbelt 2, Makati",
+      "price_label": "₱400-700",
+      "when": "Day 1 lunch / Day 2 dinner",
+      "description": "Modern Filipino tapas — sinigang sa watermelon, crispy pata, kare-kare. Order classics + twist sides. Walk-ins okay weekday lunch."
+    },
+    {
+      "key": "toyo_eatery",
+      "name": "Toyo Eatery",
+      "category": "food",
+      "area": "Karrivin Plaza, Makati",
+      "price_label": "₱3,500-4,500 tasting",
+      "when": "Day 4 dinner (book 2wks ahead)",
+      "description": "Asia's 50 Best — pinakbet bukid, Filipino tasting menu. Splurge dinner.",
+      "links": [
+        {"label": "Official site", "url": "https://www.toyoeatery.com/"}
+      ]
+    },
+    {
+      "key": "aristocrat",
+      "name": "Aristocrat Restaurant (Roxas Blvd)",
+      "category": "food",
+      "area": "Malate",
+      "price_label": "₱300-500",
+      "when": "Day 1 dinner post Baywalk",
+      "description": "Manila institution since 1936. Famous chicken BBQ + java rice + atchara. Heritage feel, often packed Sundays after Mass."
+    },
+    {
+      "key": "romulo_cafe",
+      "name": "Romulo Café",
+      "category": "food",
+      "area": "QC original / Makati branch",
+      "price_label": "₱500-900",
+      "when": "Day 4 lunch alt",
+      "description": "Heritage Filipino — Tito Greg's adobo flakes, chicken relleno, dinuguan empanadas. Named after Carlos P. Romulo. Good for groups."
+    },
+    {
+      "key": "sentro_1771",
+      "name": "Sentro 1771",
+      "category": "food",
+      "area": "Greenbelt 3 / Capitol Commons",
+      "price_label": "₱500-800",
+      "when": "Day 5 final lunch",
+      "description": "Modern Filipino — corned-beef sinigang (iconic), bagnet, ensaladang mangga. Solid sit-down option."
+    },
+    {
+      "key": "leslies_tagaytay",
+      "name": "Leslie's Restaurant Tagaytay",
+      "category": "food",
+      "area": "Aguinaldo Hwy, Tagaytay",
+      "price_label": "₱500-900",
+      "when": "Day 3 Tagaytay bulalo lunch",
+      "description": "Classic bulalo (beef bone-marrow stew) with Taal Lake panorama. Tourist mainstay but worth it for the view + the broth."
+    },
+    {
+      "key": "wildflour",
+      "name": "Wildflour Café + Bakery",
+      "category": "food",
+      "area": "Salcedo / BGC / Podium",
+      "price_label": "₱300-600",
+      "when": "Breakfast / brunch",
+      "description": "Upscale all-day café — eggs benedict, salted caramel ensaymada, fresh pastries. Reliable any day."
+    },
+    {
+      "key": "the_spa_bgc",
+      "name": "The Spa (Fort Bonifacio)",
+      "category": "spa",
+      "area": "BGC",
+      "price_label": "₱1,200-3,200",
+      "when": "Day 4 evening",
+      "description": "Reliable mid-range chain — Swedish, hilot, hot stone. Couples rooms. Book ahead Sat/Sun."
+    },
+    {
+      "key": "nuat_thai",
+      "name": "Nuat Thai",
+      "category": "spa",
+      "area": "Multiple branches (Makati/BGC/QC)",
+      "price_label": "₱400-700",
+      "when": "Any evening / post Intramuros walk",
+      "description": "Cheap reliable Thai massage chain. Walk-in possible. Foot reflex highly recommended after Intramuros walking day."
+    },
+    {
+      "key": "devarana_spa",
+      "name": "Devarana Spa (Dusit Thani)",
+      "category": "spa",
+      "area": "Makati (Ayala Center)",
+      "price_label": "₱4,500-6,500",
+      "when": "Splurge — 120-150min ritual",
+      "description": "Luxury hotel spa, Thai-inspired rituals, signature Devarana 150min package. Best splurge."
+    },
+    {
+      "key": "mandala_spa",
+      "name": "Mandala Spa (Antipolo)",
+      "category": "spa",
+      "area": "Antipolo (~28km E)",
+      "price_label": "₱3,000-5,000",
+      "when": "Day 3 v2 — pair with Pinto",
+      "description": "Hidden hillside spa retreat. Pair with Pinto Art Museum for half-day off-radar wellness combo."
+    },
+    {
+      "key": "z_hostel_rooftop",
+      "name": "Z Hostel Rooftop Bar",
+      "category": "nightlife",
+      "area": "Poblacion, Makati",
+      "price_label": "₱200-350",
+      "when": "Day 2 — start of crawl",
+      "description": "Open-air rooftop bar — sunset cocktails, Manila skyline view. Crowd builds 21:00 onward."
+    },
+    {
+      "key": "the_curator",
+      "name": "The Curator",
+      "category": "nightlife",
+      "area": "Legaspi Village, Makati",
+      "price_label": "₱500-700",
+      "when": "Day 4 nightcap (book ahead)",
+      "description": "Speakeasy behind coffee shop. World's 50 Best Bars alum. Craft cocktails. Reservation recommended Fri/Sat."
+    },
+    {
+      "key": "run_rabbit_run",
+      "name": "Run Rabbit Run",
+      "category": "nightlife",
+      "area": "Poblacion, Makati",
+      "price_label": "₱400-600",
+      "when": "Day 2 — Poblacion crawl",
+      "description": "Speakeasy behind grocery façade. Cocktails + small plates. Hidden door experience."
+    },
+    {
+      "key": "bank_bar",
+      "name": "The Bank Bar",
+      "category": "nightlife",
+      "area": "RCBC Plaza, Makati",
+      "price_label": "₱500-800",
+      "when": "Day 4 alt nightcap",
+      "description": "Concealed inside RCBC Plaza — enter via Ze Royal Filipino-Cuban restaurant. Classic cocktail focus."
+    },
+    {
+      "key": "sky_deck_bayleaf",
+      "name": "Sky Deck Bayleaf",
+      "category": "nightlife",
+      "area": "Intramuros (Bayleaf Hotel)",
+      "price_label": "₱400-700",
+      "when": "Day 1 sunset alt",
+      "description": "Rooftop bar atop Bayleaf — Intramuros + Manila Bay views. Less crowded than Poblacion."
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Red Planet Makati (Mabini)",
+      "tier": "Budget",
+      "rating": "3★",
+      "sgd_low": 35,
+      "sgd_high": 55,
+      "notes": "Walking distance Poblacion + Greenbelt. Clean, no-frills. Best budget pick.",
+      "links": [
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/searchresults.html?ss=Red+Planet+Makati"
+        }
+      ]
+    },
+    {
+      "name": "Citadines Salcedo Makati",
+      "tier": "Mid",
+      "rating": "4★",
+      "sgd_low": 90,
+      "sgd_high": 140,
+      "notes": "Aparthotel with kitchen, gym, pool. Salcedo Village near Saturday market. Mid-range sweet spot.",
+      "links": [
+        {
+          "label": "Citadines official",
+          "url": "https://www.discoverasr.com/en/citadines/philippines/citadines-salcedo-makati"
+        }
+      ]
+    },
+    {
+      "name": "Dusit Thani Manila",
+      "tier": "Luxury",
+      "rating": "5★",
+      "sgd_low": 200,
+      "sgd_high": 320,
+      "notes": "Across Ayala MRT, walking to Greenbelt/Ayala Museum. Devarana Spa onsite. Reliable luxury.",
+      "links": [
+        {
+          "label": "Dusit official",
+          "url": "https://www.dusit.com/dusitthani-manila/"
+        }
+      ]
+    },
+    {
+      "name": "Shangri-La The Fort (BGC)",
+      "tier": "Luxury",
+      "rating": "5★",
+      "sgd_low": 280,
+      "sgd_high": 450,
+      "notes": "If staying BGC instead of Makati. Tallest hotel in PH. Samba rooftop bar, CHI Spa.",
+      "links": [
+        {
+          "label": "Shangri-La official",
+          "url": "https://www.shangri-la.com/manila/shangrilaatthefort/"
+        }
+      ]
+    }
+  ],
+  "itinerary": {
+    "v1_standard": [
+      {
+        "day_label": "Day 1 — Thu 28 May: Arrival + Intramuros + Bay Sunset",
+        "rows": [
+          {
+            "time": "AM",
+            "activity": "Arrive NAIA (domestic terminal — T2/T3/T4 depending on carrier)",
+            "route": "NAIA arrival",
+            "vnd": 0,
+            "notes": "Domestic — show valid government ID"
+          },
+          {
+            "time": "+45m",
+            "activity": "Grab to Makati hotel; check in or store bags",
+            "route": "NAIA → Makati",
+            "km": 8.5,
+            "min": 35,
+            "vnd": 350,
+            "notes": "EDSA traffic — allow 30-50min"
+          },
+          {
+            "time": "11:30",
+            "activity": "Light lunch near hotel (Manam Greenbelt or Mesa)",
+            "route": "Walk Ayala/Greenbelt",
+            "km": 0.6,
+            "min": 8,
+            "vnd": 500,
+            "notes": ""
+          },
+          {
+            "time": "13:00",
+            "activity": "Grab to Intramuros — start at Fort Santiago",
+            "route": "Makati → Intramuros",
+            "km": 7.5,
+            "min": 30,
+            "vnd": 280,
+            "notes": "Entry ₱75"
+          },
+          {
+            "time": "14:00",
+            "activity": "Fort Santiago + Rizal Shrine walk",
+            "route": "Within Intramuros",
+            "vnd": 75,
+            "min": 60,
+            "notes": "Allow 1hr"
+          },
+          {
+            "time": "15:00",
+            "activity": "San Agustin Church + Museum",
+            "route": "Walk",
+            "km": 0.4,
+            "min": 8,
+            "vnd": 200,
+            "notes": "UNESCO; AC inside"
+          },
+          {
+            "time": "16:00",
+            "activity": "Casa Manila + Manila Cathedral",
+            "route": "Walk",
+            "km": 0.3,
+            "min": 6,
+            "vnd": 75,
+            "notes": ""
+          },
+          {
+            "time": "17:15",
+            "activity": "Grab to Manila Baywalk",
+            "route": "Intramuros → Baywalk",
+            "km": 2.0,
+            "min": 12,
+            "vnd": 150,
+            "notes": "For sunset"
+          },
+          {
+            "time": "17:30",
+            "activity": "Manila Bay sunset",
+            "route": "Roxas Blvd walk",
+            "vnd": 0,
+            "min": 60,
+            "notes": "Free"
+          },
+          {
+            "time": "19:00",
+            "activity": "Dinner: Aristocrat Roxas Blvd",
+            "route": "Walk Roxas Blvd",
+            "km": 0.5,
+            "min": 8,
+            "vnd": 600,
+            "notes": "Chicken BBQ classic"
+          },
+          {
+            "time": "21:00",
+            "activity": "Grab back to Makati",
+            "route": "Malate → Makati",
+            "km": 6.0,
+            "min": 25,
+            "vnd": 280,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Fri 29 May: Binondo Food Crawl + Quiapo + Escolta",
+        "rows": [
+          {
+            "time": "08:30",
+            "activity": "Quick hotel breakfast",
+            "route": "Hotel",
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "09:30",
+            "activity": "Grab to Binondo (Plaza Lorenzo Ruiz)",
+            "route": "Makati → Binondo",
+            "km": 8.2,
+            "min": 30,
+            "vnd": 320,
+            "notes": ""
+          },
+          {
+            "time": "10:00",
+            "activity": "Old Manila Walks Big Binondo Food Wok",
+            "route": "Binondo walk",
+            "vnd": 1500,
+            "min": 240,
+            "notes": "Book ahead; eats included"
+          },
+          {
+            "time": "14:00",
+            "activity": "Cross Jones Bridge to Quiapo",
+            "route": "Walk over Pasig",
+            "km": 1.0,
+            "min": 18,
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "14:30",
+            "activity": "Quiapo Church + Plaza Miranda",
+            "route": "Within Quiapo",
+            "vnd": 0,
+            "min": 45,
+            "notes": "Watch belongings"
+          },
+          {
+            "time": "15:30",
+            "activity": "Hidalgo St photography row + Villalobos herb stalls",
+            "route": "Quiapo streets",
+            "vnd": 0,
+            "min": 45,
+            "notes": ""
+          },
+          {
+            "time": "16:30",
+            "activity": "Grab to Escolta — heritage art district",
+            "route": "Quiapo → Escolta",
+            "km": 1.0,
+            "min": 10,
+            "vnd": 100,
+            "notes": ""
+          },
+          {
+            "time": "17:00",
+            "activity": "Calvo Building, HUB:Make Lab, Capitol Theatre ruins",
+            "route": "Walk Escolta",
+            "vnd": 0,
+            "min": 60,
+            "notes": ""
+          },
+          {
+            "time": "18:30",
+            "activity": "Grab back to Makati — rest 1hr",
+            "route": "Escolta → Makati",
+            "km": 8.5,
+            "min": 35,
+            "vnd": 350,
+            "notes": "Rush hour buffer"
+          },
+          {
+            "time": "20:30",
+            "activity": "Dinner: Manam Greenbelt",
+            "route": "Walk Ayala",
+            "km": 0.5,
+            "min": 8,
+            "vnd": 700,
+            "notes": ""
+          },
+          {
+            "time": "22:00",
+            "activity": "Z Hostel Rooftop / Poblacion bar crawl",
+            "route": "Walk Poblacion",
+            "km": 0.6,
+            "min": 10,
+            "vnd": 600,
+            "notes": "Optional"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Sat 30 May: Tagaytay Day Trip (Taal + Bulalo)",
+        "rows": [
+          {
+            "time": "07:00",
+            "activity": "Hotel pickup — private car or Grab to Tagaytay",
+            "route": "Makati → Tagaytay",
+            "km": 60,
+            "min": 105,
+            "vnd": 3500,
+            "notes": "Private car ₱3,500-4,500 RT"
+          },
+          {
+            "time": "09:00",
+            "activity": "Picnic Grove / People's Park in the Sky — Taal panorama",
+            "route": "Tagaytay ridge",
+            "vnd": 100,
+            "min": 90,
+            "notes": "Cool 22-25°C"
+          },
+          {
+            "time": "11:00",
+            "activity": "Sky Ranch (optional ferris wheel)",
+            "route": "Tagaytay",
+            "vnd": 600,
+            "min": 60,
+            "notes": "Skip if not into rides"
+          },
+          {
+            "time": "12:30",
+            "activity": "Lunch: Bulalo at Leslie's / Diner's",
+            "route": "Aguinaldo Hwy",
+            "vnd": 750,
+            "min": 75,
+            "notes": "Bone-marrow beef stew"
+          },
+          {
+            "time": "14:30",
+            "activity": "Sonya's Garden — organic farm + cafe",
+            "route": "Alfonso side",
+            "km": 8,
+            "min": 20,
+            "vnd": 250,
+            "notes": "Pretty stop"
+          },
+          {
+            "time": "16:00",
+            "activity": "Mahogany Market for souvenirs (kapeng barako, buko pie)",
+            "route": "Tagaytay",
+            "vnd": 400,
+            "min": 45,
+            "notes": ""
+          },
+          {
+            "time": "17:00",
+            "activity": "Drive back to Makati",
+            "route": "Tagaytay → Makati",
+            "km": 60,
+            "min": 120,
+            "vnd": 0,
+            "notes": "Light Sat traffic outbound"
+          },
+          {
+            "time": "19:30",
+            "activity": "Massage: Nuat Thai or The Spa BGC",
+            "route": "Hotel area",
+            "km": 1,
+            "min": 10,
+            "vnd": 700,
+            "notes": "Recover from drive"
+          },
+          {
+            "time": "21:30",
+            "activity": "Late dinner near hotel or skip",
+            "route": "Walk",
+            "vnd": 500,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sun 31 May: Makati Museum + BGC + Spa",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Sunday Legaspi Market — kakanin, cochinillo, produce",
+            "route": "Walk Legaspi Village",
+            "km": 0.8,
+            "min": 12,
+            "vnd": 600,
+            "notes": "Sundays only 07:30-14:00"
+          },
+          {
+            "time": "10:30",
+            "activity": "Ayala Museum — Gold of Ancestors + Diorama",
+            "route": "Walk Greenbelt",
+            "km": 0.4,
+            "min": 6,
+            "vnd": 650,
+            "notes": "Tue-Sun open"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch: Romulo Café or Wildflour",
+            "route": "Makati",
+            "km": 0.3,
+            "min": 5,
+            "vnd": 800,
+            "notes": ""
+          },
+          {
+            "time": "14:30",
+            "activity": "Grab to BGC",
+            "route": "Makati → BGC",
+            "km": 4.0,
+            "min": 18,
+            "vnd": 200,
+            "notes": ""
+          },
+          {
+            "time": "15:00",
+            "activity": "BGC street-art walk + The Alley at Karrivin (galleries)",
+            "route": "Walk BGC",
+            "vnd": 0,
+            "min": 90,
+            "notes": "Free, well-curated"
+          },
+          {
+            "time": "16:30",
+            "activity": "Mind Museum (if into science) OR Bonifacio High Street stroll",
+            "route": "BGC",
+            "vnd": 750,
+            "min": 90,
+            "notes": "Optional"
+          },
+          {
+            "time": "18:30",
+            "activity": "The Spa BGC — 90min Swedish or hilot",
+            "route": "BGC",
+            "vnd": 2200,
+            "min": 90,
+            "notes": "Book ahead"
+          },
+          {
+            "time": "20:30",
+            "activity": "Dinner: Toyo Eatery (book 2wks ahead) or Las Flores",
+            "route": "Karrivin/BGC",
+            "km": 1.5,
+            "min": 8,
+            "vnd": 3500,
+            "notes": "Splurge night"
+          },
+          {
+            "time": "22:30",
+            "activity": "The Curator speakeasy nightcap",
+            "route": "Makati",
+            "km": 4,
+            "min": 15,
+            "vnd": 600,
+            "notes": "Optional"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Mon 01 Jun: Pasalubong + Departure",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Hotel breakfast + pack",
+            "route": "Hotel",
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "10:30",
+            "activity": "Kultura Filipino (SM Aura or Greenbelt) — pasalubong run",
+            "route": "Mall walk/Grab",
+            "km": 1,
+            "min": 8,
+            "vnd": 1500,
+            "notes": "Local crafts, brands"
+          },
+          {
+            "time": "12:00",
+            "activity": "Final lunch: Sentro 1771 (Filipino comfort) or Wildflour",
+            "route": "Greenbelt",
+            "vnd": 700,
+            "min": 75,
+            "notes": ""
+          },
+          {
+            "time": "13:30",
+            "activity": "Hotel checkout; Grab to NAIA",
+            "route": "Makati → NAIA",
+            "km": 8.5,
+            "min": 45,
+            "vnd": 400,
+            "notes": "Allow 2hr+ for traffic"
+          },
+          {
+            "time": "14:30",
+            "activity": "Arrive NAIA — domestic check-in",
+            "route": "NAIA",
+            "vnd": 0,
+            "notes": "Domestic: 1.5hr buffer; Cebu Pacific/PAL T2/T3"
+          },
+          {
+            "time": "16:00+",
+            "activity": "Departure",
+            "route": "",
+            "notes": "Adjust to actual flight time"
+          }
+        ]
+      }
+    ],
+    "v2_relaxed": [
+      {
+        "day_label": "Day 1 — Thu 28 May: Soft Arrival + Sunset",
+        "rows": [
+          {
+            "time": "AM",
+            "activity": "Arrive NAIA + Grab to Makati",
+            "route": "NAIA → Makati",
+            "km": 8.5,
+            "min": 35,
+            "vnd": 350,
+            "notes": ""
+          },
+          {
+            "time": "12:00",
+            "activity": "Lazy lunch near hotel — Manam or Mesa",
+            "route": "Walk",
+            "vnd": 500,
+            "notes": ""
+          },
+          {
+            "time": "13:30",
+            "activity": "Hotel pool / nap block",
+            "route": "Hotel",
+            "vnd": 0,
+            "min": 150,
+            "notes": "Decompress"
+          },
+          {
+            "time": "16:30",
+            "activity": "Grab to Manila Baywalk for sunset only",
+            "route": "Makati → Baywalk",
+            "km": 6.5,
+            "min": 25,
+            "vnd": 280,
+            "notes": "Skip Intramuros today"
+          },
+          {
+            "time": "19:00",
+            "activity": "Dinner: Café Adriatico Malate (heritage)",
+            "route": "Walk Malate",
+            "km": 0.6,
+            "min": 10,
+            "vnd": 700,
+            "notes": ""
+          },
+          {
+            "time": "21:00",
+            "activity": "Grab back; early night",
+            "route": "Malate → Makati",
+            "km": 6,
+            "min": 25,
+            "vnd": 280,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Fri 29 May: Sunrise Intramuros + Slow Binondo",
+        "rows": [
+          {
+            "time": "05:30",
+            "activity": "Grab to Intramuros — empty walls at sunrise",
+            "route": "Makati → Intramuros",
+            "km": 7.5,
+            "min": 18,
+            "vnd": 250,
+            "notes": "No traffic; cool"
+          },
+          {
+            "time": "06:00",
+            "activity": "Walk walls + Fort Santiago perimeter (opens 08:00 — exterior only earlier)",
+            "route": "Intramuros",
+            "vnd": 0,
+            "min": 90,
+            "notes": ""
+          },
+          {
+            "time": "08:00",
+            "activity": "Fort Santiago + San Agustin",
+            "route": "Intramuros",
+            "vnd": 275,
+            "min": 120,
+            "notes": ""
+          },
+          {
+            "time": "10:30",
+            "activity": "Coffee + breakfast at Barbara's Heritage",
+            "route": "Intramuros",
+            "vnd": 450,
+            "notes": "Quiet AC break"
+          },
+          {
+            "time": "12:00",
+            "activity": "Walk to Binondo via Jones Bridge",
+            "route": "Walk",
+            "km": 2,
+            "min": 25,
+            "vnd": 0,
+            "notes": "Skip Quiapo crowds in v2"
+          },
+          {
+            "time": "12:30",
+            "activity": "Slow Binondo — self-paced (Wai Ying + Eng Bee Tin)",
+            "route": "Binondo walk",
+            "vnd": 700,
+            "min": 120,
+            "notes": "Skip the group tour"
+          },
+          {
+            "time": "15:00",
+            "activity": "Grab back to Makati — rest block",
+            "route": "Binondo → Makati",
+            "km": 8,
+            "min": 35,
+            "vnd": 350,
+            "notes": ""
+          },
+          {
+            "time": "16:30",
+            "activity": "Nuat Thai foot reflex 60min",
+            "route": "Walk",
+            "vnd": 500,
+            "min": 60,
+            "notes": ""
+          },
+          {
+            "time": "19:30",
+            "activity": "Dinner: Sentro 1771 (Greenbelt)",
+            "route": "Walk",
+            "vnd": 800,
+            "notes": ""
+          },
+          {
+            "time": "21:30",
+            "activity": "Optional nightcap — skip if tired",
+            "route": "",
+            "vnd": 0,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Sat 30 May: Antipolo Art + Quiet Lunch (skip Tagaytay crowds)",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Late breakfast at hotel",
+            "route": "Hotel",
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "10:30",
+            "activity": "Grab to Pinto Art Museum (Antipolo)",
+            "route": "Makati → Antipolo",
+            "km": 28,
+            "min": 75,
+            "vnd": 850,
+            "notes": "Less crowded than Tagaytay"
+          },
+          {
+            "time": "12:00",
+            "activity": "Pinto galleries + gardens + cafe lunch",
+            "route": "Within Pinto",
+            "vnd": 1200,
+            "min": 180,
+            "notes": "Entry ₱250 + lunch"
+          },
+          {
+            "time": "15:30",
+            "activity": "Grab back to Makati",
+            "route": "Antipolo → Makati",
+            "km": 28,
+            "min": 75,
+            "vnd": 850,
+            "notes": ""
+          },
+          {
+            "time": "17:00",
+            "activity": "Hotel rest / pool",
+            "route": "Hotel",
+            "vnd": 0,
+            "min": 90,
+            "notes": ""
+          },
+          {
+            "time": "19:00",
+            "activity": "Long ritual at The Spa BGC — 150min",
+            "route": "BGC",
+            "km": 4,
+            "min": 18,
+            "vnd": 3200,
+            "notes": "Single long session"
+          },
+          {
+            "time": "22:00",
+            "activity": "Light supper near hotel",
+            "route": "Walk",
+            "vnd": 500,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sun 31 May: Slow Makati + Optional BGC",
+        "rows": [
+          {
+            "time": "09:00",
+            "activity": "Legaspi Market wander",
+            "route": "Walk",
+            "vnd": 500,
+            "min": 75,
+            "notes": ""
+          },
+          {
+            "time": "10:30",
+            "activity": "Ayala Museum (no rush — 2.5hr)",
+            "route": "Walk",
+            "vnd": 650,
+            "min": 150,
+            "notes": ""
+          },
+          {
+            "time": "13:30",
+            "activity": "Long lunch: Toyo Eatery (book ahead) or Wildflour",
+            "route": "Karrivin/Makati",
+            "vnd": 3000,
+            "min": 150,
+            "notes": ""
+          },
+          {
+            "time": "16:30",
+            "activity": "Hotel pool / book / nap",
+            "route": "Hotel",
+            "vnd": 0,
+            "min": 120,
+            "notes": ""
+          },
+          {
+            "time": "19:00",
+            "activity": "BGC stroll — optional gallery / High Street",
+            "route": "BGC",
+            "km": 4,
+            "min": 18,
+            "vnd": 200,
+            "notes": "Skip if tired"
+          },
+          {
+            "time": "20:30",
+            "activity": "Dinner: Las Flores (Spanish, BGC) or Yardstick (lighter)",
+            "route": "BGC/Makati",
+            "vnd": 1500,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Mon 01 Jun: Easy Departure",
+        "rows": [
+          {
+            "time": "09:30",
+            "activity": "Leisurely breakfast",
+            "route": "Hotel",
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "11:00",
+            "activity": "Quick pasalubong stop — Kultura Greenbelt",
+            "route": "Walk",
+            "vnd": 1200,
+            "min": 60,
+            "notes": ""
+          },
+          {
+            "time": "12:30",
+            "activity": "Final lunch — Toyo or Manam",
+            "route": "Walk",
+            "vnd": 700,
+            "min": 75,
+            "notes": ""
+          },
+          {
+            "time": "14:00",
+            "activity": "Checkout + Grab NAIA (extra buffer)",
+            "route": "Makati → NAIA",
+            "km": 8.5,
+            "min": 50,
+            "vnd": 400,
+            "notes": "Allow 50min worst case"
+          },
+          {
+            "time": "15:00+",
+            "activity": "Arrive NAIA — relaxed check-in",
+            "route": "",
+            "notes": ""
+          }
+        ]
+      }
+    ],
+    "v3_weather": [
+      {
+        "day_label": "Day 1 — Wet weather variant: indoor arrival",
+        "rows": [
+          {
+            "time": "AM",
+            "activity": "Arrive NAIA + Grab to Makati",
+            "route": "NAIA → Makati",
+            "km": 8.5,
+            "min": 50,
+            "vnd": 400,
+            "notes": "Add traffic buffer for rain"
+          },
+          {
+            "time": "12:00",
+            "activity": "Lunch in covered Greenbelt 2-3",
+            "route": "Indoor mall",
+            "vnd": 600,
+            "notes": ""
+          },
+          {
+            "time": "14:00",
+            "activity": "Ayala Museum (3hr) — AC, dry",
+            "route": "Indoor",
+            "vnd": 650,
+            "min": 180,
+            "notes": "Swap from outdoor Intramuros"
+          },
+          {
+            "time": "17:30",
+            "activity": "Greenbelt 5 cinema OR Aristocrat covered dining",
+            "route": "Indoor",
+            "vnd": 500,
+            "notes": ""
+          },
+          {
+            "time": "19:30",
+            "activity": "Indoor dinner — Romulo Café Makati",
+            "route": "Indoor mall",
+            "vnd": 800,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 2 — Storm contingency: covered Binondo",
+        "rows": [
+          {
+            "time": "10:00",
+            "activity": "Grab Binondo — focus indoor restaurants (Wai Ying, Sincerity, Lord Stow's)",
+            "route": "Binondo restaurants",
+            "vnd": 800,
+            "min": 180,
+            "notes": "Most are covered or partially indoor"
+          },
+          {
+            "time": "14:00",
+            "activity": "Lucky Chinatown Mall (Binondo) — indoor refuge",
+            "route": "Indoor mall",
+            "vnd": 0,
+            "notes": ""
+          },
+          {
+            "time": "16:00",
+            "activity": "Grab back; storm-watch from hotel",
+            "route": "Binondo → Makati",
+            "km": 8,
+            "min": 50,
+            "vnd": 400,
+            "notes": ""
+          },
+          {
+            "time": "18:30",
+            "activity": "Indoor dinner — Sentro 1771 Greenbelt",
+            "route": "Walk via covered bridge",
+            "vnd": 800,
+            "notes": ""
+          },
+          {
+            "time": "20:30",
+            "activity": "SM Aura cinema or hotel movie",
+            "route": "Indoor",
+            "vnd": 400,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 3 — Heavy rain: CANCEL Tagaytay (zero visibility); indoor museum chain",
+        "rows": [
+          {
+            "time": "10:00",
+            "activity": "National Museum complex (3 free museums)",
+            "route": "Grab to Padre Burgos",
+            "km": 6,
+            "min": 25,
+            "vnd": 280,
+            "notes": "FREE; all AC"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch indoors near museum",
+            "route": "Walk",
+            "vnd": 600,
+            "notes": ""
+          },
+          {
+            "time": "14:30",
+            "activity": "Bahay Tsinoy + Casa Manila (Intramuros indoor stops only)",
+            "route": "Grab",
+            "km": 2,
+            "min": 12,
+            "vnd": 350,
+            "notes": "Only if rain breaks"
+          },
+          {
+            "time": "16:30",
+            "activity": "Grab back to Makati",
+            "route": "Intramuros → Makati",
+            "km": 7.5,
+            "min": 45,
+            "vnd": 350,
+            "notes": ""
+          },
+          {
+            "time": "18:00",
+            "activity": "150min spa marathon — The Spa BGC",
+            "route": "BGC",
+            "vnd": 3200,
+            "min": 150,
+            "notes": ""
+          },
+          {
+            "time": "21:00",
+            "activity": "Hotel dinner / room service",
+            "route": "Hotel",
+            "vnd": 700,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "day_label": "Day 4 — Typhoon-warning level: stay in Makati",
+        "rows": [
+          {
+            "time": "ALL DAY",
+            "activity": "Mall mode: Greenbelt + Glorietta + Power Plant covered chain",
+            "route": "Indoor walks via Ayala tunnels",
+            "vnd": 1500,
+            "notes": "Ayala/Makati malls connected by covered walkways"
+          },
+          {
+            "time": "AM",
+            "activity": "Power Plant Mall — Rockwell — boutique shops + cinema",
+            "route": "Grab covered",
+            "km": 2,
+            "min": 12,
+            "vnd": 200,
+            "notes": ""
+          },
+          {
+            "time": "Lunch",
+            "activity": "Manam or Toyo (booked) — indoor",
+            "route": "Mall",
+            "vnd": 1200,
+            "notes": ""
+          },
+          {
+            "time": "PM",
+            "activity": "Spa OR rebook Day-3 missed items if storm clears",
+            "route": "Hotel area",
+            "vnd": 2000,
+            "notes": ""
+          },
+          {
+            "time": "Evening",
+            "activity": "Stay in — order Foodpanda; check PAGASA bulletin",
+            "route": "Hotel",
+            "vnd": 600,
+            "notes": "Track typhoon track"
+          }
+        ]
+      },
+      {
+        "day_label": "Day 5 — Flight day: monitor NAIA delays",
+        "rows": [
+          {
+            "time": "06:00",
+            "activity": "Check flight status — Cebu Pacific/PAL app + Twitter",
+            "route": "Hotel",
+            "vnd": 0,
+            "notes": "Domestic cancels common in typhoon"
+          },
+          {
+            "time": "10:00",
+            "activity": "If delayed: stay another night at hotel (extend); insurance claim",
+            "route": "",
+            "vnd": 0,
+            "notes": "Check insurance delay clause"
+          },
+          {
+            "time": "If on-time",
+            "activity": "Leave 3hr early for NAIA — rain doubles traffic",
+            "route": "Makati → NAIA",
+            "km": 8.5,
+            "min": 70,
+            "vnd": 600,
+            "notes": "Worst-case buffer"
+          }
+        ]
+      }
+    ]
+  },
+  "weather_plan_b": {
+    "emit": true,
+    "rationale": "Late May–early June = transition from amihan (dry/cool) to habagat (SW monsoon). Manila prone to sudden afternoon thunderstorms + occasional early tropical depressions. Heat index can exceed 42°C midday. Indoor fallbacks mandatory.",
+    "decision_tree": [
+      {
+        "condition": "Clear / partly cloudy (heat index <38°C)",
+        "trigger": "PAGASA forecast clear",
+        "action": "Run v1 standard"
+      },
+      {
+        "condition": "PM afternoon showers (typical habagat)",
+        "trigger": "Showers forecast 13:00-17:00",
+        "action": "Front-load outdoor AM, shift indoor museum/mall PM"
+      },
+      {
+        "condition": "All-day moderate rain",
+        "trigger": "Yellow rainfall warning",
+        "action": "Activate v3 — indoor chain, skip Tagaytay/Corregidor"
+      },
+      {
+        "condition": "Tropical storm / Signal No.1-2",
+        "trigger": "PAGASA TCWS-1/2",
+        "action": "Cancel all day-trips; stay Makati; cinema/spa/mall"
+      },
+      {
+        "condition": "Typhoon / Signal No.3+",
+        "trigger": "PAGASA TCWS-3+",
+        "action": "Stay in hotel; assume flight cancellation; extend booking; insurance claim"
+      }
+    ],
+    "indoor_bank": [
+      {
+        "name": "Ayala Museum",
+        "area": "Makati",
+        "vnd": 650,
+        "duration": "2.5-3hr",
+        "notes": "Gold gallery + Diorama"
+      },
+      {
+        "name": "National Museum complex (Fine Arts / Anthro / Natural Hist)",
+        "area": "Ermita",
+        "vnd": 0,
+        "duration": "3-4hr",
+        "notes": "FREE; 3 buildings"
+      },
+      {
+        "name": "Mind Museum BGC",
+        "area": "BGC",
+        "vnd": 750,
+        "duration": "2hr",
+        "notes": "Kid-friendly"
+      },
+      {
+        "name": "Greenbelt 5 cinema",
+        "area": "Makati",
+        "vnd": 400,
+        "duration": "2hr",
+        "notes": ""
+      },
+      {
+        "name": "SM Aura / Power Plant Mall / Glorietta covered chain",
+        "area": "Makati/BGC",
+        "vnd": 0,
+        "duration": "flex",
+        "notes": "Connected covered walkways"
+      },
+      {
+        "name": "The Spa BGC — 150min ritual",
+        "area": "BGC",
+        "vnd": 3200,
+        "duration": "2.5hr",
+        "notes": "Long-form spa"
+      },
+      {
+        "name": "Bahay Tsinoy (Chinese-Filipino museum)",
+        "area": "Intramuros",
+        "vnd": 200,
+        "duration": "1.5hr",
+        "notes": "AC indoor"
+      },
+      {
+        "name": "Lucky Chinatown Mall",
+        "area": "Binondo",
+        "vnd": 0,
+        "duration": "flex",
+        "notes": "Refuge during Binondo crawl"
+      },
+      {
+        "name": "Pinto Art Museum (Antipolo)",
+        "area": "Antipolo",
+        "vnd": 250,
+        "duration": "3hr+lunch",
+        "notes": "Mostly covered galleries"
+      },
+      {
+        "name": "Lotte Cinema Greenbelt / Power Plant",
+        "area": "Makati",
+        "vnd": 400,
+        "duration": "2hr",
+        "notes": "English Hollywood + local films"
+      },
+      {
+        "name": "SM Mall of Asia (MOA)",
+        "area": "Pasay (~7km W)",
+        "vnd": 0,
+        "duration": "flex",
+        "notes": "Largest mall — cinema, aquarium, ice rink"
+      },
+      {
+        "name": "Manila Ocean Park",
+        "area": "Ermita",
+        "vnd": 800,
+        "duration": "3hr",
+        "notes": "Indoor aquarium — kid-friendly rain refuge"
+      }
+    ],
+    "per_day_swaps": [
+      {
+        "day_label": "Day 1 — Thu 28 May",
+        "swaps": [
+          {"original": "Intramuros walking (PM)", "why_risk": "Open cobblestone, no cover except churches", "trigger": "Any rain", "action": "Skip outdoor; do Casa Manila + San Agustin Museum (covered) only, OR move to Day 2 sunrise.", "alt_vnd": 275, "channel": "Self-walk"},
+          {"original": "Manila Baywalk sunset", "why_risk": "Fully open seafront", "trigger": "Mod rain", "action": "Substitute Sky Deck Bayleaf (covered rooftop, Intramuros views) OR hotel rooftop bar.", "alt_vnd": 600, "channel": "Bayleaf Hotel walk-in"},
+          {"original": "Aristocrat dinner", "why_risk": "Indoor — OK in light rain", "trigger": "Heavy rain", "action": "Stay Makati: Romulo Café / Manam Greenbelt (covered access).", "alt_vnd": 700, "channel": "Walk via covered walkway"}
+        ]
+      },
+      {
+        "day_label": "Day 2 — Fri 29 May",
+        "swaps": [
+          {"original": "Binondo food crawl (walking)", "why_risk": "Outdoor walking between stalls", "trigger": "Mod rain", "action": "Crawl uses covered shophouses — proceed with umbrella. Skip Quiapo (open plaza).", "alt_vnd": 1500, "channel": "Old Manila Walks"},
+          {"original": "Quiapo Church + Hidalgo St", "why_risk": "Open plaza + flooded streets", "trigger": "Mod-Heavy rain", "action": "SKIP — Quiapo floods at 30mm+ rain. Substitute Bahay Tsinoy (Intramuros) AC museum.", "alt_vnd": 200, "channel": "Self-walk"},
+          {"original": "Escolta heritage walk", "why_risk": "Outdoor street walk", "trigger": "Heavy rain", "action": "Lucky Chinatown Mall (covered) for refuge; reschedule Escolta to Day 4.", "alt_vnd": 0, "channel": "Mall"},
+          {"original": "Poblacion crawl", "why_risk": "Walking between bars", "trigger": "Any rain", "action": "Pick ONE indoor bar (The Curator speakeasy, Bank Bar) instead of crawl.", "alt_vnd": 600, "channel": "Reservation"}
+        ]
+      },
+      {
+        "day_label": "Day 3 — Sat 30 May",
+        "swaps": [
+          {"original": "Tagaytay day trip", "why_risk": "Long mountain drive + outdoor viewpoints; Taal lake view = ZERO in rain", "trigger": "Mod rain or worse", "action": "CANCEL Tagaytay. SUBSTITUTE: Pinto Art Museum (Antipolo, mostly covered) OR full-day mall+museum chain.", "alt_vnd": 250, "channel": "Klook refund if 24hr"},
+          {"original": "Tagaytay (storm)", "why_risk": "Aguinaldo Hwy lands floods + visibility nil", "trigger": "Tropical storm signal 1+", "action": "STAY MAKATI. National Museum complex (FREE, AC, 3-4hr) + spa marathon.", "alt_vnd": 0, "channel": "Walk-in"},
+          {"original": "Taal volcano boat", "why_risk": "Open lake", "trigger": "Wind >40km/h OR PHIVOLCS Alert 2+", "action": "CANCEL — boat ops suspended. Refund via operator.", "alt_vnd": 0, "channel": "Operator refund"}
+        ]
+      },
+      {
+        "day_label": "Day 4 — Sun 31 May",
+        "swaps": [
+          {"original": "Legaspi Sunday Market", "why_risk": "Outdoor market", "trigger": "Any rain", "action": "Market runs in light rain (tarps); heavy rain — vendors close. Substitute: hotel breakfast + Wildflour Salcedo.", "alt_vnd": 400, "channel": "Walk-in"},
+          {"original": "Ayala Museum", "why_risk": "Fully indoor AC", "trigger": "Any", "action": "ALREADY INDOOR ✅ — keep as primary. Extend to 3hr if rain continues.", "alt_vnd": 650, "channel": "Walk-in"},
+          {"original": "BGC street art walk", "why_risk": "Outdoor walking", "trigger": "Mod rain", "action": "SKIP. Substitute: Mind Museum BGC (indoor, ₱750, 2hr) + Bonifacio High Street covered walkways.", "alt_vnd": 750, "channel": "Walk-in"},
+          {"original": "Toyo Eatery dinner (booked)", "why_risk": "Indoor restaurant", "trigger": "Any", "action": "ALREADY INDOOR ✅ — Grab to Karrivin. Allow extra time for traffic.", "alt_vnd": 3500, "channel": "Reservation"}
+        ]
+      },
+      {
+        "day_label": "Day 5 — Mon 01 Jun",
+        "swaps": [
+          {"original": "Pasalubong run + final lunch", "why_risk": "Mostly indoor malls", "trigger": "Any", "action": "✅ Already indoor — Greenbelt + SM Aura. Skip outdoor stops.", "alt_vnd": 1500, "channel": "Mall"},
+          {"original": "Grab to NAIA", "why_risk": "EDSA floods + traffic doubles", "trigger": "Heavy rain", "action": "Leave Makati 3hr before flight (vs 2hr). Use Skyway not EDSA. Have Grab Plus / 6-seater backup.", "alt_vnd": 600, "channel": "Grab"},
+          {"original": "Flight departure", "why_risk": "Domestic flights cancel at PAGASA Signal 2+ near track", "trigger": "Typhoon signal 2+", "action": "Cebu Pacific / PAL waive rebook fee during published advisories. Check carrier app + Twitter. Extend hotel free-cancel rate if delayed.", "alt_vnd": 0, "channel": "Carrier app"}
+        ]
+      }
+    ],
+    "booking_flex_tips": [
+      {"label": "Klook bookings", "text": "Filter 'Free cancellation up to 24hr' — most Tagaytay + Corregidor + Pinto tours offer it. Decide outdoor activities 2 days out based on PAGASA radar."},
+      {"label": "Hotel rate", "text": "Agoda / Booking Free Cancellation rate (~5-10% more than non-refund) lets you extend a day at fixed rate if flight cancels."},
+      {"label": "Cebu Pacific / PAL flights", "text": "Both waive change fees during officially-declared typhoon advisories. Monitor T-72hr via carrier app + Twitter (@CebuPacificAir / @flyPAL). Domestic = waived less generously than intl — file early."},
+      {"label": "Travel insurance", "text": "Standard Insurance, Pioneer, Malayan PH all cover >6hr delay (meals, hotel, transit) + cancellation. Keep receipts; file within 30 days."},
+      {"label": "Private driver", "text": "Hotel-arranged Tagaytay car can reschedule same week. Klook private = refund if road impassable. Confirm by 18:00 day before."},
+      {"label": "Spa bookings", "text": "WhatsApp The Spa BGC / Nuat Thai — flexible to reshuffle same week. No deposit at most chains."},
+      {"label": "Forecast sources", "text": "PAGASA (pagasa.dost.gov.ph official PH), Windy.com (radar + multi-model), AccuWeather (hour-by-hour), Yr.no (Norwegian Met = often more accurate)."},
+      {"label": "Local cue", "text": "If hotel staff says 'malakas ang ulan' (heavy rain) or 'bagyo' (typhoon) — believe them over app forecasts. Check PHIVOLCS for Taal alert."},
+      {"label": "Flood signals", "text": "MMDA Flood Twitter (@MMDA) reports street-level flooding live. España Blvd + EDSA Cubao + Marikina = first to flood."}
+    ]
+  },
+  "budget": {
+    "rate_vnd_per_sgd": 43,
+    "categories": [
+      {
+        "category": "Food (5 days)",
+        "low_vnd": 7500,
+        "high_vnd": 14000
+      },
+      {
+        "category": "Transport — Grab + day trip",
+        "low_vnd": 4500,
+        "high_vnd": 7000
+      },
+      {
+        "category": "Activities + entries",
+        "low_vnd": 3000,
+        "high_vnd": 5500
+      },
+      {
+        "category": "Spas + wellness",
+        "low_vnd": 1500,
+        "high_vnd": 5000
+      },
+      {
+        "category": "Nightlife (optional)",
+        "low_vnd": 0,
+        "high_vnd": 2500
+      },
+      {
+        "category": "SIM / data",
+        "low_vnd": 400,
+        "high_vnd": 800
+      },
+      {
+        "category": "Pasalubong / souvenirs",
+        "low_vnd": 1500,
+        "high_vnd": 4000
+      }
+    ],
+    "flight_sgd_low": 60,
+    "flight_sgd_high": 180,
+    "hotel_sgd_low": 140,
+    "hotel_sgd_high": 1200
+  },
+  "distance_matrix": [
+    {
+      "from": "NAIA Airport",
+      "to": "Makati CBD hotels",
+      "km": 8.5,
+      "min": 35,
+      "fare_vnd": 350,
+      "note": "Grab; allow 50min rush hour"
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Intramuros / Fort Santiago",
+      "km": 7.5,
+      "min": 28,
+      "fare_vnd": 280
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Rizal Park / National Museum",
+      "km": 6.2,
+      "min": 25,
+      "fare_vnd": 250
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Binondo Chinatown",
+      "km": 8.2,
+      "min": 30,
+      "fare_vnd": 320
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Quiapo Church",
+      "km": 8.0,
+      "min": 28,
+      "fare_vnd": 320
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Manila Baywalk (Roxas Blvd)",
+      "km": 6.5,
+      "min": 22,
+      "fare_vnd": 280
+    },
+    {
+      "from": "Makati CBD",
+      "to": "BGC Bonifacio High Street",
+      "km": 4.0,
+      "min": 18,
+      "fare_vnd": 200
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Poblacion bars",
+      "km": 0.5,
+      "min": 5,
+      "fare_vnd": 100,
+      "note": "Walkable"
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Tagaytay (Picnic Grove)",
+      "km": 60,
+      "min": 105,
+      "fare_vnd": 3500,
+      "note": "Private car RT; Grab outbound only"
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Corregidor Ferry Terminal (ESPLANADE)",
+      "km": 7.0,
+      "min": 25,
+      "fare_vnd": 300
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Pinto Art Museum Antipolo",
+      "km": 28,
+      "min": 75,
+      "fare_vnd": 850,
+      "note": "Grab"
+    },
+    {
+      "from": "Makati CBD",
+      "to": "Manila Chinese Cemetery",
+      "km": 11,
+      "min": 35,
+      "fare_vnd": 400
+    },
+    {
+      "from": "Makati CBD",
+      "to": "QC (Romulo Café original)",
+      "km": 12,
+      "min": 40,
+      "fare_vnd": 450
+    },
+    {
+      "from": "Makati CBD",
+      "to": "SM MOA (Mall of Asia)",
+      "km": 7.5,
+      "min": 25,
+      "fare_vnd": 300
+    }
+  ],
+  "activity_pricing": [
+    {
+      "category": "🚌 TAGAYTAY DAY TRIP — PICK ONE BUNDLE",
+      "paths": [
+        {
+          "name": "PATH 1 — Klook GROUP DAY TOUR",
+          "channel": "Klook shared van",
+          "vnd_per_pax": 2200,
+          "includes": "ALL-IN: RT van + Picnic Grove + Sky Ranch entry + bulalo lunch + Sonya's. Group of 10-15. Cheapest path."
+        },
+        {
+          "name": "PATH 2 — Private Grab car RT",
+          "channel": "Direct Grab/private booking",
+          "vnd_per_pax": 4500,
+          "includes": "Private car + driver RT (8hr). Entries + lunch NOT incl. Most flexible."
+        },
+        {
+          "name": "PATH 3 — Self-drive rental",
+          "channel": "Klook/Avis car rental",
+          "vnd_per_pax": 3500,
+          "includes": "Self-drive small SUV 24hr + fuel + toll. NLEX-CAVITEX. Independence; need PH license."
+        },
+        {
+          "name": "PATH 4 — DIY by P2P bus",
+          "channel": "DLTB / Genesis bus from Cubao or PITX",
+          "vnd_per_pax": 250,
+          "includes": "BUS ONLY one-way. Cheap, slow. Add jeepney/tricycle at Tagaytay. For backpackers."
+        }
+      ],
+      "extras": [
+        {
+          "name": "Optional: Sky Ranch ferris wheel",
+          "channel": "on-site",
+          "vnd_per_pax": 250,
+          "includes": "Single ride"
+        },
+        {
+          "name": "Optional: People's Park in the Sky entry",
+          "channel": "on-site",
+          "vnd_per_pax": 100,
+          "includes": "Entry only"
+        },
+        {
+          "name": "Optional: Taal Lake boat to volcano crater",
+          "channel": "Talisay Lakeside Brgy",
+          "vnd_per_pax": 1800,
+          "includes": "Bangka boat + island fee. Check PHIVOLCS volcano alert level FIRST."
+        }
+      ]
+    },
+    {
+      "category": "🏝️ CORREGIDOR DAY TRIP — PICK ONE BUNDLE",
+      "paths": [
+        {
+          "name": "PATH 1 — Sun Cruises full-day",
+          "channel": "Sun Cruises (sole ferry operator)",
+          "vnd_per_pax": 2999,
+          "includes": "RT ferry from ESPLANADE + tram tour + buffet lunch + guide. 06:30-15:30. Only practical path."
+        },
+        {
+          "name": "PATH 2 — Overnight Corregidor",
+          "channel": "Sun Cruises + Corregidor Inn",
+          "vnd_per_pax": 6500,
+          "includes": "Tour + Corregidor Inn 1 night + meals. Sunset + lights-of-Manila view."
+        }
+      ],
+      "extras": [
+        {
+          "name": "Optional: Light & Sound Show (Malinta Tunnel)",
+          "channel": "on-site",
+          "vnd_per_pax": 200,
+          "includes": "Add-on, 30min"
+        }
+      ]
+    },
+    {
+      "category": "🚶 INTRAMUROS — PICK ONE BUNDLE",
+      "paths": [
+        {
+          "name": "PATH 1 — Self-walk + entries",
+          "channel": "DIY",
+          "vnd_per_pax": 350,
+          "includes": "Fort Santiago ₱75 + San Agustin ₱200 + Casa Manila ₱75. Walk between. Cheapest."
+        },
+        {
+          "name": "PATH 2 — Bambike Eco-Tour",
+          "channel": "Bambike Intramuros",
+          "vnd_per_pax": 1200,
+          "includes": "Bamboo bike + guide + all entries 2.5hr. Most fun moderate-cost option."
+        },
+        {
+          "name": "PATH 3 — Kalesa carriage hire",
+          "channel": "Plaza San Luis",
+          "vnd_per_pax": 800,
+          "includes": "1hr horse-drawn carriage tour. Tourist-y but classic. NEGOTIATE before boarding."
+        },
+        {
+          "name": "PATH 4 — Old Manila Walks Intramuros tour",
+          "channel": "Old Manila Walks",
+          "vnd_per_pax": 1500,
+          "includes": "3hr guided walk + entries. Strong historian-led."
+        }
+      ]
+    },
+    {
+      "category": "🍜 BINONDO FOOD CRAWL — PICK ONE BUNDLE",
+      "paths": [
+        {
+          "name": "PATH 1 — Old Manila Walks Big Binondo Food Wok",
+          "channel": "Old Manila Walks",
+          "vnd_per_pax": 1500,
+          "includes": "4hr guided + 6-8 food stops. Most comprehensive."
+        },
+        {
+          "name": "PATH 2 — Ivan ManDy independent",
+          "channel": "@theoldmanilawalks",
+          "vnd_per_pax": 1800,
+          "includes": "Premium small-group; books out fast."
+        },
+        {
+          "name": "PATH 3 — DIY self-guided",
+          "channel": "Walk",
+          "vnd_per_pax": 700,
+          "includes": "Hit Wai Ying + Eng Bee Tin + Lord Stow's + Sincerity + Polland. ~₱700 food."
+        }
+      ]
+    },
+    {
+      "category": "💆 SPA — PICK ONE",
+      "paths": [
+        {
+          "name": "PATH 1 — Nuat Thai 60min foot reflex",
+          "channel": "Nuat Thai walk-in",
+          "vnd_per_pax": 500,
+          "includes": "60min foot. Cheap, reliable chain."
+        },
+        {
+          "name": "PATH 2 — The Spa BGC 90min Swedish",
+          "channel": "The Spa BGC",
+          "vnd_per_pax": 2200,
+          "includes": "90min full body. Mid-range."
+        },
+        {
+          "name": "PATH 3 — Dusit Devarana Spa 150min ritual",
+          "channel": "Dusit Thani Manila",
+          "vnd_per_pax": 6000,
+          "includes": "Hotel luxury spa. Splurge."
+        }
+      ]
+    }
+  ],
+  "maps": {
+    "regional": {
+      "zoom": 10,
+      "places": [
+        {
+          "lat": 14.5547,
+          "lon": 121.0244,
+          "label": "BASE HOTEL\n(Makati CBD)",
+          "color": "red",
+          "pos": "E"
+        },
+        {
+          "lat": 14.5086,
+          "lon": 121.0194,
+          "label": "NAIA Airport",
+          "color": "blue",
+          "pos": "S"
+        },
+        {
+          "lat": 14.5906,
+          "lon": 120.9742,
+          "label": "Intramuros",
+          "color": "orange",
+          "pos": "NW"
+        },
+        {
+          "lat": 14.601,
+          "lon": 120.975,
+          "label": "Binondo\n(Chinatown)",
+          "color": "orange",
+          "pos": "N"
+        },
+        {
+          "lat": 14.5512,
+          "lon": 121.051,
+          "label": "BGC",
+          "color": "orange",
+          "pos": "E"
+        },
+        {
+          "lat": 14.1059,
+          "lon": 120.9628,
+          "label": "Tagaytay\n(Taal Volcano)",
+          "color": "purple",
+          "pos": "S"
+        },
+        {
+          "lat": 14.3833,
+          "lon": 120.575,
+          "label": "Corregidor\nIsland",
+          "color": "purple",
+          "pos": "SW"
+        },
+        {
+          "lat": 14.5949,
+          "lon": 121.1842,
+          "label": "Pinto Art\nMuseum",
+          "color": "green",
+          "pos": "E"
+        },
+        {
+          "lat": 14.5826,
+          "lon": 120.9787,
+          "label": "Rizal Park",
+          "color": "orange",
+          "pos": "W"
+        }
+      ]
+    },
+    "city_closeup": {
+      "zoom": 12,
+      "places": [
+        {
+          "lat": 14.5547,
+          "lon": 121.0244,
+          "label": "BASE HOTEL\nMakati CBD",
+          "color": "red",
+          "pos": "SEE"
+        },
+        {
+          "lat": 14.5086,
+          "lon": 121.0194,
+          "label": "NAIA Airport",
+          "color": "blue",
+          "pos": "SWW"
+        },
+        {
+          "lat": 14.5906,
+          "lon": 120.9742,
+          "label": "Intramuros",
+          "color": "orange",
+          "pos": "NW"
+        },
+        {
+          "lat": 14.601,
+          "lon": 120.975,
+          "label": "Binondo\nChinatown",
+          "color": "orange",
+          "pos": "N"
+        },
+        {
+          "lat": 14.598,
+          "lon": 120.9836,
+          "label": "Quiapo Church",
+          "color": "orange",
+          "pos": "NE"
+        },
+        {
+          "lat": 14.5826,
+          "lon": 120.9787,
+          "label": "Rizal Park +\nNational Museum",
+          "color": "orange",
+          "pos": "W"
+        },
+        {
+          "lat": 14.5712,
+          "lon": 120.975,
+          "label": "Manila Bay\nSunset",
+          "color": "purple",
+          "pos": "SWW"
+        },
+        {
+          "lat": 14.5512,
+          "lon": 121.051,
+          "label": "BGC",
+          "color": "green",
+          "pos": "E"
+        },
+        {
+          "lat": 14.566,
+          "lon": 121.019,
+          "label": "Poblacion\nNightlife",
+          "color": "green",
+          "pos": "S"
+        }
+      ]
+    }
+  },
+  "practical_links": {
+    "Booking & Transport": [
+      {
+        "label": "Grab PH",
+        "url": "https://www.grab.com/ph/"
+      },
+      {
+        "label": "Klook Manila activities",
+        "url": "https://www.klook.com/en-PH/city/26-manila-things-to-do/"
+      },
+      {
+        "label": "Sun Cruises (Corregidor)",
+        "url": "https://corregidorphilippines.com/"
+      },
+      {
+        "label": "Agoda Manila hotels",
+        "url": "https://www.agoda.com/city/manila-ph.html"
+      }
+    ],
+    "Government & Safety": [
+      {
+        "label": "Bureau of Immigration PH",
+        "url": "https://immigration.gov.ph/"
+      },
+      {
+        "label": "PAGASA weather (typhoon track)",
+        "url": "https://www.pagasa.dost.gov.ph/"
+      },
+      {
+        "label": "PHIVOLCS (Taal alerts)",
+        "url": "https://www.phivolcs.dost.gov.ph/"
+      },
+      {
+        "label": "Emergency: 911 (national)",
+        "url": "https://911.gov.ph/"
+      }
+    ],
+    "Tourism & Reference": [
+      {
+        "label": "Tourism Promotions Board PH",
+        "url": "https://tpb.gov.ph/"
+      },
+      {
+        "label": "Intramuros Administration",
+        "url": "https://intramuros.gov.ph/"
+      },
+      {
+        "label": "Old Manila Walks (tours)",
+        "url": "https://www.oldmanilawalks.com/"
+      }
+    ],
+    "Apps to install": [
+      {
+        "label": "Grab (rides + food)",
+        "url": "https://www.grab.com/ph/"
+      },
+      {
+        "label": "GCash (payments)",
+        "url": "https://www.gcash.com/"
+      },
+      {
+        "label": "Foodpanda (delivery)",
+        "url": "https://www.foodpanda.ph/"
+      },
+      {
+        "label": "Waze (traffic)",
+        "url": "https://www.waze.com/"
+      }
+    ]
+  },
+  "changes_applied": [
+    "R1: single Makati base (5-day trip)",
+    "R2: distance + travel-time columns added",
+    "R3: NAIA buffer set to 2hr domestic (1.5hr min)",
+    "R4: visa = none (domestic PH passport)",
+    "R5: FX rate set to 43 PHP/SGD (as of 2026-05-01)",
+    "R6: power plug A/B/C clarified — US plugs fit, SG/UK do NOT",
+    "R7: Tagaytay + Corregidor consolidated into pick-ONE-bundle paths",
+    "R8: Day 2 fatigue flag (Binondo food crawl + Poblacion nightlife = high)",
+    "R10: Hidden gems added (Escolta, Poblacion, Pinto, Chinese Cemetery)",
+    "R11: Bad weather Plan B emitted (habagat onset risk)",
+    "R13: v2 sunrise-shift Intramuros (cool + empty + photogenic)"
+  ]
+}

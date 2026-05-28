@@ -1,0 +1,9 @@
+- **image for "Wai Ying Fastfood"** — No Wikipedia or Commons image found — manually source.
+- **image for "Manam Comfort Filipino"** — No Wikipedia or Commons image found — manually source.
+- **image for "Toyo Eatery"** — No Wikipedia or Commons image found — manually source.
+- **image for "Aristocrat Restaurant (Roxas Blvd)"** — No Wikipedia or Commons image found — manually source.
+- **image for "Romulo Café"** — No Wikipedia or Commons image found — manually source.
+- **image for "The Spa (Fort Bonifacio)"** — No Wikipedia or Commons image found — manually source.
+- **image for "Nuat Thai"** — No Wikipedia or Commons image found — manually source.
+- **image for "Z Hostel Rooftop Bar"** — No Wikipedia or Commons image found — manually source.
+- **image for "The Curator"** — No Wikipedia or Commons image found — manually source.
