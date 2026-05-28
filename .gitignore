@@ -1,0 +1,8 @@
+# Synthesizer
+.claude/skills/itinerary-builder/runs/*
+!.claude/skills/itinerary-builder/runs/.gitkeep
+trips/_test/
+trips/*/.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
