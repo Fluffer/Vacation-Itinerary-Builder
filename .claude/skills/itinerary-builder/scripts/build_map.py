@@ -6,7 +6,10 @@ trips/<slug>/data.json. Writes map_regional.jpg and map_danang.jpg
 
 See references/map_rendering.md.
 """
-import sys, os, math, argparse
+import sys
+import os
+import math
+import argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.common import load_data, img_dir
 from staticmap import StaticMap, CircleMarker, Line
@@ -57,7 +60,8 @@ def render_map(places, out_path, title, zoom, size=(1600, 1200), draw_lines=True
         title_font = ImageFont.truetype('arialbd.ttf', 34)
     except Exception:
         font = ImageFont.load_default()
-        font_sm = font; title_font = font
+        font_sm = font
+        title_font = font
 
     lats = [p['lat'] for p in places]
     lons = [p['lon'] for p in places]

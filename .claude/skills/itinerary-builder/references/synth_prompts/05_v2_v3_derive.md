@@ -74,7 +74,7 @@ Fill `itinerary.v2_relaxed[]` and `itinerary.v3_weather[]` in `trips/<slug>/data
 ```
 
 ## When done, run
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 5
 ```
 

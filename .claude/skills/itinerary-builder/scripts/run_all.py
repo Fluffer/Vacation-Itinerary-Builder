@@ -15,7 +15,12 @@ Steps:
     6. build_docx.py        — Word
     7. copy outputs to user Downloads
 """
-import sys, os, argparse, subprocess, shutil, json
+import sys
+import os
+import argparse
+import subprocess  # nosec B404
+import shutil
+import json
 from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.common import load_data, out_xlsx, out_docx, trip_dir
@@ -25,10 +30,18 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 class PipelineError(RuntimeError):
     pass
 
-def run(script, slug, *extra, required=True):
+def run(script, slug, *extra, required=True, timeout=600):
     cmd = [sys.executable, os.path.join(SCRIPT_DIR, script), '--slug', slug, *extra]
     print(f'\n=== {script} ===')
-    result = subprocess.run(cmd, check=False)
+    try:
+        result = subprocess.run(cmd, check=False, timeout=timeout, shell=False)  # nosec B603
+    except subprocess.TimeoutExpired:
+        # A hung child (e.g. a stalled network call) must not block forever.
+        msg = f'{script} timed out after {timeout}s'
+        if required:
+            raise PipelineError(msg)
+        print(f'⚠️ {msg} — continuing (non-required step)')
+        return
     if result.returncode != 0:
         msg = f'{script} failed with exit code {result.returncode}'
         if required:
@@ -92,7 +105,7 @@ def main():
 
     xlsx = out_xlsx(args.slug)
     docx = out_docx(args.slug)
-    print(f'\n=== DONE ===')
+    print('\n=== DONE ===')
     print(f'Excel:  {xlsx}  ({os.path.getsize(xlsx) if os.path.exists(xlsx) else "?"} bytes)')
     print(f'Word:   {docx}  ({os.path.getsize(docx) if os.path.exists(docx) else "?"} bytes)')
 

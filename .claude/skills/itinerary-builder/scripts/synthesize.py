@@ -14,8 +14,8 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from lib.stage_runner import run_stage, final_validate, StageResult
-from lib.run_logger import RunLogger
+from lib.stage_runner import run_stage, final_validate, StageResult  # noqa: E402
+from lib.run_logger import RunLogger  # noqa: E402
 
 
 def _trips_root() -> Path:

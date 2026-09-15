@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from unittest.mock import patch, MagicMock
 
 from lib.wiki_precheck import WikiPrechecker

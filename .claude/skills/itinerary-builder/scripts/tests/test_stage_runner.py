@@ -2,7 +2,6 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
 
 from lib.stage_runner import run_stage, final_validate, StageResult
 
@@ -38,8 +37,12 @@ def test_stage_2_runs_geocode_and_wiki(tmp_trip, minimal_data):
     with patch("lib.geocode.requests.get") as gm, \
          patch("lib.wiki_precheck.requests.get") as wm:
         from unittest.mock import MagicMock
-        gr = MagicMock(); gr.status_code = 200; gr.json.return_value = [{"lat": "1.0", "lon": "2.0"}]; gr.raise_for_status.return_value = None
-        wr = MagicMock(); wr.status_code = 200
+        gr = MagicMock()
+        gr.status_code = 200
+        gr.json.return_value = [{"lat": "1.0", "lon": "2.0"}]
+        gr.raise_for_status.return_value = None
+        wr = MagicMock()
+        wr.status_code = 200
         gm.return_value = gr
         wm.return_value = wr
         result = run_stage(slug_dir=tmp_trip, stage_num=2, country="Vietnam")

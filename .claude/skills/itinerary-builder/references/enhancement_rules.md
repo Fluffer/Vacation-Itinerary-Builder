@@ -74,7 +74,7 @@ Flag in Practical Info sheet with "SG/UK plugs DO NOT FIT" warning where true.
 
 **Trigger:** Source itinerary lists separate transport + ticket + lunch for an activity that vendors offer as a bundle.
 
-**Transform:** Replace with ALL-IN row referencing Sheet 13. See [`pricing_pattern.md`](pricing_pattern.md).
+**Transform:** Replace with ALL-IN row referencing the Activity Pricing sheet. See [`pricing_pattern.md`](pricing_pattern.md).
 
 ## R8. Risk-fatigue detection
 
@@ -97,13 +97,13 @@ Common patterns to catch:
 
 **Trigger:** Source itinerary lacks ≥ 1 alternative POI per category (food, beach, café, culture, scenic).
 
-**Transform:** Pull 20+ vetted alternatives from local-knowledge sources. Populate Sheet 10.
+**Transform:** Pull 20+ vetted alternatives from local-knowledge sources. Populate the Hidden Gems & Swaps sheet.
 
 ## R11. Weather plan B — always emit
 
 **Trigger:** Always (skill's core promise — every itinerary has all 3 variants).
 
-**Transform:** Emit Sheet 14 with destination-specific indoor bank + decision tree. Threshold profile chosen by `weather_risk` (low / medium / high) — see [`weather_pivot_pattern.md`](weather_pivot_pattern.md).
+**Transform:** Emit the v3 Weather Itinerary + Bad Weather Plan B sheets with destination-specific indoor bank + decision tree. Threshold profile chosen by `weather_risk` (low / medium / high) — see [`weather_pivot_pattern.md`](weather_pivot_pattern.md).
 
 ## R12. Booking-flex defaults
 
@@ -128,19 +128,16 @@ Examples: Lady Buddha (Son Tra), Mỹ Sơn ruins, Angkor Wat, Borobudur, fishing
 
 ## Implementation
 
-Each rule in `scripts/lib/rules.py` as a pure function:
+These rules are applied by **Claude during v1 authoring** (they need destination
+judgement, so they are not a Python module). The deterministic parts have real
+implementations you can point at:
 
-```python
-def rule_r1_single_hotel(trip: dict) -> dict: ...
-def rule_r3_airport_buffer(trip: dict) -> dict: ...
-```
+- Distance/time columns + bundle consolidation: reflected in the workbook renderer
+  (`scripts/build_workbook.py`) and the stage-6 schema.
+- Airport-buffer / visa / FX checks: authored into `metadata` and validated in
+  `scripts/lib/stage_runner.py`.
+- Weather Plan B (R11): `scripts/lib/common.py:derive_indoor_bank` plus the
+  v3 sheets emitted by `scripts/build_workbook.py`.
 
-Apply in order:
-
-```python
-RULES = [rule_r1_single_hotel, rule_r2_distance, rule_r3_airport_buffer, ...]
-for rule in RULES:
-    trip = rule(trip)
-```
-
-Each rule appends to `trip['changes_applied']` for audit / changelog in the Word doc.
+Record what was applied in the trip's Overview notes so the changelog stays
+auditable.

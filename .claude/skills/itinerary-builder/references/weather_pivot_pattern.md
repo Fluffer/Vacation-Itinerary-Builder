@@ -14,7 +14,7 @@ Generic decision-tree template. Plug in destination-specific thresholds + indoor
 
 ## When to emit
 
-**ALWAYS emit Sheet 14.** Skill's core promise — every itinerary has all 3 variants.
+**ALWAYS emit the v3 Weather Itinerary and Bad Weather Plan B sheets.** Skill's core promise — every itinerary has all 3 variants.
 
 Threshold profile chosen by `weather_risk`:
 
@@ -67,7 +67,7 @@ Destination-specific list (15–20 items) covering:
 | Heritage site indoor | Mỹ Sơn Sanctuary (partly covered ruins) |
 | Han River dinner cruise | (covered lower deck) |
 
-Maintain per-destination bank in `trips/<slug>/indoor_bank.json`.
+Store the bank in `data.json` under `weather_plan_b.indoor_bank[]` (the stage runner auto-merges `places[]` with `indoor=true` into it).
 
 ## Booking flexibility tips — 9 standard items
 

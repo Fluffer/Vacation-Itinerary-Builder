@@ -96,7 +96,7 @@ Pre-vetted destination-specific options. Categories to populate:
 
 ## Comparison sheet (auto-generated)
 
-Sheet 12 emits a diff table v1 vs v2 with ~11 rows covering:
+The v1-vs-v2 Compare sheet emits a diff table with ~11 rows covering:
 - Day-by-day anchor change
 - Total spa time
 - Avg daily transit km
@@ -107,11 +107,12 @@ Sheet 12 emits a diff table v1 vs v2 with ~11 rows covering:
 
 ## Implementation notes
 
-Each transform is a Python function in `scripts/lib/variants.py`:
+The v2/v3 transforms are authored by **Claude in-session** (the stage-5 synth
+prompt `references/synth_prompts/05_v2_v3_derive.md`) — they require per-destination
+judgement and are not a Python module. The deterministic pieces are:
 
-```python
-def transform_v2_relaxed(v1_data: dict, swaps: dict) -> dict: ...
-def transform_v3_weather(v1_data: dict, indoor_bank: list, weather_dates: tuple) -> dict: ...
-```
+- `scripts/lib/stage_runner.py` — `_stage_5_v2_v3` enforces the v1/v2/v3 day-count parity.
+- `scripts/lib/common.py` — `derive_indoor_bank` builds the v3 indoor bank.
+- `scripts/build_workbook.py` — emits the v1/v2/v3 sheets.
 
-Both consume + return the same trip-data schema (see `templates/trip_data.schema.json`).
+All output the same trip-data schema (see `templates/trip_data.schema.json`).

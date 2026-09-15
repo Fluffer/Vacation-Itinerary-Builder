@@ -75,7 +75,7 @@ Fill the top-level `slug` field, the `metadata{}` block, and the `visa{}` block 
 ```
 
 ## When done, run
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 1
 ```
 

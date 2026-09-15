@@ -106,7 +106,7 @@ Fill `hotels[]`, `activity_pricing[]`, and `budget{}` in `trips/<slug>/data.json
 ```
 
 ## When done, run
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 3
 ```
 

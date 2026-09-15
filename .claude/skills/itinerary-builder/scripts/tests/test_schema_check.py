@@ -1,7 +1,5 @@
 import json
-from pathlib import Path
 
-import pytest
 
 from lib.schema_check import validate, validate_file
 

@@ -82,7 +82,9 @@ def _stage_4_v1(data: dict) -> list[str]:
     if not v1:
         errors.append("itinerary.v1_standard: missing")
         return errors
-    place_keys = {p["key"] for p in data.get("places", [])}
+    # .get(): a malformed place must surface as a schema error later, not crash
+    # the CLI with a KeyError before its own reporting runs.
+    place_keys = {p.get("key") for p in data.get("places", []) if p.get("key")}
     for day_idx, day in enumerate(v1):
         for row_idx, row in enumerate(day.get("rows", [])):
             if "time" not in row:
@@ -112,34 +114,12 @@ def _stage_5_v2_v3(data: dict) -> list[str]:
 
 
 def _stage_6_ancillary_and_derive(data: dict) -> list[str]:
-    # Auto-derive distance_matrix
-    dm = data.setdefault("distance_matrix", [])
-    existing_pairs = {(d.get("from"), d.get("to")) for d in dm}
-    base = data.get("metadata", {}).get("base_hotel_area", "Base")
-    for p in data.get("places", []):
-        if p.get("distance_km_from_base") is None or p.get("travel_min_from_base") is None:
-            continue
-        pair = (base, p["name"])
-        if pair not in existing_pairs:
-            dm.append({
-                "from": base, "to": p["name"],
-                "km": p["distance_km_from_base"], "min": p["travel_min_from_base"],
-            })
-            existing_pairs.add(pair)
+    # Auto-derive distance_matrix + indoor_bank using the shared helpers, so the
+    # staged validator and the workbook renderer always produce identical rows.
+    from lib.common import derive_distance_matrix, derive_indoor_bank
 
-    # Auto-derive indoor_bank
-    wpb = data.setdefault("weather_plan_b", {})
-    bank = wpb.setdefault("indoor_bank", [])
-    bank_names = {b.get("name") for b in bank}
-    for p in data.get("places", []):
-        if p.get("indoor") and p.get("name") not in bank_names:
-            bank.append({
-                "name": p["name"], "area": p.get("area", ""),
-                "local_cost": p.get("price_local"),
-                "duration": p.get("duration", ""),
-                "notes": p.get("description", "")[:200],
-            })
-            bank_names.add(p["name"])
+    data["distance_matrix"] = derive_distance_matrix(data)
+    data.setdefault("weather_plan_b", {})["indoor_bank"] = derive_indoor_bank(data)
 
     # Strict schema
     return validate(data, partial=False)
@@ -184,15 +164,20 @@ def final_validate(slug_dir: Path, skip_fact_validate: bool = False) -> StageRes
     if not skip_fact_validate:
         # Best-effort Ollama fact validate. Non-blocking by design.
         try:
-            import subprocess
+            import subprocess  # nosec B404
             scripts_dir = Path(__file__).resolve().parents[1]
             vf = scripts_dir / "validate_facts.py"
             if vf.exists():
-                subprocess.run(
+                res = subprocess.run(  # nosec B603
                     [sys.executable, str(vf), "--slug-dir", str(slug_dir)],
-                    timeout=120, check=False, capture_output=True, text=True,
+                    timeout=120, check=False, capture_output=True, text=True, shell=False,
                 )
-                notes.append("fact-validate ran (see unvalidated.md)")
+                # Surface the outcome instead of always claiming it ran.
+                if res.returncode == 0:
+                    notes.append("fact-validate checklist written "
+                                 "(see validate_prompts.md / unvalidated.md)")
+                else:
+                    notes.append(f"fact-validate failed (exit {res.returncode})")
         except Exception as e:
             notes.append(f"fact-validate skipped: {e}")
 

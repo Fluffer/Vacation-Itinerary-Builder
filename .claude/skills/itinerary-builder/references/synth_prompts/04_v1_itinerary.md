@@ -57,7 +57,7 @@ Populate `itinerary.v1_standard` — one array entry per day, each containing a 
 
 ## When done, run
 
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 4
 ```
 

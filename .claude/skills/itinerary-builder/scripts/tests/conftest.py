@@ -1,6 +1,4 @@
 """Shared pytest fixtures for the itinerary-builder synthesizer."""
-import json
-import os
 import sys
 from pathlib import Path
 

@@ -2,11 +2,15 @@
 
 The pipeline must produce deliverables even when sub-steps fail. Never block on a single validation or image fetch.
 
-## Ollama validation hangs / errors
+## Fact validation hangs / errors
+
+`scripts/validate_facts.py` writes the checklist (`validate_prompts.md`) and the
+pending list (`unvalidated.md`); Claude performs the calls via the MCP
+`second_opinion` tools.
 
 - Per-call timeout 60 seconds
 - Try model order: `deepseek-pro` → `deepseek-flash` → `glm` → `minimax`
-- On all-fail: log fact to `trips/<slug>/unvalidated.md` with status "manual verify needed"
+- On all-fail: leave the fact in `trips/<slug>/unvalidated.md` with status "manual verify needed"
 - Add ⚠️ flag to corresponding cell in workbook + paragraph in docx
 - Continue pipeline
 
@@ -63,7 +67,7 @@ Options:
 1. Detect locked file, prompt user to close OR save with `_v2` suffix
 2. Always write to temp file first, then atomic rename
 
-Reference implementation in `scripts/lib/safe_save.py`:
+Reference implementation in `scripts/lib/common.py` (`safe_save_xlsx`):
 
 ```python
 def safe_save_xlsx(wb, path):
@@ -81,9 +85,8 @@ def safe_save_xlsx(wb, path):
 
 ## LibreOffice not installed on Windows
 
-`recalc.py` from the xlsx skill uses Unix sockets (AF_UNIX), unavailable on Windows.
-
-Fallback: don't recalc formulas; rely on Excel to recalc on first open. Verify formula strings via openpyxl load:
+The workbook sets `fullCalcOnLoad`, so Excel recalculates formulas on first open.
+Verify formula strings syntactically via openpyxl load:
 
 ```python
 from openpyxl import load_workbook
@@ -116,7 +119,7 @@ If we can't determine km/min between two points:
 Always use raw strings + UTF-8:
 
 ```python
-path = r'C:\Users\peter\Downloads\📅 Booking Strategy.docx'  # this works
+path = r'C:\Users\<you>\Downloads\📅 Booking Strategy.docx'  # this works
 ```
 
 If invoking subprocess, ensure encoding:

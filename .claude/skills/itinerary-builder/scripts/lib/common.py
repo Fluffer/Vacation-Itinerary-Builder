@@ -8,7 +8,10 @@ Layout:
 
 Run scripts from a project root that has (or will have) a `trips/` dir.
 """
-import sys, io, os, json
+import sys
+import io
+import os
+import json
 
 # Ensure UTF-8 stdout on Windows
 if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
@@ -60,6 +63,63 @@ def log_unvalidated(slug, fact, reason):
     path = os.path.join(trip_dir(slug), 'unvalidated.md')
     with open(path, 'a', encoding='utf-8') as f:
         f.write(f'- **{fact}** — {reason}\n')
+
+def derive_distance_matrix(data):
+    """Augment distance_matrix with base→place rows derived from places[].
+
+    Explicit rows always win. Shared by stage_runner (stage 6) and
+    build_workbook so both agree on the derived rows. De-duplication is exact
+    (case-insensitive) — a substring match wrongly collapsed distinct places
+    (e.g. "Beach" vs "My Khe Beach") and broke on empty `to` values.
+    """
+    base = data.get('metadata', {}).get('base_hotel_area', 'Base hotel')
+    dm = list(data.get('distance_matrix', []))
+    existing_to = {(row.get('to') or '').strip().casefold() for row in dm}
+    for p in data.get('places', []):
+        name = (p.get('name') or '').strip()
+        if not name or p.get('distance_km_from_base') is None:
+            continue
+        if name.casefold() in existing_to:
+            continue
+        dm.append({
+            'from': base,
+            'to': name,
+            'km': p['distance_km_from_base'],
+            'min': p.get('travel_min_from_base', 0),
+            'note': '[derived from places]',
+        })
+        existing_to.add(name.casefold())
+    return dm
+
+
+def derive_indoor_bank(data):
+    """Augment weather_plan_b.indoor_bank with places[] flagged indoor=true.
+
+    Explicit rows win; de-duplication is exact (case-insensitive). Shared by
+    stage_runner (stage 6) and build_workbook.
+    """
+    wb_data = data.get('weather_plan_b', {}) or {}
+    bank = list(wb_data.get('indoor_bank', []))
+    existing = {(b.get('name') or '').strip().casefold() for b in bank}
+    for p in data.get('places', []):
+        if not p.get('indoor'):
+            continue
+        name = (p.get('name') or '').strip()
+        if not name or name.casefold() in existing:
+            continue
+        local_cost = p.get('price_local')
+        if local_cost is None:
+            local_cost = p.get('price_vnd')
+        bank.append({
+            'name': name,
+            'area': p.get('area', ''),
+            'local_cost': local_cost,
+            'duration': p.get('duration', ''),
+            'notes': (p.get('description') or '')[:120],
+        })
+        existing.add(name.casefold())
+    return bank
+
 
 def safe_save_xlsx(wb, path):
     """Atomic save with fallback if file locked.

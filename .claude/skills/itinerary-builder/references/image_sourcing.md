@@ -6,15 +6,17 @@ Use only permissively-licensed images. Wikipedia/Wikimedia Commons content (CC-B
 
 For any named POI (must match a Wikipedia article title):
 
-```
+```text
 GET https://en.wikipedia.org/api/rest_v1/page/summary/{Title}
 ```
 
 Returns JSON. Two image URLs of interest:
-- `originalimage.source` — full resolution
-- `thumbnail.source` — ~300px wide
+- `thumbnail.source` — ~300px wide, always a raster format (JPEG/PNG)
+- `originalimage.source` — full resolution, **may be SVG or PDF**
 
-Use `originalimage` when available, fall back to `thumbnail`.
+Prefer `thumbnail` (guaranteed raster) and fall back to `originalimage` only if
+its media type is an accepted raster (`fetch_images.py` rejects non-image
+responses). SVG/PDF originals must be skipped so PIL and python-docx don't fail.
 
 ### Title encoding
 
@@ -26,7 +28,7 @@ Use `originalimage` when available, fall back to `thumbnail`.
 
 When Wikipedia REST returns no image, search Commons directly:
 
-```
+```text
 GET https://commons.wikimedia.org/w/api.php
     ?action=query
     &list=search
@@ -38,7 +40,7 @@ GET https://commons.wikimedia.org/w/api.php
 
 The first hit's `title` is "File:Something.jpg". Then fetch its URL via `imageinfo`:
 
-```
+```text
 GET https://commons.wikimedia.org/w/api.php
     ?action=query
     &titles=<File:Something.jpg>
@@ -49,10 +51,10 @@ GET https://commons.wikimedia.org/w/api.php
 
 ## User-Agent header — required
 
-Wikimedia REST/API endpoints **require** a real `User-Agent` header identifying your app + contact:
+Wikimedia REST/API endpoints **require** a descriptive `User-Agent` header:
 
 ```python
-HEADERS = {'User-Agent': 'ItineraryBuilder/1.0 (peter@isspan.net)'}
+HEADERS = {'User-Agent': 'ItineraryBuilder/1.0 (trip-planner)'}
 ```
 
 Without this, you get 403 / rate-limited.
@@ -93,8 +95,8 @@ Build a list in `trips/<slug>/data.json` under `images`:
 ```json
 {
   "places": [
-    {"key": "dragon_bridge", "wiki": "Dragon Bridge (Vietnam)", "alt_search": "Dragon Bridge Da Nang"},
-    {"key": "ba_na_hills",   "wiki": "Bà Nà Hills", "alt_search": "Golden Bridge Da Nang"},
+    {"key": "dragon_bridge", "wiki_title": "Dragon Bridge (Vietnam)", "alt_search_query": "Dragon Bridge Da Nang"},
+    {"key": "ba_na_hills",   "wiki_title": "Bà Nà Hills", "alt_search_query": "Golden Bridge Da Nang"},
     ...
   ]
 }

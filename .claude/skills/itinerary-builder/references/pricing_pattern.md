@@ -4,7 +4,7 @@
 
 When a destination has flagship activities bundleable via Klook / Pelago / Viator / Get Your Guide, naïvely listing every line item in the itinerary leads to **double-counting**:
 
-```
+```text
 07:30  Drive to Ba Na          | 850,000 VND  (private Grab one-way)
 09:00  Cable car combo ticket  | 1,050,000 VND  (gate price)
 12:30  Lunch at French Village | 350,000 VND  (per pax)
@@ -18,9 +18,9 @@ But the same trip booked via Klook GROUP DAY TOUR is one ticket: **1,200,000 VND
 
 For any flagship activity where bundling exists, present **PATHS** as mutually-exclusive booking strategies. Sum within a path. NEVER sum across paths.
 
-## Sheet 13 layout
+## Activity Pricing sheet layout
 
-```
+```text
 🎡 BA NA HILLS — PICK ONE BUNDLE (do NOT add rows together)
 
 PATH 1 — Klook GROUP DAY TOUR     | Klook shared bus pkg    | 1,200,000 | ALL-IN: shuttle+ticket+lunch+guide
@@ -38,10 +38,10 @@ Top of sheet must have a **YELLOW BANNER** warning:
 
 ## Itinerary sheet rows
 
-In the day-by-day grid, the bundled activity gets **one ALL-IN row** referencing Sheet 13:
+In the day-by-day grid, the bundled activity gets **one ALL-IN row** referencing the Activity Pricing sheet:
 
-```
-07:30  Ba Na ALL-IN — pick ONE path (see Sheet 13)  |  72 km  | 110 min | 1,300,000 | mid-path estimate; alt paths Sheet 13
+```text
+07:30  Ba Na ALL-IN — pick ONE path (see Activity Pricing sheet)  |  72 km  | 110 min | 1,300,000 | mid-path estimate; alt paths on Activity Pricing sheet
 08:30  Arrive Ba Na cable car                       |          |         |          |
 09:00  Cable car + Golden Bridge                    |  5.8 km  |  18 min |        0 | included in 07:30
 10:30  French Village + pagoda                      |  1.5 km  |  45 min |        0 | included

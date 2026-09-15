@@ -27,8 +27,8 @@ Two paths. Both end with a fully-populated `trips/<slug>/data.json` conforming t
 
 Six sequential authoring stages. Each stage: read the corresponding `references/synth_prompts/0N_<name>.md` template + `references/learnings.md`, write the relevant blocks to `trips/<slug>/data.json`, then run:
 
-```
-python scripts/synthesize.py --slug <slug> --stage <N>
+```text
+python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage <N>
 ```
 
 If the validator prints errors, patch `data.json` and re-run the same stage. Iterate until pass. Then move to stage N+1.
@@ -44,11 +44,11 @@ Stages:
 
 After stage 6:
 
-```
-python scripts/synthesize.py --slug <slug> --stage final
+```text
+python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage final
 ```
 
-Runs strict schema check + invokes existing Ollama fact-validate (non-blocking; results in `trips/<slug>/unvalidated.md`). On pass, snapshots `data.json` to `runs/<run_id>/data.snapshot.json`.
+Runs strict schema check, then writes the fact-validation checklist (`validate_prompts.md`) and the pending list (`unvalidated.md`) to `trips/<slug>/`. Validation itself is performed by Claude via the MCP `second_opinion` tools (non-blocking); write confirmed values back into `data.json`. On pass, snapshots `data.json` to `runs/<run_id>/data.snapshot.json`.
 
 Then proceed to Phase 6 (images / maps / workbook / docx) via `run_all.py`.
 
@@ -70,11 +70,11 @@ For each high-stakes claim, send to Ollama `second_opinion`:
 - **Airport buffer** for the operating airline at the destination airport
 - **Major attraction pricing** (current vs draft-stated)
 
-Implementation in `scripts/validate_facts.py`:
-- 60-second per-call timeout
-- Try `deepseek-pro` → `deepseek-flash` → `glm` → `minimax` in order
-- On every timeout/error, log to `trips/<slug>/unvalidated.md` and continue
-- Final fallback: rule-based check against `references/known_facts.md` if maintained
+`scripts/validate_facts.py` writes the checklist; the actual calls are made by Claude:
+- `validate_facts.py` emits `validate_prompts.md` and lists pending facts in `trips/<slug>/unvalidated.md`
+- Claude sends each prompt to the MCP `second_opinion` tool with a 60-second per-call timeout
+- Models tried in order: `deepseek-pro` → `deepseek-flash` → `glm` → `minimax` → rule-based
+- On every timeout/error, keep the entry in `unvalidated.md` and continue — never block the pipeline
 
 ## Phase 3 — Enhancement Rules
 
@@ -90,11 +90,11 @@ Apply rules from [`enhancement_rules.md`](enhancement_rules.md) to the parsed it
 See [`variant_transforms.md`](variant_transforms.md). Three variants by default:
 - **v1 standard** — source doc enhanced; original places kept; corrections applied
 - **v2 relaxed less-touristy** — apply substitution table; lift starts by 30–60 min; cap active hours per day
-- **v3 bad-weather Plan B** — emitted only if destination + dates intersect monsoon/typhoon window
+- **v3 bad-weather Plan B** — **always emitted** (arid destinations need heat/dust/sandstorm refuges). The destination's `weather_risk` only picks the decision-tree threshold profile, never whether v3 exists.
 
 ## Phase 5 — Hidden Gems & Comparison
 
-Pull 20–30 alternative POIs from local-knowledge sources (Wikivoyage, local tourism boards). Group by category: nature, beaches, food, coffee, culture, wellness. Score each on tourist-density (low/med/high) and include in workbook Sheet 10.
+Pull 20–30 alternative POIs from local-knowledge sources (Wikivoyage, local tourism boards). Group by category: nature, beaches, food, coffee, culture, wellness. Score each on tourist-density (low/med/high) and include in the "Hidden Gems & Swaps" workbook sheet.
 
 ## Phase 6 — Image & Map Assets
 
@@ -132,7 +132,7 @@ Every entry has Google Maps + Wikipedia + official site hyperlinks where availab
 
 ## Phase 9 — Verification
 
-1. Workbook: verify formulas via `recalc.py` if LibreOffice available, OR by loading via openpyxl and inspecting formula strings
+1. Workbook: verify formulas by loading via openpyxl and inspecting formula strings (the workbook sets `fullCalcOnLoad` so Excel recalculates on open)
 2. Word doc: ensure no UnrecognizedImageError by re-saving each image via PIL beforehand
 3. Open both in target apps (Excel + Word) — sanity check on Windows requires manual look
 
@@ -151,9 +151,10 @@ Report any `unvalidated.md` items at the end of the response so user knows what 
 After workbook + Word doc are delivered, prompt the user:
 
 > "Trip rendered. Anything good/bad to capture for future runs?
->   - What worked well?
->   - What was thin or wrong?
->   - Specific places or sections that needed manual fix?"
+>
+> - What worked well?
+> - What was thin or wrong?
+> - Specific places or sections that needed manual fix?"
 
 Use `AskUserQuestion` with a single open-ended question. User may skip.
 

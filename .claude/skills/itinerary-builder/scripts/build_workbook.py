@@ -3,9 +3,17 @@
 Emits up to 14 sheets, conditionally on data presence. See
 references/sheet_schemas.md.
 """
-import sys, os, argparse
+import sys
+import os
+import argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib.common import load_data, out_xlsx, safe_save_xlsx
+from lib.common import (
+    load_data,
+    out_xlsx,
+    safe_save_xlsx,
+    derive_distance_matrix,
+    derive_indoor_bank,
+)
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
@@ -79,7 +87,8 @@ def write_itinerary(ws, start_row, day_blocks, header_color):
             ws.cell(row=r, column=1, value=row.get('time'))
             ws.cell(row=r, column=2, value=row.get('activity'))
             ws.cell(row=r, column=3, value=row.get('route', ''))
-            km = row.get('km'); mn = row.get('min')
+            km = row.get('km')
+            mn = row.get('min')
             local = row.get('cost_local', row.get('vnd'))  # back-compat
             sgd = row.get('sgd')
             ws.cell(row=r, column=4, value=km if km is not None else None).number_format = '0.0;[Red]0.0;"-"'
@@ -147,54 +156,8 @@ def _pick(d, *keys, default=None):
             return d[k]
     return default
 
-def derive_distance_matrix(data):
-    """Augment distance_matrix with entries derivable from places[].
-
-    Explicit distance_matrix rows always win. Auto-add base→place rows for
-    places that have distance_km_from_base + travel_min_from_base but no
-    matching matrix entry.
-    """
-    base = data.get('metadata', {}).get('base_hotel_area', 'Base hotel')
-    dm = list(data.get('distance_matrix', []))
-    existing_to = {row.get('to', '').lower() for row in dm}
-    for p in data.get('places', []):
-        name = p.get('name', '')
-        if not name or p.get('distance_km_from_base') is None:
-            continue
-        # Skip if already present (loose substring match — generous)
-        if any(name.lower() in t or t in name.lower() for t in existing_to):
-            continue
-        dm.append({
-            'from': base,
-            'to': name,
-            'km': p['distance_km_from_base'],
-            'min': p.get('travel_min_from_base', 0),
-            'fare_local': None,
-            'note': '[derived from places]',
-        })
-    return dm
-
-def derive_indoor_bank(data):
-    """Augment weather_plan_b.indoor_bank with places[] flagged indoor=true.
-
-    Explicit indoor_bank rows win. Derived only when no matching name exists.
-    """
-    wb_data = data.get('weather_plan_b', {})
-    bank = list(wb_data.get('indoor_bank', []))
-    existing = {b.get('name', '').lower() for b in bank}
-    for p in data.get('places', []):
-        if not p.get('indoor'):
-            continue
-        if p.get('name', '').lower() in existing:
-            continue
-        bank.append({
-            'name': p['name'],
-            'area': p.get('area', ''),
-            'local_cost': _pick(p, 'price_local', 'price_vnd'),
-            'duration': p.get('duration', ''),
-            'notes': p.get('description', '')[:120],
-        })
-    return bank
+# derive_distance_matrix / derive_indoor_bank now live in lib.common so the
+# stage-6 validator and the workbook renderer produce identical rows.
 
 def build(slug):
     data = load_data(slug)
@@ -439,21 +402,27 @@ def build(slug):
         ws.cell(row=3, column=1, value=f'Exchange rate ({currency} per 1 SGD)').font = Font(name=ARIAL, bold=True)
         rate_val = _pick(budget, 'rate_local_per_sgd', 'rate_vnd_per_sgd', default=rate)
         rc = ws.cell(row=3, column=2, value=rate_val)
-        rc.font = Font(name=ARIAL, color='0000FF', bold=True); rc.fill = WARN_FILL
-        rc.number_format = '#,##0'; rc.border = BORDER
+        rc.font = Font(name=ARIAL, color='0000FF', bold=True)
+        rc.fill = WARN_FILL
+        rc.number_format = '#,##0'
+        rc.border = BORDER
         ws.cell(row=3, column=3, value='← edit to update all SGD figures').font = Font(name=ARIAL, italic=True, color='666666')
         r = 5
         for j, h in enumerate(['Category', f'{currency} (low)', f'{currency} (high)', 'SGD (low)', 'SGD (high)'], 1):
             ws.cell(row=r, column=j, value=h)
         style_header_row(ws, r, 5)
-        r += 1; start_data = r
+        r += 1
+        start_data = r
         for cat in budget.get('categories', []):
             ws.cell(row=r, column=1, value=cat['category']).font = DEFAULT_FONT
             low = _pick(cat, 'low_local', 'low_vnd', default=0)
             high = _pick(cat, 'high_local', 'high_vnd', default=0)
-            cl = ws.cell(row=r, column=2, value=low); cl.font = Font(name=ARIAL, color='0000FF')
-            ch = ws.cell(row=r, column=3, value=high); ch.font = Font(name=ARIAL, color='0000FF')
-            cl.number_format = '#,##0'; ch.number_format = '#,##0'
+            cl = ws.cell(row=r, column=2, value=low)
+            cl.font = Font(name=ARIAL, color='0000FF')
+            ch = ws.cell(row=r, column=3, value=high)
+            ch.font = Font(name=ARIAL, color='0000FF')
+            cl.number_format = '#,##0'
+            ch.number_format = '#,##0'
             ws.cell(row=r, column=4, value=f'=B{r}/$B$3').number_format = '"S$"#,##0'
             ws.cell(row=r, column=5, value=f'=C{r}/$B$3').number_format = '"S$"#,##0'
             for cc in range(1, 6):
@@ -482,14 +451,16 @@ def build(slug):
         ws.cell(row=r, column=4, value=budget.get('flight_sgd_low', 0)).number_format = '"S$"#,##0'
         ws.cell(row=r, column=5, value=budget.get('flight_sgd_high', 0)).number_format = '"S$"#,##0'
         for cc in range(1, 6):
-            ws.cell(row=r, column=cc).border = BORDER; ws.cell(row=r, column=cc).font = DEFAULT_FONT
+            ws.cell(row=r, column=cc).border = BORDER
+            ws.cell(row=r, column=cc).font = DEFAULT_FONT
         r += 1
         hotel_row = r
         ws.cell(row=r, column=1, value=f'Hotel ({meta.get("nights","?")} nights)')
         ws.cell(row=r, column=4, value=budget.get('hotel_sgd_low', 0)).number_format = '"S$"#,##0'
         ws.cell(row=r, column=5, value=budget.get('hotel_sgd_high', 0)).number_format = '"S$"#,##0'
         for cc in range(1, 6):
-            ws.cell(row=r, column=cc).border = BORDER; ws.cell(row=r, column=cc).font = DEFAULT_FONT
+            ws.cell(row=r, column=cc).border = BORDER
+            ws.cell(row=r, column=cc).font = DEFAULT_FONT
         r += 1
         ws.cell(row=r, column=1, value='GRAND TOTAL (per person)').font = Font(name=ARIAL, bold=True, color='FFFFFF')
         ws.cell(row=r, column=4, value=f'=D{subtotal_row}+D{flight_row}+D{hotel_row}').number_format = '"S$"#,##0'
@@ -509,6 +480,16 @@ def build(slug):
         write_itinerary(ws, 3, itin['v2_relaxed'], '7030A0')
         sheets_emitted.append('9. Relaxed Pace v2')
 
+    # ===== Sheet 5: v3 Bad-Weather daily itinerary =====
+    # v3_weather is authored and validated in stage 5; render it as a first-class
+    # daily itinerary (the separate Plan-B sheet carries the swap matrix).
+    if itin.get('v3_weather'):
+        ws = wb.create_sheet('5. v3 Weather Itinerary')
+        ws.sheet_view.showGridLines = False
+        write_section_title(ws, 1, 'Bad-Weather Itinerary (v3)', 9, fill=V3_FILL)
+        write_itinerary(ws, 3, itin['v3_weather'], 'C00000')
+        sheets_emitted.append('5. v3 Weather Itinerary')
+
     # ===== Sheet 10: Hidden Gems & Swaps =====
     gems = data.get('hidden_gems_categorized', {})
     if gems:
@@ -518,7 +499,8 @@ def build(slug):
         ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=6)
         sub = ws.cell(row=2, column=1,
                       value=f'All vetted as light-traffic vs the standard tourist circuit. Distance from {meta.get("base_hotel_area","base hotel")}.')
-        sub.font = Font(name=ARIAL, italic=True, size=10); sub.alignment = LEFT
+        sub.font = Font(name=ARIAL, italic=True, size=10)
+        sub.alignment = LEFT
         r = 4
         for cat_name, items in gems.items():
             write_subsection_band(ws, r, cat_name, 6, color='C65911')
@@ -631,8 +613,10 @@ def build(slug):
         c = ws.cell(row=2, column=1,
                     value='⚠️ READ FIRST: For bundled activities PICK ONE PATH only — do NOT add rows. '
                           'GROUP DAY TOURS bundle transport + ticket + lunch in ONE price.')
-        c.font = Font(name=ARIAL, italic=True, size=10); c.fill = WARN_FILL
-        c.alignment = WRAP; c.border = BORDER
+        c.font = Font(name=ARIAL, italic=True, size=10)
+        c.fill = WARN_FILL
+        c.alignment = WRAP
+        c.border = BORDER
         ws.row_dimensions[2].height = 40
         r = 4
         for block in pricing:
@@ -646,15 +630,17 @@ def build(slug):
                 ws.cell(row=r, column=j, value=h)
             style_header_row(ws, r, 7)
             r += 1
-            for i, path in enumerate(block.get('paths', []) + block.get('extras', [])):
-                ws.cell(row=r, column=1, value=path['name']).font = Font(name=ARIAL, bold=True)
-                ws.cell(row=r, column=2, value=path['channel'])
+            for i, path in enumerate((block.get('paths') or []) + (block.get('extras') or [])):
+                # `extras` entries are not required to carry name/channel (schema),
+                # so use .get() rather than aborting the whole build on a KeyError.
+                ws.cell(row=r, column=1, value=path.get('name', '')).font = Font(name=ARIAL, bold=True)
+                ws.cell(row=r, column=2, value=path.get('channel', ''))
                 per_pax = _pick(path, 'local_per_pax', 'vnd_per_pax', default=0)
                 cv = ws.cell(row=r, column=3, value=per_pax)
                 cv.number_format = '#,##0;[Red](#,##0);"FREE"'
                 # Link FX to Budget sheet B3 so editing rate updates Pricing too.
                 # Fallback to literal rate if Budget sheet not emitted.
-                fx_ref = f"'12. Budget'!$B$3" if budget else rate
+                fx_ref = "'12. Budget'!$B$3" if budget else rate
                 ws.cell(row=r, column=4, value=f'=C{r}/{fx_ref}').number_format = '"S$"#,##0'
                 ws.cell(row=r, column=5, value=path.get('includes', ''))
                 ws.cell(row=r, column=6, value='☐')
@@ -675,7 +661,8 @@ def build(slug):
 
     # ===== Sheet 14: Bad Weather Plan B =====
     wb_data = data.get('weather_plan_b', {})
-    if wb_data.get('emit', False):
+    # Emit whenever the block has content; an explicit `emit: false` still skips.
+    if wb_data and wb_data.get('emit', True):
         ws = wb.create_sheet('5. v3 Bad Weather Plan B')
         ws.sheet_view.showGridLines = False
         write_section_title(ws, 1, '🌧️ Bad Weather Plan B (v3) — Indoor / Sheltered Swaps', 6,
@@ -683,7 +670,9 @@ def build(slug):
         ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=6)
         rationale = wb_data.get('rationale', '')
         c = ws.cell(row=2, column=1, value=rationale)
-        c.font = Font(name=ARIAL, italic=True, size=10); c.alignment = WRAP; c.fill = WARN_FILL
+        c.font = Font(name=ARIAL, italic=True, size=10)
+        c.alignment = WRAP
+        c.fill = WARN_FILL
         c.border = BORDER
         ws.row_dimensions[2].height = 42
 
@@ -806,6 +795,7 @@ def build(slug):
         '2. Booking Timeline',
         '3. v1 Daily Itinerary',
         '4. v2 Relaxed Pace',
+        '5. v3 Weather Itinerary',
         '5. v3 Bad Weather Plan B',
         '6. v1 vs v2 Compare',
         '7. Accommodation',
@@ -827,6 +817,13 @@ def build(slug):
             wb.move_sheet(name, offset=target_idx - cur_idx)
 
     # Save
+    # Recalculate all formulas when the workbook is opened, so viewers show real
+    # values instead of blank/0 before a manual recalc.
+    try:
+        wb.calculation.fullCalcOnLoad = True
+    except AttributeError:
+        pass  # older openpyxl without CalcProperties
+
     path = out_xlsx(slug)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     actual = safe_save_xlsx(wb, path)

@@ -5,7 +5,9 @@ canonical JPEG with predictable structure.
 
 Run after fetch_images.py, before build_docx.py.
 """
-import sys, os, argparse
+import sys
+import os
+import argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.common import img_dir
 from PIL import Image

@@ -47,15 +47,21 @@ class WikiPrechecker:
         try:
             resp = requests.get(url, headers=headers, timeout=self.timeout_s)
         except requests.RequestException:
+            # Transient — do not cache, so a later run retries.
+            return False
+        if resp.status_code == 200:
+            self._cache[title] = True
+            self._save_cache()
+        elif resp.status_code == 404:
+            # Definitive miss — safe to cache.
             self._cache[title] = False
             self._save_cache()
+        else:
+            # 429/5xx etc. are transient; return False without poisoning the cache.
             return False
-        hit = resp.status_code == 200
-        self._cache[title] = hit
-        self._save_cache()
         if self.sleep_s > 0:
             time.sleep(self.sleep_s)
-        return hit
+        return self._cache[title]
 
     def precheck_places(self, places: Iterable[dict]) -> list[dict]:
         """For each place with `wiki_title`, probe and return result list.

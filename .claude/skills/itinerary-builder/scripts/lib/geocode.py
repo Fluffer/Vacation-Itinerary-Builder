@@ -62,20 +62,19 @@ class Geocoder:
                     NOMINATIM_URL, params=params, headers=headers, timeout=self.timeout_s
                 )
             except requests.RequestException:
-                self._cache[key] = None
-                self._save_cache()
+                # Transient failure — do NOT cache, so a later run retries.
                 return None
 
             if resp.status_code == 429 and attempt == 0:
                 time.sleep(self.retry_backoff_s)
                 continue
             if resp.status_code != 200:
-                self._cache[key] = None
-                self._save_cache()
+                # 429/5xx are transient; only a definitive miss is cached below.
                 return None
 
             data = resp.json()
             if not data:
+                # Definitive: Nominatim found nothing for this query — cache it.
                 self._cache[key] = None
                 self._save_cache()
                 return None
@@ -88,9 +87,7 @@ class Geocoder:
                 time.sleep(self.sleep_s)
             return (lat, lon)
 
-        # all attempts exhausted on 429
-        self._cache[key] = None
-        self._save_cache()
+        # all attempts exhausted on 429 — transient, do not cache
         return None
 
     def geocode_batch(self, places: Iterable[dict], country: str) -> int:

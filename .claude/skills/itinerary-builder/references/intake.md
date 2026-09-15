@@ -57,7 +57,7 @@ Common passports (offer as quick-pick options when relevant):
 
 Use ONE AskUserQuestion call with up to 4 questions. Combine missing fields. Example for blank-slate "plan a trip":
 
-```
+```text
 [
   {
     "question": "Where do you want to go?",

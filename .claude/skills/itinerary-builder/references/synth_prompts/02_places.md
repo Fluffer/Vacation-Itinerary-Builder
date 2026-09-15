@@ -84,7 +84,7 @@ Populate the `places[]` array with 15-25 entries covering all required categorie
 
 ## When done, run
 
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 2
 ```
 

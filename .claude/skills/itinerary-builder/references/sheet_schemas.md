@@ -19,35 +19,39 @@ GEM_FILL = PatternFill('solid', start_color='FCE4D6')    # hidden-gem tag
 
 ## Sheet list (conditional)
 
-| # | Sheet | Always emit? | Source data |
-|---|---|---|---|
-| 1 | Overview | yes | trip metadata + risk flags |
-| 2 | Booking Timeline | yes | activity list w/ lead times |
-| 3 | Daily Itinerary (v1) | yes | parsed source doc enhanced |
-| 4 | Accommodation | yes | hotel options |
-| 5 | Food, Spas, Nightlife | yes | POI list |
-| 6 | Practical Info | yes | visa, currency, plug, emergency |
-| 7 | Pre-Departure Checklist | yes | rolled up from validation flags |
-| 8 | Budget | yes | per-pax costs |
-| 9 | Relaxed Pace v2 | **yes (always)** | substitution table |
-| 10 | Hidden Gems & Swaps | if alternatives ≥ 5 (auto-generated if missing) | POI database |
-| 11 | Distance Matrix | yes | base hotel → every POI |
-| 12 | v1 vs v2 Compare | yes (since v2 always emits) | diff table |
-| 13 | Activity Pricing | if bundleable activities exist | pick-one-path matrix |
-| 14 | Bad Weather Plan B | **yes (always)** — threshold profile varies by weather_risk | weather decision tree + indoor swaps |
+Sheets are addressed **by name** everywhere (the leading numbers in the workbook
+are display-only). Emitted order follows `build_workbook.py`'s `desired_order`.
+
+| Sheet | Always emit? | Source data |
+|---|---|---|
+| Overview | yes | trip metadata + risk flags |
+| Booking Timeline | yes | activity list w/ lead times |
+| v1 Daily Itinerary | yes | parsed source doc enhanced |
+| v2 Relaxed Pace | **yes (always)** | substitution table |
+| v3 Weather Itinerary | **yes (always)** | `itinerary.v3_weather` |
+| v3 Bad Weather Plan B | **yes (always)**; threshold profile varies by weather_risk | weather decision tree + indoor swaps |
+| v1 vs v2 Compare | yes (since v2 always emits) | diff table |
+| Accommodation | yes | hotel options |
+| Food, Spas, Nightlife | yes | POI list |
+| Hidden Gems & Swaps | if alternatives ≥ 5 (auto-generated if missing) | POI database |
+| Activity Pricing | if bundleable activities exist | pick-one-path matrix |
+| Distance Matrix | yes | base hotel → every POI |
+| Budget | yes | per-pax costs |
+| Practical Info | yes | visa, currency, plug, emergency |
+| Pre-Departure Checklist | yes | rolled up from validation flags |
 
 ## Sheet 1 — Overview
 
 Key-value layout, merged columns 2–4. Sections:
 1. Trip metadata block (dates, origin, destination, passport, visa, base hotel, currency, climate, power, emergency)
 2. Risk Flags & Mitigations (10 items, yellow-fill labels)
-3. Variant pointer note (purple band — directs to Sheets 3 / 9 / 14)
+3. Variant pointer note (purple band — directs to the v1 / v2 / v3 sheets)
 
 ## Sheet 2 — Booking Timeline
 
 4 columns: Window | Lead time | Action | Why. ~10 rows.
 
-## Sheet 3 / 9 — Daily Itinerary (v1 / v2)
+## v1 / v2 / v3 Daily Itinerary sheets
 
 9 columns: Time | Activity | From→To | Dist (km) | Travel (min) | Cost (VND) | Cost (SGD) | Notes | ✓
 
@@ -108,11 +112,11 @@ Append a Grab/transport tips block below (6 bullet rows).
 - Organised by activity category, each category as a header band
 - Path rows: `PATH 1 — Klook GROUP DAY TOUR` | channel | per-pax VND | what's bundled
 - After path rows, OPTIONAL extras as separate rows
-- Auto-calc SGD via `=C{r}/18500`
+- Auto-calc SGD via `=C{r}/<rate-ref>` where `<rate-ref>` is the currency cell on the Budget sheet (e.g. `'Budget'!$B$3`) — never a hardcoded rate
 
 Categories: BA NA HILLS (or equivalent flagship), HAI VAN PASS (or scenic drive), HOI AN (or culture core), MARBLE MOUNTAINS (or hike), main pagoda, day-trip alts, spas, transport, nightlife, food markers.
 
-## Sheet 14 — Bad Weather Plan B
+## v3 Bad Weather Plan B sheet
 
 Sections:
 1. **Decision tree** — 5 conditions × Trigger × Action. Conditions: Clear / PM showers / All-day rain / Tropical storm / Typhoon warning

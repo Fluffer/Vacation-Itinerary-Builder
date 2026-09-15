@@ -17,9 +17,9 @@ Populate all remaining `data.json` blocks so the file passes strict schema valid
 - `v1_v2_compare[]` — entries `{item, v1, v2, why}` aligned to substituted rows across v1 vs v2
 - `weather_plan_b.emit` (bool)
 - `weather_plan_b.rationale` (1 sentence describing destination climate + season)
-- `weather_plan_b.decision_tree[]` — exactly 5 levels: `clear` / `PM showers` / `all-day rain` / `tropical storm` / `typhoon warning`
+- `weather_plan_b.decision_tree[]` — exactly 5 ordered severity bands, each `{condition, trigger, action}`. The condition/trigger labels adapt to the destination's `weather_risk` profile (rain/storm slots become extreme-heat / dust / wildfire for arid destinations).
 - `weather_plan_b.per_day_swaps[]` — one entry per day `{day_label, swaps: [{original, why_risk, trigger, action, alt_local, channel}]}`
-- `weather_plan_b.booking_flex_tips[]` — string array
+- `weather_plan_b.booking_flex_tips[]` — array of `{label, text}` objects (renderer requirement; a plain string array raises `AttributeError`)
 - `weather_plan_b.indoor_bank[]` — **auto-merged** by stage runner from `places[]` where `indoor=true`; you may add extra entries not already in `places[]`
 - `distance_matrix[]` — **auto-derived** from `places[].distance_km_from_base`; you may add extra point-to-point entries not already covered
 - `maps.regional.zoom` — set to `10`
@@ -35,7 +35,7 @@ Populate all remaining `data.json` blocks so the file passes strict schema valid
 - `practical_info[]` has 10-20 `[label, text]` pairs covering: currency, payments, SIM/eSIM, transport, local manners, safety, drinking water, plug type, language, tipping.
 - `checklist[]` has 15-30 entries grouped by category: Documents, Money, Health, Devices, Clothing, Day-Pack.
 - `hidden_gems_categorized` has at least 3 categories (e.g. nature, food, culture); each place entry includes all five fields.
-- `weather_plan_b.decision_tree` has exactly 5 levels: `clear` / `PM showers` / `all-day rain` / `tropical storm` / `typhoon warning`.
+- `weather_plan_b.decision_tree` has exactly 5 ordered severity bands, each with `condition`, `trigger`, and `action` (labels vary by the destination's `weather_risk` profile — see `references/weather_pivot_pattern.md`).
 - `weather_plan_b.per_day_swaps` has one entry per itinerary day, each with 1-3 swaps.
 - `maps.regional` zoom=10; `maps.city_closeup` zoom=12. Each `.places[]` entry has `lat`, `lon`, `label`, `color`, `pos`.
   - `color` enum: `red`, `blue`, `orange`, `green`, `purple`, `darkblue`
@@ -64,11 +64,11 @@ Embed these blocks verbatim (adapt values to the destination):
     "emit": true,
     "rationale": "Da Nang mid-August: 32C humid, brief PM showers daily, early typhoon season",
     "decision_tree": [
-      {"level": "clear", "action": "Proceed with v1 (or v2 if pace preferred)"},
-      {"level": "PM showers", "action": "Front-load outdoor for morning; move museum/mall to PM"},
-      {"level": "all-day rain", "action": "Switch to v3 weather plan; indoor-only day"},
-      {"level": "tropical storm warning", "action": "Stay in district; cafes + mall + spa loop; skip beaches"},
-      {"level": "typhoon warning", "action": "Indoor hotel day; check airline rebook policy; postpone outdoor tours by >= 1 day"}
+      {"condition": "clear", "trigger": "No rain in AM/PM forecast", "action": "Proceed with v1 (or v2 if pace preferred)"},
+      {"condition": "PM showers", "trigger": "Showers forecast after 13:00", "action": "Front-load outdoor for morning; move museum/mall to PM"},
+      {"condition": "all-day rain", "trigger": "Rain probability >70% all day", "action": "Switch to v3 weather plan; indoor-only day"},
+      {"condition": "tropical storm warning", "trigger": "Met service storm warning issued", "action": "Stay in district; cafes + mall + spa loop; skip beaches"},
+      {"condition": "typhoon warning", "trigger": "Typhoon signal issued", "action": "Indoor hotel day; check airline rebook policy; postpone outdoor tours by >= 1 day"}
     ],
     "per_day_swaps": [
       {
@@ -89,7 +89,7 @@ Embed these blocks verbatim (adapt values to the destination):
 
 ## When done, run
 
-```
+```text
 python .claude/skills/itinerary-builder/scripts/synthesize.py --slug <slug> --stage 6
 ```
 

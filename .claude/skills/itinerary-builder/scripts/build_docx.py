@@ -6,7 +6,10 @@ hotels, practical-link blocks.
 
 See references/workflow.md Phase 8.
 """
-import sys, os, argparse, urllib.parse
+import sys
+import os
+import argparse
+import urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.common import load_data, out_docx, img_dir
 from docx import Document
@@ -24,14 +27,24 @@ def add_hyperlink(paragraph, url, text, color='0563C1', underline=True):
     hl.set(qn('r:id'), r_id)
     new_run = OxmlElement('w:r')
     rPr = OxmlElement('w:rPr')
-    rFonts = OxmlElement('w:rFonts'); rFonts.set(qn('w:ascii'), 'Arial'); rFonts.set(qn('w:hAnsi'), 'Arial')
+    rFonts = OxmlElement('w:rFonts')
+    rFonts.set(qn('w:ascii'), 'Arial')
+    rFonts.set(qn('w:hAnsi'), 'Arial')
     rPr.append(rFonts)
-    c = OxmlElement('w:color'); c.set(qn('w:val'), color); rPr.append(c)
+    c = OxmlElement('w:color')
+    c.set(qn('w:val'), color)
+    rPr.append(c)
     if underline:
-        u = OxmlElement('w:u'); u.set(qn('w:val'), 'single'); rPr.append(u)
-    sz = OxmlElement('w:sz'); sz.set(qn('w:val'), '22'); rPr.append(sz)
+        u = OxmlElement('w:u')
+        u.set(qn('w:val'), 'single')
+        rPr.append(u)
+    sz = OxmlElement('w:sz')
+    sz.set(qn('w:val'), '22')
+    rPr.append(sz)
     new_run.append(rPr)
-    t = OxmlElement('w:t'); t.text = text; t.set(qn('xml:space'), 'preserve')
+    t = OxmlElement('w:t')
+    t.text = text
+    t.set(qn('xml:space'), 'preserve')
     new_run.append(t)
     hl.append(new_run)
     paragraph._p.append(hl)
@@ -43,9 +56,11 @@ def build(slug):
 
     doc = Document()
     s = doc.styles['Normal']
-    s.font.name = 'Arial'; s.font.size = Pt(11)
+    s.font.name = 'Arial'
+    s.font.size = Pt(11)
     sec = doc.sections[0]
-    sec.page_width = Cm(21.0); sec.page_height = Cm(29.7)
+    sec.page_width = Cm(21.0)
+    sec.page_height = Cm(29.7)
     sec.left_margin = sec.right_margin = sec.top_margin = sec.bottom_margin = Cm(2.0)
 
     def h(text, level=1, color='1F4E78'):
@@ -57,7 +72,9 @@ def build(slug):
     def p(text, italic=False, size=11):
         para = doc.add_paragraph()
         r = para.add_run(text)
-        r.font.name = 'Arial'; r.font.size = Pt(size); r.italic = italic
+        r.font.name = 'Arial'
+        r.font.size = Pt(size)
+        r.italic = italic
         return para
 
     def add_pic(filename, width_in=6.0, caption=None):
@@ -65,19 +82,27 @@ def build(slug):
         if not os.path.exists(path):
             para = doc.add_paragraph()
             r = para.add_run(f'[Image placeholder: {filename}]')
-            r.font.color.rgb = RGBColor.from_string('999999'); r.italic = True
+            r.font.color.rgb = RGBColor.from_string('999999')
+            r.italic = True
             return
-        para = doc.add_paragraph(); para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        para = doc.add_paragraph()
+        para.alignment = WD_ALIGN_PARAGRAPH.CENTER
         para.add_run().add_picture(path, width=Inches(width_in))
         if caption:
-            cap = doc.add_paragraph(); cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            cr = cap.add_run(caption); cr.italic = True
-            cr.font.size = Pt(9); cr.font.color.rgb = RGBColor.from_string('666666')
+            cap = doc.add_paragraph()
+            cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            cr = cap.add_run(caption)
+            cr.italic = True
+            cr.font.size = Pt(9)
+            cr.font.color.rgb = RGBColor.from_string('666666')
 
     def link_para(label, url, prefix=''):
         para = doc.add_paragraph()
         if prefix:
-            r = para.add_run(prefix); r.font.name='Arial'; r.bold=True; r.font.size=Pt(10)
+            r = para.add_run(prefix)
+            r.font.name = 'Arial'
+            r.bold = True
+            r.font.size = Pt(10)
         add_hyperlink(para, url, label)
 
     def gmaps(name):
@@ -85,14 +110,20 @@ def build(slug):
             f'{name}, {meta.get("destination","")}')
 
     # ===== Title =====
-    title = doc.add_paragraph(); title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    title = doc.add_paragraph()
+    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     tr = title.add_run(f'{meta.get("destination","Trip")} Trip Guide')
-    tr.font.name='Arial'; tr.font.size=Pt(36); tr.font.bold=True
+    tr.font.name='Arial'
+    tr.font.size=Pt(36)
+    tr.font.bold=True
     tr.font.color.rgb = RGBColor.from_string('1F4E78')
-    sub = doc.add_paragraph(); sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    sub = doc.add_paragraph()
+    sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
     sr = sub.add_run(f'{meta.get("dates_start","")} – {meta.get("dates_end","")} · '
                      f'{meta.get("nights","?")} nights · {meta.get("origin","")} → {meta.get("destination","")}')
-    sr.font.name='Arial'; sr.font.size=Pt(16); sr.font.color.rgb=RGBColor.from_string('2E75B6')
+    sr.font.name='Arial'
+    sr.font.size=Pt(16)
+    sr.font.color.rgb=RGBColor.from_string('2E75B6')
     doc.add_paragraph()
 
     # Hero photo — first iconic place
@@ -205,7 +236,9 @@ def build(slug):
     nr = note.add_run(
         'All photos from Wikimedia Commons under permissive licences (CC-BY-SA / public domain). '
         'Map data © OpenStreetMap contributors. Verify all prices and operating hours 2 weeks before travel.')
-    nr.italic = True; nr.font.name='Arial'; nr.font.size=Pt(9)
+    nr.italic = True
+    nr.font.name='Arial'
+    nr.font.size=Pt(9)
     nr.font.color.rgb = RGBColor.from_string('666666')
 
     path = out_docx(slug)
